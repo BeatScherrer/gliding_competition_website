@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import contactCard from './contactCard/contactCard.vue'
+import contactCard from './contactCard/ContactCard.vue'
 
 export default {
   components: {
