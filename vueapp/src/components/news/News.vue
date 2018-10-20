@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="news">
-    <div class="" v-for="i in 5">
+    <div class="" v-for="i in 5" :key="i">
         <news-card></news-card>
         <hr>
     </div>

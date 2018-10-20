@@ -10,7 +10,7 @@
       <th scope="col">Sign</th>
     </tr>
   </thead>
-  <tbody v-for="i in 5">
+  <tbody v-for="i in 5" :key="i">
     <tr>
       <th scope="row">{{ i }}</th>
       <td>{{ participants[0].name }}</td>

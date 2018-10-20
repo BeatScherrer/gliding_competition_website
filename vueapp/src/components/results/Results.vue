@@ -24,7 +24,7 @@
               <th scope="col"> Avg Speed </th>
             </tr>
           </thead>
-          <tbody v-for="i in 5">
+          <tbody v-for="i in 5" :key="i">
             <tr>
               <th scope="row">{{ i }}.</th>
               <td> hans muster </td>
