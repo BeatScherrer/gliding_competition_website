@@ -1,7 +1,7 @@
 <template lang="html">
 
   <div class="register">
-
+    <p class="lead"> Work in Progress...</p>
   </div>
 
 </template>
@@ -14,7 +14,6 @@ export default {
 <style lang="css" scoped>
 
 .register {
-  background-color: lightblue;
 }
 
 </style>

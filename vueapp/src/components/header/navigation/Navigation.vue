@@ -3,19 +3,9 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">Hidden brand</a>
-    <ul class="ml-auto">
-      <router-link tag="li" class="nav-item" to="/register">
-        <button class="btn btn-primary">
-          Register
-        </button>
-      </router-link>
-      <router-link tag="li" class="nav-item" to="/login">
-        <button class="btn btn-secondary">
-          Login
-        </button>
-      </router-link>
-    </ul>
+    <a class="navbar-brand" href="#">
+      <img src="./assets/logo_wings_transparent.png" height="60" class="d-inline-block" alt="logo">
+    </a>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <router-link tag="li" class="nav-item" to="/news">
@@ -35,6 +25,18 @@
         </router-link>
         <router-link tag="li" class="nav-item" to="/tracking">
           <a class="nav-link">Live Tracking</a>
+        </router-link>
+      </ul>
+      <ul class="ml-auto">
+        <router-link tag="li" class="nav-item" to="/register">
+          <button class="btn btn-primary">
+            Register
+          </button>
+        </router-link>
+        <router-link tag="li" class="nav-item" to="/login">
+          <button class="btn btn-secondary">
+            Login
+          </button>
         </router-link>
       </ul>
     </div>

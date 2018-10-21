@@ -45,7 +45,6 @@ export default {
 footer {
   padding-top: 50px;
   width: 100%;
-  background-color: lightgray;
 }
 
 </style>

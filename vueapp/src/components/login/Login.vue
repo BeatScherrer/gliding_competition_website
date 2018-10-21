@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="login">
-
+    <p class="lead"> Work in Progress...</p>
   </div>
 </template>
 
@@ -12,7 +12,8 @@ export default {
 <style lang="css" scoped>
 
 .login {
-  background-color: lightblue;
+}
+p {
 }
 
 </style>

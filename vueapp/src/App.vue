@@ -1,12 +1,6 @@
 <template>
   <div class="" id="app">
     <app-header></app-header>
-    <div class="jumbotron jumbotron-fluid">
-      <div class="container">
-        <h1 class="display-4">Fluid jumbotron</h1>
-        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
-      </div>
-    </div>
     <div class="container main-container">
       <div class="row">
         <div class="col-md-10 router-container">
@@ -20,6 +14,7 @@
         <app-sponsors class="col-md-2"> </app-sponsors> -->
       </div>
     </div>
+    <hr/>
     <app-footer></app-footer>
   </div>
 </template>
@@ -45,32 +40,17 @@ export default {
 
 <style lang="scss">
 #app {
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   width: 100%;
-}
-
-h1, h2 {
-  font-weight: normal;
-}
-
-a {
-  color: #42b983;
+  overflow: hidden;
 }
 
 .router-container {
   padding: 50px 0;
-}
-
-.sponsors-container {
-
-}
-
-.jumbotron {
-  background-image: url("./assets/flugplatz_dittingen.jpg");
-  opacity: 0.5;
 }
 </style>

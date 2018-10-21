@@ -1,6 +1,13 @@
 <template>
   <header>
     <app-navigation/>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container jumbotron-container">
+        <h1 class="display-4">Segelflug Junioren Schweizermeisterschaft 2019</h1>
+        <h1 class="display-5">01.05.2019 - 06.05.2019</h1>
+        <h1 class="display-5">Dittingen</h1>
+      </div>
+    </div>
   </header>
 </template>
 
@@ -19,8 +26,31 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 header {
   display: block;
 }
+
+.jumbotron {
+  height: 400px;
+  background-image: url("./assets/flugplatz_dittingen.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.jumbotron-container h1 {
+  color: white;
+  font-family: Roboto;
+  font-weight: 900;
+  text-align: left;
+}
+
+.jumbotron-container p {
+  color: white;
+  font-family: Roboto;
+  font-weight: 900;
+}
+
 </style>
