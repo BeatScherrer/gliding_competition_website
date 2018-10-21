@@ -3,6 +3,7 @@
   <footer>
       <!-- Footer Elements -->
       <div class="container">
+        <!-- Social Network Icons- -->
         <div class="row">
           <div class="col-md-12">
             <!-- Facebook -->
@@ -19,11 +20,12 @@
             </a>
           </div>
         </div>
+        <!-- Copyright -->
+        <div class="text-center py-3">© 2018 Copyright:
+          <a href="https://sg-dittingen.ch/d/index.php/de/"> Segelfluggruppe Dittingen</a>
+        </div>
       </div>
-      <!-- Copyright -->
-      <div class="footer-copyright text-center py-3">© 2018 Copyright:
-        <a href="https://sg-dittingen.ch/d/index.php/de/"> Segelfluggruppe Dittingen</a>
-      </div>
+
     </footer>
 </template>
 
@@ -41,9 +43,9 @@ export default {
 <style lang="scss" scoped>
 
 footer {
+  padding-top: 50px;
   width: 100%;
   background-color: lightgray;
-  height: 200px;
 }
 
 </style>

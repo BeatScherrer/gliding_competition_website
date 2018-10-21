@@ -1,9 +1,15 @@
 <template>
   <div class="" id="app">
     <app-header></app-header>
-    <div class="container">
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Fluid jumbotron</h1>
+        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+      </div>
+    </div>
+    <div class="container main-container">
       <div class="row">
-        <div class="col-md-10 main-content" style="">
+        <div class="col-md-10 router-container">
           <router-view> </router-view>
         </div>
 
@@ -55,14 +61,16 @@ a {
   color: #42b983;
 }
 
-.main-content {
-  padding: 20px;
-}
-
 .router-container {
+  padding: 50px 0;
 }
 
 .sponsors-container {
 
+}
+
+.jumbotron {
+  background-image: url("./assets/flugplatz_dittingen.jpg");
+  opacity: 0.5;
 }
 </style>

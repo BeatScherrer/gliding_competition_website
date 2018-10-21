@@ -3,7 +3,7 @@
   <div class="card-header">
     <ul class="nav nav-tabs card-header-tabs">
       <li class="nav-item">
-        <a class="nav-link active" href="#">Active</a>
+        <a class="nav-link active" href="#"></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
@@ -14,9 +14,9 @@
     </ul>
   </div>
   <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <ul>
+      <li>Zweck</li>
+    </ul>
   </div>
 </div>
 </template>
