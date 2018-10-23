@@ -14,7 +14,7 @@
       </div>
       <hr>
       <div class="col-sm-6 col-md-12 sponsor">
-        <img src="http://www.aeroclub.ch/wp-content/uploads/AeCS-weiss-mit-Text.png" alt="">
+        <img src="http://www.aeroclub.ch/wp-content/uploads/AeCS-weiss-mit-Text.png" alt="" style="background-color: lightgray;">
       </div>
     </div>
   </div>
