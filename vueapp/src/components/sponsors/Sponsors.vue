@@ -2,6 +2,10 @@
   <div class="sponsors">
     <div class="row">
       <div class="col-sm-6 col-md-12 sponsor">
+        <img src="./assets/arb_logo.png" alt="arb logo">
+      </div>
+      <hr>
+      <div class="col-sm-6 col-md-12 sponsor">
         <img src="http://static.apidae-tourisme.com/filestore/objets-touristiques/images/101/172/3189861.jpg" alt="">
       </div>
       <hr>

@@ -12,13 +12,13 @@ const routes = [
   { path:'/home', component: Home},
   { path:'/news', component: News},
   { path:'/participants', component: Participants},
-  { path:'/results', component: Results},
+  //{ path:'/results', component: Results},
   { path:'/contact', component: Contact},
   { path:'/register', component: Register},
   { path:'/login', component: Login},
   { path:'/news', component: News},
   { path:'/information', component: Information},
-  { path:'/tracking', component: Tracking}
+  //{ path:'/tracking', component: Tracking}
 ];
 
 export default routes

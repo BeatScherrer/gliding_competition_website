@@ -41,4 +41,9 @@ img {
   font-weight: 300;
 }
 
+p {
+  white-space: pre-wrap;
+  text-align: left;
+}
+
 </style>

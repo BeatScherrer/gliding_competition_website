@@ -9,30 +9,25 @@
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <router-link tag="li" class="nav-item" to="/news">
-          <a class="nav-link">News</a>
+          <a class="nav-link">Neuigkeiten</a>
         </router-link>
         <router-link tag="li" class="nav-item" to="/participants">
-          <a class="nav-link">Participants</a>
+          <a class="nav-link">Teilnehmer</a>
         </router-link>
-        <router-link tag="li" class="nav-item" to="/results">
-          <a class="nav-link">Results</a>
-        </router-link>
+        <!-- <router-link tag="li" class="nav-item" to="/results">
+          <a class="nav-link">Aufgaben & Resultate</a>
+        </router-link> -->
         <router-link tag="li" class="nav-item" to="/information">
-          <a class="nav-link">Information</a>
+          <a class="nav-link">Informationen</a>
+        </router-link>
+        <router-link tag="li" class="nav-item" to="/sponsoring">
+          <a class="nav-link">Sponsoring</a>
         </router-link>
         <router-link tag="li" class="nav-item" to="/contact">
-          <a class="nav-link">Contact</a>
-        </router-link>
-        <router-link tag="li" class="nav-item" to="/tracking">
-          <a class="nav-link">Live Tracking</a>
+          <a class="nav-link">Kontakt</a>
         </router-link>
       </ul>
       <ul class="ml-auto">
-        <router-link tag="li" class="nav-item" to="/register">
-          <button class="btn btn-primary">
-            Register
-          </button>
-        </router-link>
         <router-link tag="li" class="nav-item" to="/login">
           <button class="btn btn-secondary">
             Login
