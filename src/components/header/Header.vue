@@ -38,7 +38,7 @@ header {
 
 .jumbotron {
   height: 400px;
-  background-image: url("./assets/flugplatz_dittingen.jpg");
+  background-image: url("./flugplatz_dittingen.jpg");
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
