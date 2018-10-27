@@ -28,7 +28,9 @@
             OK Präsident: Florian Anklin <br>
             Konkurrenzleitung: Beat Scherrer <br>
             Web: <a href="#">www.jsm2019.ch</a> <br>
-            E-Mail: <a href="#">mail@jsm2019.ch</a></p>
+            E-Mail: <a href="#">mail@jsm2019.ch</a> <br>
+            IBAN: CH12 8080 8004 1710 5382 0</p>
+
 
             <h2><li> Ort </li></h2>
             <p>Der Wettbewerb findet auf dem Flugplatz Dittingen (LSPD) statt. Das
@@ -63,7 +65,8 @@
             </ul>
             <p>Nenngeld JSM: CHF 80.-<br>
             Aufgrund der Platzverhältnisse ist die Teilnehmerzahl auf 25 Piloten begrenzt, die
-            Berücksichtigung erfolgt nach Anmeldungseingang.</p>
+            Berücksichtigung erfolgt nach Anmeldungseingang. <br>
+            Versicherung ist Sache der Teilnehmer.</p>
 
             <h2><li> Dokumente </li></h2>
             <p>Für die Teilnahme am Wettbewerb sind gültige Dokumente zwingend notwendig. Wir
@@ -203,11 +206,20 @@ export default {
 
 .card-body {
   text-align: left;
-  padding: 30px 50px;
 }
 
 p {
   margin-bottom: 30px;
+}
+
+.card-body {
+  padding: 20px 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    .card-body {
+      padding: 20px 70px;
+    }
 }
 
 </style>
