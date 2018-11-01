@@ -28,7 +28,7 @@
             OK Präsident: Florian Anklin <br>
             Konkurrenzleitung: Beat Scherrer <br>
             Web: <a href="#">www.jsm2019.ch</a> <br>
-            E-Mail: <a href="#">mail@jsm2019.ch</a> <br>
+            E-Mail: <a href="mailto:mail@jsm2019.ch">mail@jsm2019.ch</a> <br>
             IBAN: CH12 8080 8004 1710 5382 0</p>
 
 
@@ -58,7 +58,7 @@
               <li>Bezahltes Nenngeld</li>
               <li>Mitgliedschaft einer Segelfluggruppe des SFVS</li>
               <li>Am 31.12.2019 noch nicht 25 Jahre alt</li>
-              <li>Standartklasse-Segelflugzeug (es wird mit Index gewertet)</li>
+              <li>Standardklasse-Segelflugzeug (es wird mit Index gewertet)</li>
               <li>Gültige Bordpapiere inklusive Haftpflichtversicherung und Certificate of
                 Insurance</li>
               <li>FLARM bitte mit Range Analyzer Results</li>

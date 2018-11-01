@@ -1,15 +1,18 @@
 <template lang="html">
-  <div class="contact container">
+  <div class="">
+    <p>Kontakt kommt bald...</p>
+  </div>
+  <!-- <div class="contact container">
     <div class="row">
       <div class="card-group">
         <contact-card v-for='i in 5' :key="i"> </contact-card>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script>
-import contactCard from './contactCard/ContactCard.vue'
+import contactCard from '@/components/contact/contactCard/ContactCard.vue'
 
 export default {
   components: {

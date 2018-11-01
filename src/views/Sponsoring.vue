@@ -1,7 +1,7 @@
 <template lang="html">
-  <main>
-
-  </main>
+  <div class="">
+    <p>Sponsoring Informationen kommen bald...</p>
+  </div>
 </template>
 
 <script>
@@ -10,10 +10,4 @@ export default {
 </script>
 
 <style lang="css">
-
-main {
-  height: 1000px;
-  background-color: lightgreen;
-}
-
 </style>

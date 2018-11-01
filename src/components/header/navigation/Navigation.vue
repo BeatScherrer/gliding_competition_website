@@ -1,12 +1,13 @@
 <template lang="html">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navList" aria-controls="navList" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">
+    <router-link :to="{ name: 'news', params: {} }">
       <img src="./assets/logo_wings_transparent.png" height="60" class="d-inline-block" alt="logo">
-    </a>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    </router-link>
+
+    <div class="collapse navbar-collapse" id="navList">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <router-link tag="li" class="nav-item" to="/news">
           <a class="nav-link">Neuigkeiten</a>
@@ -43,7 +44,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 
 ul {
   list-style-type: none;

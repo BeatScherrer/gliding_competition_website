@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import newsCard from './newsCard/NewsCard.vue'
+import newsCard from '@/components/newsCard/NewsCard.vue'
 
 export default {
   components: {

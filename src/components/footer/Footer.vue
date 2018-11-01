@@ -7,15 +7,11 @@
         <div class="row">
           <div class="col-md-12">
             <!-- Facebook -->
-            <a class="fb-ic">
+            <a class="fb-ic" href="https://www.facebook.com/SGDittingen/">
               <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
             </a>
-            <!-- Twitter -->
-            <a class="tw-ic">
-              <i class="fa fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-            </a>
             <!--Instagram-->
-            <a class="ins-ic">
+            <a class="ins-ic" href="https://www.instagram.com/flugplatz_dittingen_lspd/">
               <i class="fa fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
             </a>
           </div>
@@ -40,11 +36,15 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="css" scoped>
 
 footer {
   padding-top: 50px;
   width: 100%;
+}
+
+i {
+  color: black;
 }
 
 </style>

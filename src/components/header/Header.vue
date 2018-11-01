@@ -31,14 +31,14 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="css">
 header {
   display: block;
 }
 
 .jumbotron {
   height: 400px;
-  background-image: url("./flugplatz_dittingen.jpg");
+  background-image: url("./assets/flugplatz_dittingen.jpg");
   background-position: center;
   background-attachment: fixed;
   background-size: cover;

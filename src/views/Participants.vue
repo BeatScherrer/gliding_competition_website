@@ -1,6 +1,6 @@
-<template lang="html">
+<template lang="mp">
   <div class="">
-    <p>Coming Soon...</p>
+    <p>Teilnehmerliste kommt bald...</p>
   </div>
 </template>
 

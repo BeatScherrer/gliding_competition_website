@@ -3,10 +3,11 @@
     <app-header></app-header>
     <div class="container main-container">
       <div class="row">
+        <!-- main content -->
         <div class="col-md-10 router-container">
           <router-view> </router-view>
         </div>
-
+        <!-- sponsors -->
         <div class="col-md-2" style="">
           <app-sponsors> </app-sponsors>
         </div>
@@ -20,9 +21,9 @@
 </template>
 
 <script>
-import Header from './components/header/Header.vue'
-import Footer from './components/footer/Footer.vue'
-import Sponsors from './components/sponsors/Sponsors.vue'
+import Header from '@/components/header/Header.vue'
+import Footer from '@/components/footer/Footer.vue'
+import Sponsors from '@/components/sponsors/Sponsors.vue'
 
 export default {
   name: 'app',
@@ -38,7 +39,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="css">
 #app {
   font-family: Roboto, sans-serif;
   font-weight: 300;
@@ -51,6 +52,11 @@ export default {
 }
 
 .router-container {
-  padding: 50px 0;
+  padding: 50px 20px;
+}
+
+html {
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
 }
 </style>
