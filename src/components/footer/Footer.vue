@@ -7,7 +7,7 @@
         <div class="row">
           <div class="col-md-12">
             <!-- Facebook -->
-            <a class="fb-ic" href="https://www.facebook.com/SGDittingen/">
+            <a class="fb-ic" href="https://www.facebook.com/jsmdittingen2019/">
               <i class="fa fa-facebook fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
             </a>
             <!--Instagram-->

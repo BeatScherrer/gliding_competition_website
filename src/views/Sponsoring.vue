@@ -1,6 +1,21 @@
 <template lang="html">
   <div class="">
-    <p>Sponsoring Informationen kommen bald...</p>
+    <h1></h1>
+    <p>
+      Haben Sie ein Unternehmen das gerne die Segelflug Junioren Schweizermeisterschaft 2019 unsterstützen möchte oder kennen Sie ein Unternehmen das in Frage kommt? <br>
+      Wir sind auf der Suche nach Sponsoren und würden uns über eine Rückmeldung an
+      <a href="mailto:mail@jsm2019.ch?Subject=Sponsoring">mail@jsm2019</a> freuen.
+    </p>
+
+    <hr>
+
+    <p class="lead">
+      Vielen Dank an unsere Sponsoren und Unterstützer:
+    </p>
+    <ul>
+      <li><h4><a href="http://www.aeroclub-regiobasel.ch/NEU/index.php">Aeroclub Regio Basel</a></h4></li>
+      <li><h4><a href="https://segelflug.ch/?lang=de">Segelflugverband der Schweiz</a></h4></li>
+    </ul>
   </div>
 </template>
 
@@ -9,5 +24,8 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="scss" scoped>
+ul {
+  list-style-type: none;
+}
 </style>

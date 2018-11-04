@@ -57,7 +57,7 @@
               <li>Gültige Segelflug- und Sport-Lizenz</li>
               <li>Bezahltes Nenngeld</li>
               <li>Mitgliedschaft einer Segelfluggruppe des SFVS</li>
-              <li>Am 31.12.2019 noch nicht 25 Jahre alt</li>
+              <li>Am 31.12.2019 noch nicht 26 Jahre alt</li>
               <li>Standardklasse-Segelflugzeug (es wird mit Index gewertet)</li>
               <li>Gültige Bordpapiere inklusive Haftpflichtversicherung und Certificate of
                 Insurance</li>
