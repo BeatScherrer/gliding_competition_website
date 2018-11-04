@@ -4,11 +4,11 @@
     <div class="container main-container">
       <div class="row">
         <!-- main content -->
-        <div class="col-md-10 router-container">
+        <div class="col-sm-12 col-md-9 router-container">
           <router-view> </router-view>
         </div>
         <!-- sponsors -->
-        <div class="col-md-2" style="">
+        <div class="col-sm-12 col-md-3" style="">
           <app-sponsors> </app-sponsors>
         </div>
         <!-- <router-view class="col-md-10"> </router-view>
