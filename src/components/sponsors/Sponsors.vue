@@ -2,7 +2,10 @@
   <div class="sponsors">
     <div class="row">
       <div class="col-sm-6 col-md-12 sponsor">
-        <!-- <img src="./assets/arb_logo.png" alt="arb logo"> -->
+        <img src="./assets/arb_logo.png" alt="arb logo">
+      </div>
+      <div class="col-sm-6 col-md-12 sponsor">
+        <img src="./assets/sfvs.jpeg" alt="sfvs logo">
       </div>
     </div>
   </div>
