@@ -4,7 +4,7 @@
     <div class="jumbotron jumbotron-fluid">
       <div class="container jumbotron-text">
         <h1 class="display-4">Segelflug Junioren Schweizermeisterschaft</h1>
-        <h1 class="display-5">01.05.2019 - 06.05.2019</h1>
+        <h1 class="display-5">01.05.2019 - 05.05.2019</h1>
         <h1 class="display-5">Dittingen</h1>
       </div>
       <router-link class="nav-item" to="/register">
