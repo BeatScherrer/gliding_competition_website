@@ -1,5 +1,5 @@
 <template lang="html">
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navList" aria-controls="navList" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -45,6 +45,10 @@ export default {
 </script>
 
 <style lang="css" scoped>
+nav {
+  position: -webkit-sticky;
+  top: 0;
+}
 
 ul {
   list-style-type: none;

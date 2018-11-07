@@ -1,7 +1,7 @@
 <template>
   <div class="" id="app">
     <app-header></app-header>
-    <div class="container main-container">
+    <div class="container main-container shadow">
       <div class="row">
         <!-- main content -->
         <div class="col-sm-12 col-md-9 router-container">
@@ -40,6 +40,7 @@ export default {
 </script>
 
 <style lang="css">
+
 #app {
   font-family: Roboto, sans-serif;
   font-weight: 300;
@@ -53,6 +54,10 @@ export default {
 
 .router-container {
   padding: 50px 20px;
+}
+
+.shadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 html {

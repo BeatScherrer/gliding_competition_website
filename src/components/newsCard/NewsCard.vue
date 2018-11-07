@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="card mb-3">
+  <div class="card mb-3 shadow">
     <img class="card-img-top" src="" alt="Card image cap" v-if="hasImage">
     <div class="card-body">
       <h5 class="card-title" v-if="hasTitle"></h5>

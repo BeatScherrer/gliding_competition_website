@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="shadow">
     <app-navigation/>
     <div class="jumbotron jumbotron-fluid">
       <div class="container jumbotron-text">
@@ -8,7 +8,7 @@
         <h1 class="display-5">Dittingen</h1>
       </div>
       <router-link class="nav-item" to="/register">
-        <button class="btn btn-primary btn-lg">
+        <button class="btn btn-primary btn-lg" id="register-button">
           Teilnehmen
         </button>
       </router-link>
@@ -31,20 +31,27 @@ export default {
 }
 </script>
 
-<style lang="css">
-header {
-  display: block;
+<style lang="scss" scoped>
+#register-button {
+  position: absolute;
+  width: 160px;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -80px;
+
 }
 
 .jumbotron {
+  position: relative;
   height: 400px;
   background-image: url("./assets/flugplatz_dittingen.jpg");
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
   overflow: hidden;
-  position: relative;
 }
+
+
 
 .jumbotron-text h1 {
   color: white;
