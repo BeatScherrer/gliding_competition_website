@@ -8,7 +8,7 @@
         <h1 class="display-5">Dittingen</h1>
       </div>
       <router-link class="nav-item" to="/register">
-        <button class="btn btn-primary btn-lg" id="register-button">
+        <button class="btn btn-primary btn-lg shadow" id="register-button">
           Teilnehmen
         </button>
       </router-link>

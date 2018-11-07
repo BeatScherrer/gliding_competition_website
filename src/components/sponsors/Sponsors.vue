@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="sponsors">
+  <div class="container">
     <div class="row">
       <div class="col-6 col-md-12 sponsor mx-auto" id="arb">
         <a href="http://www.aeroclub-regiobasel.ch/NEU/index.php"><img src="./assets/arb_logo.png" alt="arb logo" id="arb_logo"></a>
@@ -26,10 +26,6 @@ export default {
 
 <style lang="css" scoped>
 
-.sponsors {
-  margin: 20px 0;
-}
-
 .sponsor {
   padding: 15px 0;
   max-height: 400px;
@@ -37,7 +33,7 @@ export default {
   }
 
   #arb_logo {
-    height: 120px;
+    height: 110px;
   }
 
 

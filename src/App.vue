@@ -8,7 +8,7 @@
           <router-view> </router-view>
         </div>
         <!-- sponsors -->
-        <div class="col-sm-12 col-md-3" style="">
+        <div class="col-sm-12 col-md-3 sponsors-container">
           <app-sponsors> </app-sponsors>
         </div>
         <!-- <router-view class="col-md-10"> </router-view>
@@ -54,6 +54,10 @@ export default {
 
 .router-container {
   padding: 50px 20px;
+}
+
+.sponsors-container {
+  padding: 20px;
 }
 
 .shadow {
