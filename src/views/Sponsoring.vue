@@ -6,6 +6,7 @@
       Wir sind auf der Suche nach Sponsoren und würden uns über eine Rückmeldung an
       <a href="mailto:mail@jsm2019.ch?Subject=Sponsoring">mail@jsm2019</a> freuen.
     </p>
+    <hr>
     <p class="lead">
       Vielen Dank an unsere Sponsoren und Unterstützer:
     </p>

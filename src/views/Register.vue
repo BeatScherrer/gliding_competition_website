@@ -48,8 +48,9 @@
         <label for="passwort_ver" class="control-label">Passwort wiederholen</label>
         <input type="password" class="form-control" name="password_ver" placeholder="password" required>
       </div>
-      <button type="submit" class="btn btn-primary" >Registrieren</button>
-    </form> -->
+      <button type="submit" class="btn btn-primary shadow" >Registrieren</button>
+    </form>
+  </div> -->
 </template>
 
 <script>

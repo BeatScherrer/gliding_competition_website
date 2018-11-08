@@ -30,7 +30,7 @@
       </ul>
       <ul class="ml-auto">
         <router-link tag="li" class="nav-item" to="/login">
-          <button class="btn btn-secondary">
+          <button class="btn btn-secondary shadow">
             Login
           </button>
         </router-link>

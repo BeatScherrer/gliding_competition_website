@@ -1,10 +1,10 @@
 <template>
   <div class="" id="app">
     <app-header></app-header>
-    <div class="container main-container shadow">
+    <div class="container main-container">
       <div class="row">
         <!-- main content -->
-        <div class="col-sm-12 col-md-9 router-container">
+        <div class="col-sm-12 col-md-9 router-container shadow" id="main-content">
           <router-view> </router-view>
         </div>
         <!-- sponsors -->
