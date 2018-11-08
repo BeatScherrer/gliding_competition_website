@@ -30,10 +30,11 @@
       </ul>
       <ul class="ml-auto">
         <router-link tag="li" class="nav-item" to="/login">
-          <button class="btn btn-secondary shadow" @click="scrollToContent">
+          <button class="btn btn-secondary shadow">
             Login
           </button>
         </router-link>
+        <button class="btn btn-secondary shadow" type="button" name="button" @click="test">test Button</button>
       </ul>
     </div>
   </nav>
@@ -42,22 +43,21 @@
 <script>
 export default {
   methods: {
-    scrollToContent: ()=>{
-      $(".nav-item").click(function() {
-        $('html,body').animate({
-        scrollTop: $("#main-content").offset().top},
-        'slow');
-      });
-    },
-    test: function(){console.log('test');}
+    test: function(){
+      window.scrollBy(200,200);
+      //alert(window.pageXOffset + window.pageYOffset);
+      window.console.log('test');
+    }
   }
 }
 </script>
 
 <style lang="css" scoped>
 nav {
-  position: -webkit-sticky;
+  position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
 }
 
 ul {

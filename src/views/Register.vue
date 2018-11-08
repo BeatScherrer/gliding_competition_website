@@ -1,8 +1,8 @@
 <template lang="html">
-  <div class="">
+  <!-- <div class="">
     <p>Registrierung kommt bald...</p>
-  </div>
-  <!-- <div class="register">
+  </div> -->
+  <div class="register">
     <p>
       Da zum Zeitpunkt der Anmeldung für einen Wettbewerb oft der Flugzeugtyp und andere Informationen noch nicht verfügbar oder gänzlich klar sind, bieten wir ein Login system an wo Ihr eure Daten anpassen und vervollständigen könnt. Dafür müsst Ihr euch jedoch registrieren. Die Daten werden selbstverständlich vertraulich behandelt und nicht weiter gegeben.<br>
       Es wird gebeten die fehlenden Informationen selbständig zu vervollständigen.
@@ -95,20 +95,20 @@
         <div class="col-lg-8">An folgenden Trainingstagen dabei:</div>
         <div class="col-lg-4">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck1">
+            <input class="form-check-input" type="checkbox" id="checkTraining1">
             <label class="form-check-label" for="gridCheck1">
               Sonntag 28.4.2019
             </label>
           </div>
 
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck2">
+            <input class="form-check-input" type="checkbox" id="checkTraining2">
             <label class="form-check-label" for="gridCheck2">
               Montag 29.4.2019
             </label>
           </div>
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck3">
+            <input class="form-check-input" type="checkbox" id="checkTraining3">
             <label class="form-check-label" for="gridCheck3">
               Dienstag 30.4.2019
             </label>
@@ -119,21 +119,21 @@
       <div class="form-group row">
         <div class="col-lg-8">Camping:</div>
         <div class="form-check col-lg-4">
-          <input class="form-check-input" type="checkbox" id="gridCheck1">
+          <input class="form-check-input" type="checkbox" id="checkCamping">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-lg-8">Rückholservice:</div>
         <div class="form-check col-lg-4">
-          <input class="form-check-input" type="checkbox" id="gridCheck1">
+          <input class="form-check-input" type="checkbox" id="checkService">
         </div>
       </div>
 
       <div class="form-group row">
-        <div class="col-lg-8">Ich lasse mein Flugzeug bevorzugt über nacht montiert:</div>
+        <div class="col-lg-8">Ich lasse mein Flugzeug bevorzugt über Nacht montiert:</div>
         <div class="form-check col-lg-4">
-          <input class="form-check-input" type="checkbox" id="gridCheck1">
+          <input class="form-check-input" type="checkbox" id="checkOverNight">
         </div>
       </div>
 
@@ -141,7 +141,7 @@
 
       <button type="submit" class="btn btn-primary shadow" >Registrieren</button>
     </form>
-  </div> -->
+  </div>
 </template>
 
 <script>
