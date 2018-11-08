@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navList">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <router-link tag="li" class="nav-item" to="/news">
-          <a class="nav-link">Neuigkeiten</a>
+          <a class="nav-link" v-on:click="test">Neuigkeiten</a>
         </router-link>
         <router-link tag="li" class="nav-item" to="/participants">
           <a class="nav-link">Teilnehmer</a>
@@ -30,7 +30,7 @@
       </ul>
       <ul class="ml-auto">
         <router-link tag="li" class="nav-item" to="/login">
-          <button class="btn btn-secondary shadow">
+          <button class="btn btn-secondary shadow" @click="scrollToContent">
             Login
           </button>
         </router-link>
@@ -41,6 +41,16 @@
 
 <script>
 export default {
+  methods: {
+    scrollToContent: ()=>{
+      $(".nav-item").click(function() {
+        $('html,body').animate({
+        scrollTop: $("#main-content").offset().top},
+        'slow');
+      });
+    },
+    test: function(){console.log('test');}
+  }
 }
 </script>
 
