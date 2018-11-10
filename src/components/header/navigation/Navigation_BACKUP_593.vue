@@ -29,11 +29,17 @@
         </router-link>
       </ul>
       <ul class="ml-auto">
+<<<<<<< HEAD
+        <router-link tag="li" class="nav-item" to="/login">
+          <button class="btn btn-secondary shadow">
+=======
         <router-link tag="li" class="nav-item" to="/login" data-toggle="collapse" data-target=".navbar-collapse.show">
           <button class="btn btn-secondary shadow" @click="scrollToContent">
+>>>>>>> b08a172d1f56213fa38f7ede0ebc107fbc89ad36
             Login
           </button>
         </router-link>
+        <button class="btn btn-secondary shadow" type="button" name="button" @click="test">test Button</button>
       </ul>
     </div>
   </nav>
@@ -42,15 +48,25 @@
 <script>
 export default {
   methods: {
+<<<<<<< HEAD
+    test: function(){
+      window.scrollBy(200,200);
+      //alert(window.pageXOffset + window.pageYOffset);
+      window.console.log('test');
+    }
+=======
 
+>>>>>>> b08a172d1f56213fa38f7ede0ebc107fbc89ad36
   }
 }
 </script>
 
 <style lang="css" scoped>
 nav {
-  position: -webkit-sticky;
+  position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
 }
 
 ul {

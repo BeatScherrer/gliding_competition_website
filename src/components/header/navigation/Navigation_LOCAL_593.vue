@@ -9,31 +9,32 @@
 
     <div class="collapse navbar-collapse" id="navList">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <router-link tag="li" class="nav-item" to="/news" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <router-link tag="li" class="nav-item" to="/news">
           <a class="nav-link" v-on:click="test">Neuigkeiten</a>
         </router-link>
-        <router-link tag="li" class="nav-item" to="/participants" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <router-link tag="li" class="nav-item" to="/participants">
           <a class="nav-link">Teilnehmer</a>
         </router-link>
         <!-- <router-link tag="li" class="nav-item" to="/results">
           <a class="nav-link">Aufgaben & Resultate</a>
         </router-link> -->
-        <router-link tag="li" class="nav-item" to="/information" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <router-link tag="li" class="nav-item" to="/information">
           <a class="nav-link">Informationen</a>
         </router-link>
-        <router-link tag="li" class="nav-item" to="/sponsoring" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <router-link tag="li" class="nav-item" to="/sponsoring">
           <a class="nav-link">Sponsoring</a>
         </router-link>
-        <router-link tag="li" class="nav-item" to="/contact" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <router-link tag="li" class="nav-item" to="/contact">
           <a class="nav-link">Kontakt</a>
         </router-link>
       </ul>
       <ul class="ml-auto">
-        <router-link tag="li" class="nav-item" to="/login" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <button class="btn btn-secondary shadow" @click="scrollToContent">
+        <router-link tag="li" class="nav-item" to="/login">
+          <button class="btn btn-secondary shadow">
             Login
           </button>
         </router-link>
+        <button class="btn btn-secondary shadow" type="button" name="button" @click="test">test Button</button>
       </ul>
     </div>
   </nav>
@@ -42,15 +43,21 @@
 <script>
 export default {
   methods: {
-
+    test: function(){
+      window.scrollBy(200,200);
+      //alert(window.pageXOffset + window.pageYOffset);
+      window.console.log('test');
+    }
   }
 }
 </script>
 
 <style lang="css" scoped>
 nav {
-  position: -webkit-sticky;
+  position: fixed;
   top: 0;
+  right: 0;
+  left: 0;
 }
 
 ul {
