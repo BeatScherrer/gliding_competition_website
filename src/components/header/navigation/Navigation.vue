@@ -9,27 +9,27 @@
 
     <div class="collapse navbar-collapse" id="navList">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <router-link tag="li" class="nav-item" to="/news">
+        <router-link tag="li" class="nav-item" to="/news" data-toggle="collapse" data-target=".navbar-collapse.show">
           <a class="nav-link" v-on:click="test">Neuigkeiten</a>
         </router-link>
-        <router-link tag="li" class="nav-item" to="/participants">
+        <router-link tag="li" class="nav-item" to="/participants" data-toggle="collapse" data-target=".navbar-collapse.show">
           <a class="nav-link">Teilnehmer</a>
         </router-link>
         <!-- <router-link tag="li" class="nav-item" to="/results">
           <a class="nav-link">Aufgaben & Resultate</a>
         </router-link> -->
-        <router-link tag="li" class="nav-item" to="/information">
+        <router-link tag="li" class="nav-item" to="/information" data-toggle="collapse" data-target=".navbar-collapse.show">
           <a class="nav-link">Informationen</a>
         </router-link>
-        <router-link tag="li" class="nav-item" to="/sponsoring">
+        <router-link tag="li" class="nav-item" to="/sponsoring" data-toggle="collapse" data-target=".navbar-collapse.show">
           <a class="nav-link">Sponsoring</a>
         </router-link>
-        <router-link tag="li" class="nav-item" to="/contact">
+        <router-link tag="li" class="nav-item" to="/contact" data-toggle="collapse" data-target=".navbar-collapse.show">
           <a class="nav-link">Kontakt</a>
         </router-link>
       </ul>
       <ul class="ml-auto">
-        <router-link tag="li" class="nav-item" to="/login">
+        <router-link tag="li" class="nav-item" to="/login" data-toggle="collapse" data-target=".navbar-collapse.show">
           <button class="btn btn-secondary shadow" @click="scrollToContent">
             Login
           </button>
@@ -42,14 +42,7 @@
 <script>
 export default {
   methods: {
-    scrollToContent: ()=>{
-      $(".nav-item").click(function() {
-        $('html,body').animate({
-        scrollTop: $("#main-content").offset().top},
-        'slow');
-      });
-    },
-    test: function(){console.log('test');}
+
   }
 }
 </script>

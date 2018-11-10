@@ -11,6 +11,11 @@
       <div class="col-6 col-md-12 sponsor" id="amstutz">
         <a href="https://www.fromagerieamstutz.ch/en"><img src="./assets/amstutz_logo.png" alt="Fromagerie Amstutz logo"></a>
       </div>
+
+      <div class="col-6 col-md-12 sponsor" id="amstutz">
+        <a href="https://www.cobratrailer.com/?lang=en"><img src="./assets/A.Spindelberger_Logo.jpg" alt="A. Spindelberger logo"></a>
+      </div>
+
     </div>
   </div>
 </template>
