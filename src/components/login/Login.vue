@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="">
-    <p>Coming Soon...</p>
+    <p>Login kommt bald...</p>
   </div>
 </template>
 
