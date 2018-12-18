@@ -1,19 +1,30 @@
 <template lang="html">
   <div class="container">
     <div class="row">
-      <div class="col-6 col-md-12 sponsor mx-auto" id="arb">
-        <a href="http://www.aeroclub-regiobasel.ch/NEU/index.php"><img src="./assets/arb_logo.png" alt="arb logo" id="arb_logo"></a>
-        <p>Aeroclub Regio Basel</p>
-      </div>
-      <div class="col-6 col-md-12 sponsor mx-auto" id="sfvs">
-        <img src="./assets/sfvs.png" alt="sfvs logo" class="mx-auto">
-      </div>
+
       <div class="col-6 col-md-12 sponsor" id="amstutz">
         <a href="https://www.fromagerieamstutz.ch/en"><img src="./assets/amstutz_logo.png" alt="Fromagerie Amstutz logo"></a>
       </div>
 
+      <div class="col-6 col-md-12 sponsor" id="six">
+        <a href="www.six-group.com"><img src="./assets/six_logo.png" alt="six-group logo" id="six-logo"></a>
+      </div>
+
+      <div class="col-6 col-md-12 sponsor" id="pilatus">
+        <a href="www.pilatus-aircraft.com"><img src="./assets/pilatus_logo.png" alt="pilatus-group logo" id="pilatus-logo"></a>
+      </div>
+
       <div class="col-6 col-md-12 sponsor" id="amstutz">
         <a href="https://www.cobratrailer.com/?lang=en"><img src="./assets/A.Spindelberger_Logo.jpg" alt="A. Spindelberger logo"></a>
+      </div>
+
+      <div class="col-6 col-md-12 sponsor mx-auto" id="arb">
+        <a href="http://www.aeroclub-regiobasel.ch/NEU/index.php"><img src="./assets/arb_logo.png" alt="arb logo" id="arb-logo"></a>
+        <p>Aeroclub Regio Basel</p>
+      </div>
+
+      <div class="col-6 col-md-12 sponsor mx-auto" id="sfvs">
+        <img src="./assets/sfvs.png" alt="sfvs logo" class="mx-auto">
       </div>
 
     </div>
@@ -32,17 +43,22 @@ export default {
 <style lang="css" scoped>
 
 .sponsor {
-  padding: 15px 0;
+  padding: 10px 10px;
   max-height: 400px;
   margin: auto 0;
   }
 
-  #arb_logo {
+  #arb-logo {
     height: 110px;
   }
 
+  #six-logo {
+    height: 50px;
+  }
 
-  a {margin:auto;}
+  a {
+    margin:auto;
+  }
 
   img {
     object-fit: contain;
