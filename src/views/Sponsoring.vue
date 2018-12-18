@@ -21,6 +21,7 @@
       <li><h4><a href="www.vonroll.com">Von Roll Schweiz AG</a></h4></li>
       <li><h4><a href="www.air-connect-intl.com">air-connect International AG</a></h4></li>
       <li><h4><a href="www.accu-24.de">ACCU-24 Batterien & Systeme GmbH</a></h4></li>
+      <li><h4><a href="www.cobratrailer.com">COBRA trailer</a></h4></li>
     </ul>
   </div>
 </template>
