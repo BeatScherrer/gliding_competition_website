@@ -30,7 +30,7 @@
       </ul>
       <ul class="ml-auto">
         <router-link tag="li" class="nav-item" to="/login" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <button class="btn btn-secondary shadow" @click="scrollToContent">
+          <button class="btn btn-secondary shadow">
             Login
           </button>
         </router-link>
