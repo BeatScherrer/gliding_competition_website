@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navList">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <router-link tag="li" class="nav-item" to="/news" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="nav-link" v-on:click="test">Neuigkeiten</a>
+          <a class="nav-link">Neuigkeiten</a>
         </router-link>
         <router-link tag="li" class="nav-item" to="/participants" data-toggle="collapse" data-target=".navbar-collapse.show">
           <a class="nav-link">Teilnehmer</a>

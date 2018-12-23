@@ -22,8 +22,9 @@ export default {
   methods: {
   },
   created(){
-    this.$http.get("https://graph.facebook.com/391674157977731/posts?pretty=1&access_token=EAAUWcKX4ZCvoBAPXQw6GqHsOZAMYwMikEqZCh4TWTKO8yxWNZAswHNUuZCs5nNH2yL7TLgy6T2YZBAz2UWp0YZCCCqHclvyR4ksmqBUzIJa2qzZCOWnViTS6vqYFNSWPdv1ntr7sM1dsCtW2pobAP6dbMYpYJmN1YlBDu3kwpNpWpQZDZD").then(function(data) {
+    this.$http.get("https://graph.facebook.com/391674157977731/posts?pretty=1&access_token=EAAUWcKX4ZCvoBAAC8GePRJ15Jv01LL8r2luZBsKye8yLNejuxvTQrzxGhnyJ7rU9HAKOS4wFodaVB3ZAm99SECssYdKDwYoiUrnhyUqAdeqqX6NZBuDeA3ni6m8pZBJ1JRaL8pz3ONYdZCDYDAVhv5DymOA0SMNQ7aeIiMFlK9688YT8tfwrawCHrYqWnUgluZCAdMS3TrTCwZDZD").then(function(data) {
       this.facebookPosts = data.body.data;
+      console.log(this.facebookPosts);
     })
   }
 }
