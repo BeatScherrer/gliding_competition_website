@@ -7,6 +7,8 @@ import Sponsoring from './views/Sponsoring.vue'
 import Register from './views/Register.vue'
 import Contact from './views/Contact.vue'
 
+import Login from './components/login/Login.vue'
+
 Vue.use(Router)
 
 export default new Router({
@@ -54,6 +56,11 @@ export default new Router({
       path: '/contact',
       name: 'contact',
       component: Contact
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login
     }
   ]
 })
