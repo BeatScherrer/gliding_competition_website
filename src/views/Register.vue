@@ -1,8 +1,8 @@
 <template lang="html">
-  <!-- <div class="">
+  <div class="">
     <p>Registrierung kommt bald...</p>
-  </div> -->
-  <div class="register">
+  </div>
+  <!-- <div class="register">
     <p>
       Da zum Zeitpunkt der Anmeldung für einen Wettbewerb oft der Flugzeugtyp und andere Informationen noch nicht verfügbar oder gänzlich klar sind, bieten wir ein Login system an wo Ihr eure Daten anpassen und vervollständigen könnt. Dafür müsst Ihr euch jedoch registrieren. Die Daten werden selbstverständlich vertraulich behandelt und nicht weiter gegeben.<br>
       Es wird gebeten die fehlenden Informationen selbständig zu vervollständigen.
@@ -141,7 +141,7 @@
 
       <button type="submit" class="btn btn-primary shadow" >Registrieren</button>
     </form>
-  </div>
+  </div> -->
 </template>
 
 <script>
