@@ -4,6 +4,10 @@ import router from './router'
 import store from './store'
 import VueResource from 'vue-resource'
 
+import dotenv from 'dotenv'
+
+dotenv.config()
+
 Vue.use(VueResource)
 
 Vue.config.productionTip = false
