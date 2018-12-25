@@ -11,6 +11,7 @@
 import newsCard from '@/components/newsCard/NewsCard.vue'
 
 export default {
+  name: 'news',
   components: {
     newsCard
   },

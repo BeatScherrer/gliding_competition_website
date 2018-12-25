@@ -1,9 +1,13 @@
 <template lang="html">
   <div class="container">
     <div class="row">
-      
+
       <div class="col-6 col-md-12 sponsor mx-auto" id="sfvs">
         <img src="./assets/sfvs.png" alt="sfvs logo" class="mx-auto">
+      </div>
+
+      <div class="col-6 col-md-12 sponsor mx-auto" id="arb">
+        <a href="http://www.aeroclub-regiobasel.ch/NEU/index.php"><img src="./assets/aeroclub_regio_basel.jpg" alt="arb logo" id="arb-logo"></a>
       </div>
 
       <div class="col-6 col-md-12 sponsor" id="amstutz">
@@ -20,11 +24,6 @@
 
       <div class="col-6 col-md-12 sponsor" id="amstutz">
         <a href="https://www.cobratrailer.com/?lang=en"><img src="./assets/A.Spindelberger_Logo.jpg" alt="A. Spindelberger logo"></a>
-      </div>
-
-      <div class="col-6 col-md-12 sponsor mx-auto" id="arb">
-        <a href="http://www.aeroclub-regiobasel.ch/NEU/index.php"><img src="./assets/arb_logo.png" alt="arb logo" id="arb-logo"></a>
-        <p>Aeroclub Regio Basel</p>
       </div>
 
     </div>
@@ -49,7 +48,6 @@ export default {
   }
 
   #arb-logo {
-    height: 110px;
   }
 
   #six-logo {

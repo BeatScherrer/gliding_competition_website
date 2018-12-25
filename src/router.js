@@ -9,12 +9,18 @@ import Contact from './views/Contact.vue'
 
 import Login from './components/login/Login.vue'
 
+import firebase from 'firebase'
+
 Vue.use(Router)
 
-export default new Router({
+let router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
+    {
+      path: '*',
+      redirect: '/news'
+    },
     {
       path: '/',
       redirect: '/news'
@@ -61,6 +67,28 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: Login
+    },
+    {
+      path: '/user_information',
+      name: 'user-info',
+      component: News,
+      meta: {
+        requiresAuth: true
+      }
     }
   ]
-})
+});
+
+router.beforeEach((to, from, next) => {
+  const current_user = firebase.auth().currentUser;
+  console.log(current_user);
+
+  // check if route has meta field requiresAuth
+  const requires_auth = to.matched.some(record => record.meta.requiresAuth);
+
+  if(requires_auth && !current_user) next('login');
+  else if(requires_auth && current_user) next('user_information');
+  else next();
+});
+
+export default router;

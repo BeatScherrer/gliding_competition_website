@@ -11,8 +11,6 @@
         <div class="col-sm-12 col-md-3 sponsors-container">
           <app-sponsors> </app-sponsors>
         </div>
-        <!-- <router-view class="col-md-10"> </router-view>
-        <app-sponsors class="col-md-2"> </app-sponsors> -->
       </div>
     </div>
     <hr/>

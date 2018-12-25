@@ -27,22 +27,48 @@
         <router-link tag="li" class="nav-item" to="/contact" data-toggle="collapse" data-target=".navbar-collapse.show">
           <a class="nav-link">Kontakt</a>
         </router-link>
+
+        <hr v-if="user">
+
+        <router-link tag="li" class="nav-item" to="/user_information" data-toggle="collapse" data-target=".navbar-collapse.show" v-if="user">
+          <a class="nav-link">Meine Daten</a>
+        </router-link>
+
+        <hr>
+
       </ul>
       <ul class="ml-auto">
-        <router-link tag="li" class="nav-item" to="/login" data-toggle="collapse" data-target=".navbar-collapse.show">
+        <router-link tag="li" class="nav-item" to="/login" data-toggle="collapse" data-target=".navbar-collapse.show" v-if="!user">
           <button class="btn btn-secondary shadow">
             Login
           </button>
         </router-link>
+        <button class="btn btn-secondary shadow" v-if="user" @click="logout">
+          Logout
+        </button>
       </ul>
     </div>
   </nav>
 </template>
 
 <script>
-export default {
-  methods: {
+import firebase from 'firebase'
 
+export default {
+  name: 'navigation',
+  data(){
+    return {
+      user: firebase.auth().currentUser
+    }
+  },
+  methods: {
+    logout(){
+      firebase.auth().signOut().then(function() {
+      alert('Successfully signed out...');
+      }, function(error) {
+        // An error happened.
+      });
+    }
   }
 }
 </script>
@@ -61,6 +87,14 @@ ul {
 li {
   display: inline-block;
   margin: 0 10px;
+}
+
+hr {
+  margin: 10px;
+}
+
+.btn {
+  margin-top: 15px;
 }
 
 </style>
