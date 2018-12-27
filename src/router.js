@@ -8,6 +8,7 @@ import Register from './views/Register.vue'
 import Contact from './views/Contact.vue'
 
 import Login from './components/login/Login.vue'
+import User from './components/user/User.vue'
 
 import firebase from 'firebase'
 
@@ -56,7 +57,10 @@ let router = new Router({
     {
       path: '/register',
       name: 'register',
-      component: Register
+      component: Register,
+      meta: {
+        requiresGuest: true
+      }
     },
     {
       path: '/contact',
@@ -66,12 +70,15 @@ let router = new Router({
     {
       path: '/login',
       name: 'login',
-      component: Login
+      component: Login,
+      meta: {
+        requiresGuest: true
+      }
     },
     {
-      path: '/user_information',
-      name: 'user-info',
-      component: News,
+      path: '/user',
+      name: 'user',
+      component: User,
       meta: {
         requiresAuth: true
       }
@@ -79,15 +86,28 @@ let router = new Router({
   ]
 });
 
+// Route guard handling
 router.beforeEach((to, from, next) => {
+
+  // Check if logged in
   const current_user = firebase.auth().currentUser;
-  console.log(current_user);
 
-  // check if route has meta field requiresAuth
-  const requires_auth = to.matched.some(record => record.meta.requiresAuth);
-
-  if(requires_auth && !current_user) next('login');
-  else if(requires_auth && current_user) next('user_information');
+  // check if route is protected
+  if(to.matched.some(record => record.meta.requiresAuth))
+  {
+    console.log("route protected.")
+    if(!current_user) next('login');
+    else next();
+  }
+  else if(to.matched.some(record => record.meta.requiresGuest))
+  {
+    console.log("route needs guest.")
+    if(current_user)
+    {
+      alert(`You are already logged in with ${current_user.email}!`);
+      next('user');
+    }
+  }
   else next();
 });
 

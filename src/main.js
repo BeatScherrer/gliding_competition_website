@@ -4,29 +4,19 @@ import router from './router'
 import store from './store'
 import VueResource from 'vue-resource'
 
-import firebase from 'firebase'
+import firebase from '@/firebase.js'
 
 // Configure .env variables
 import dotenv from 'dotenv'
 dotenv.config()
-
-// Use vuex
+//
+// Use http request module
 Vue.use(VueResource)
 
 Vue.config.productionTip = false
 
-let app = '';
-
-// Configure firebase
-const config = {
-  apiKey: process.env.VUE_APP_FIREABSE_API_KEY,
-  authDomain: "jsm2019-ffe72.firebaseapp.com",
-  databaseURL: "https://jsm2019-ffe72.firebaseio.com",
-  projectId: "jsm2019-ffe72",
-  storageBucket: "",
-  messagingSenderId: "1085322579037"
-};
-firebase.initializeApp(config);
+// create empty app variable
+let app;
 
 // make sure the auth state is available before the app is created.
 firebase.auth().onAuthStateChanged(() => {

@@ -47,9 +47,6 @@ export default {
   margin: auto 0;
   }
 
-  #arb-logo {
-  }
-
   #six-logo {
     height: 50px;
   }

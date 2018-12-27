@@ -30,7 +30,7 @@
 
         <hr v-if="user">
 
-        <router-link tag="li" class="nav-item" to="/user_information" data-toggle="collapse" data-target=".navbar-collapse.show" v-if="user">
+        <router-link tag="li" class="nav-item" to="/user" data-toggle="collapse" data-target=".navbar-collapse.show" v-if="user">
           <a class="nav-link">Meine Daten</a>
         </router-link>
 
@@ -63,10 +63,14 @@ export default {
   },
   methods: {
     logout(){
-      firebase.auth().signOut().then(function() {
-      alert('Successfully signed out...');
-      }, function(error) {
+      firebase.auth().signOut().then(
+      () => {
+        // Success.
+        alert('Successfully signed out...');
+      },
+      error => {
         // An error happened.
+        alert(`Oops: ${error.message}`)
       });
     }
   }

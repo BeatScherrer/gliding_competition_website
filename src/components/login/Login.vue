@@ -40,9 +40,9 @@ export default {
     login(event){
       event.preventDefault();
       firebase.auth().signInWithEmailAndPassword(this.user.email, this.user.password).then(
-        ()=>{
-          alert('success');
-          console.log('success');
+        (user)=>{
+          alert(`Success! Logged in as ${user.user.email}`);
+          this.$router.push('user');
         },
         (err)=>{
           alert(`Oops: ${err.message}`);
