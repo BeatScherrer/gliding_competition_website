@@ -112,21 +112,21 @@
       <div class="form-group row">
         <div class="col-lg-8">Camping:</div>
         <div class="form-check col-lg-4">
-          <input class="form-check-input" type="checkbox" id="checkCamping">
+          <input class="form-check-input" type="checkbox" id="checkCamping" v-model="user.camping">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-lg-8">Rückholservice:</div>
         <div class="form-check col-lg-4">
-          <input class="form-check-input" type="checkbox" id="checkService">
+          <input class="form-check-input" type="checkbox" id="checkService" v-model="user.pickup_service">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-lg-8">Ich lasse mein Flugzeug bevorzugt über Nacht montiert:</div>
         <div class="form-check col-lg-4">
-          <input class="form-check-input" type="checkbox" id="checkOverNight">
+          <input class="form-check-input" type="checkbox" id="checkOverNight" v-model="user.glider_assembled">
         </div>
       </div>
 
@@ -149,26 +149,24 @@ export default {
     }
   },
   methods: {
-    saveData(event){
-      // Prevent default form submission.
-      event.preventDefault();
+     saveData(event){
+       // Prevent default form submission.
+       event.preventDefault();
 
       console.log(this.user);
 
-      const usersRef = firebase.firestore().collection("users");
-      usersRef.doc("VezLOaumLCza8jih8Ylk").set({
-        test: "foo"
-      });
+    firebase.firestore().collection("users").doc("g0c11bNpPWN3WxZjpqvQ").set(this.user);
     }
   },
   created(){
-    console.log(firebase.auth().currentUser);
-    const docRef = firebase.firestore().collection("users").doc("VezLOaumLCza8jih8Ylk");
+    const vm = this;
+    const docRef = firebase.firestore().collection("users").doc("g0c11bNpPWN3WxZjpqvQ");
     docRef.get().then(
       function(doc){
         if(doc.exists){
           console.log(`Document data: ${doc.data()}`);
-          this.user = doc.data();
+          vm.user = doc.data();
+          vm.user.email = firebase.auth().currentUser.email;
         } else {
           console.log(`Doc data is undefined`);
         }

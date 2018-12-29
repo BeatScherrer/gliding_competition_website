@@ -4,19 +4,23 @@ import router from './router'
 import store from './store'
 import VueResource from 'vue-resource'
 
-import firebase from '@/firebase.js'
-
 // Configure .env variables
 import dotenv from 'dotenv'
-dotenv.config()
-//
-// Use http request module
-Vue.use(VueResource)
+dotenv.config();
 
-Vue.config.productionTip = false
+
+Vue.config.productionTip = false;
+
+// Use http request module
+Vue.use(VueResource);
+
+// Use firestore
+//Vue.use(VueFirestore);
+
+import firebase from '@/firebase.js'
 
 // create empty app variable
-let app;
+let app="";
 
 // make sure the auth state is available before the app is created.
 firebase.auth().onAuthStateChanged(() => {

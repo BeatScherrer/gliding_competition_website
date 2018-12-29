@@ -91,22 +91,26 @@ router.beforeEach((to, from, next) => {
 
   // Check if logged in
   const current_user = firebase.auth().currentUser;
+  console.log(current_user);
 
   // check if route is protected
   if(to.matched.some(record => record.meta.requiresAuth))
   {
     console.log("route protected.")
+    // if no user is logged in redirect to login
     if(!current_user) next('login');
     else next();
   }
   else if(to.matched.some(record => record.meta.requiresGuest))
   {
     console.log("route needs guest.")
+    // if user is logged in alert that alreaddy logged in
     if(current_user)
     {
       alert(`You are already logged in with ${current_user.email}!`);
       next('user');
     }
+    else next();
   }
   else next();
 });

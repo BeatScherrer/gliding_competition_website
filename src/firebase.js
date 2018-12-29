@@ -13,14 +13,10 @@ const config = {
 };
 firebase.initializeApp(config);
 
-// Initialize Cloud Firestore through Firebase
-var db = firebase.firestore();
-
-// Disable deprecated features
-db.settings({
+const db = firebase.firestore();
+const settings = {
   timestampsInSnapshots: true
-});
-
-firebase.bla = 'test';
+}
+db.settings(settings);
 
 export default firebase;
