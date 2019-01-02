@@ -34,25 +34,22 @@ export default {
     };
   },
   methods: {
-    test(){
-      console.log(this.user);
-    },
     login(event){
       event.preventDefault();
-      firebase.auth().signInWithEmailAndPassword(this.user.email, this.user.password).then(
-        (user)=>{
-          alert(`Success! Logged in as ${user.user.email}`);
-          this.$router.push('user');
-        },
-        (err)=>{
-          alert(`Oops: ${err.message}`);
-        }
-      );
+
+      this.$store.dispatch('userSignIn', this.user);
     },
     forgotPassword(){
 
     }
-
+  },
+  computed: {
+    error() {
+      return this.$store.state.error;
+    },
+    loading() {
+      return this.$store.state.loading;
+    }
   }
 }
 </script>

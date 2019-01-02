@@ -8,9 +8,10 @@
         <h1 class="display-5">Dittingen</h1>
       </div>
       <router-link class="nav-item" to="/register">
-        <button class="btn btn-primary btn-lg shadow" id="register-button" v-if="user">
+        <button class="btn btn-primary btn-lg shadow" id="register-button" v-if="!user">
           Teilnehmen
         </button>
+
       </router-link>
     </div>
   </header>
@@ -19,17 +20,18 @@
 <script>
 import Navigation from './navigation/Navigation.vue'
 
-import firebase from '@/firebase.js'
-
 export default {
   data () {
     return {
-      user: !firebase.auth().currentUser,
-      msg: 'This is the header'
     }
   },
   components: {
     appNavigation: Navigation
+  },
+  computed: {
+    user() {
+      return this.$store.state.user;
+    }
   }
 }
 </script>

@@ -58,20 +58,17 @@ export default {
   name: 'navigation',
   data(){
     return {
-      user: firebase.auth().currentUser
+
     }
   },
   methods: {
-    logout(){
-      firebase.auth().signOut().then(
-      () => {
-        // Success.
-        alert('Successfully signed out...');
-      },
-      error => {
-        // An error happened.
-        alert(`Oops: ${error.message}`)
-      });
+    logout() {
+      this.$store.dispatch('userSignOut');
+    }
+  },
+  computed: {
+    user() {
+      return this.$store.state.user;
     }
   }
 }

@@ -119,21 +119,21 @@
       <div class="form-group row">
         <div class="col-lg-8">Camping:</div>
         <div class="form-check col-lg-4">
-          <input class="form-check-input" type="checkbox" id="checkCamping">
+          <input class="form-check-input" type="checkbox" id="checkCamping" v-model="user.camping">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-lg-8">Rückholservice:</div>
         <div class="form-check col-lg-4">
-          <input class="form-check-input" type="checkbox" id="checkService">
+          <input class="form-check-input" type="checkbox" id="checkService" v-model="user.pickup_service">
         </div>
       </div>
 
       <div class="form-group row">
         <div class="col-lg-8">Ich lasse mein Flugzeug bevorzugt über Nacht montiert:</div>
         <div class="form-check col-lg-4">
-          <input class="form-check-input" type="checkbox" id="checkOverNight">
+          <input class="form-check-input" type="checkbox" id="checkOverNight" v-model="user.glider_assembled">
         </div>
       </div>
 
@@ -145,8 +145,6 @@
 </template>
 
 <script>
-import firebase from 'firebase'
-
 export default {
   data(){
     return {
@@ -162,7 +160,7 @@ export default {
         password: '',
         password_ver: '',
 
-        plane: '',
+        glider: '',
         immat: '',
         sign: '',
         logger_id: '',
@@ -176,17 +174,21 @@ export default {
     }
   },
   methods: {
-    signUp(){
-      console.log(this.user.email);
-      firebase.auth().createUserWithEmailAndPassword(this.user.email, this.user.password).then(
-        ()=>{
-          console.log('account created');
-          alert(`Your account has been created!`);
-        },
-        (err)=>{
-          alert(`Oops: ${err.message}`);
-        }
-      );
+    signUp(event){
+      event.preventDefault();
+
+      if(this.comparePasswords !== true)
+      {
+        return;
+      }
+      console.log(this.email);
+      this.$store.dispatch('userSignUp', { email: this.user.email, password: this.user.password });
+    }
+  },
+  computed: {
+    comparePasswords(){
+      console.log('compare passwords');
+      return this.password === this.password_ver ? true : 'Passwords dont\'t match';
     }
   }
 }
