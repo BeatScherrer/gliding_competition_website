@@ -43,7 +43,7 @@
             Login
           </button>
         </router-link>
-        <button class="btn btn-secondary shadow" id="logoutButton" v-if="user" @click="logout">
+        <button class="btn btn-secondary shadow" id="logoutButton"@click="logout" v-if="user">
           Logout
         </button>
       </ul>

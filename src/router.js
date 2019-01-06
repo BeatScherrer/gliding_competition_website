@@ -72,7 +72,7 @@ let router = new Router({
       name: 'login',
       component: Login,
       meta: {
-        requiresGuest: true
+        requresGuest: true
       }
     },
     {
@@ -91,7 +91,7 @@ router.beforeEach((to, from, next) => {
 
   // Check if logged in
   const current_user = firebase.auth().currentUser;
-  console.log("current User: " + current_user);
+  console.log(current_user);
 
   // check if route is protected
   if(to.matched.some(record => record.meta.requiresAuth))

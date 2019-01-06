@@ -1,9 +1,37 @@
 <template lang="mp">
   <div class="">
-    <p v-for="item in users">
-      {{ item.prename }}
-    </p>
-    <button class="btn btn-secondary" type="button" name="button" @click="test">test</button>
+
+
+
+<div class="table-responsive">
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Vorname</th>
+        <th scope="col">Nachname</th>
+        <th scope="col">Geburstdatum</th>
+        <th scope="col">Gruppe</th>
+        <th scope="col">Flugzeug</th>
+        <th scope="col">Kennzeichen</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr v-for="user in users">
+        <td> {{ i+1 }}</td>
+        <td> {{ user.prename }} </td>
+        <td> {{ user.surname }} </td>
+        <td> {{ user.birth }} </td>
+        <td> {{ user.group }} </td>
+        <td> {{ user.glider }} </td>
+        <td> {{ user.sign.toUpperCase() }} </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
   </div>
 </template>
 
@@ -14,7 +42,8 @@ export default {
   name: 'participants',
   data(){
     return {
-      users: []
+      users: [],
+      i: 1
     }
   },
   methods: {
@@ -26,7 +55,7 @@ export default {
     let vm = this;
 
     // Get all documents with verified property is true.
-    firebase.firestore().collection("users").where("verified" , "==", true).get()
+    firebase.firestore().collection("users").where("verified", "==", true).get()
     .then(function(querySnapshot) {
       querySnapshot.forEach(function(doc) {
         // set all verified participants to the users array.

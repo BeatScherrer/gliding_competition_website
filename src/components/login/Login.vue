@@ -1,6 +1,13 @@
 <template lang="html">
   <div class="login">
+
+
     <form id="login-form" v-on:submit.prevent="login">
+
+      <div class="alert alert-danger" role="alert" v-if="this.$store.state.error">
+        {{ this.$store.state.error }}
+      </div>
+
       <h2>Teilnehmer Login</h2>
       <p>Bitte logge dich mit deiner Email Adresse und deinem Passwort ein.</p>
 
@@ -16,7 +23,15 @@
         <a href="reset.html">Forgot password?</a>
       </div>
       <button type="submit" class="btn btn-secondary">Login</button>
+
+      <hr>
+
     </form>
+
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+      <button type="submit" class="btn btn-secondary" name="button" @click="googleLogin">Google</button>
+      <div class="" id="my-signin2"> </div>
   </div>
 </template>
 
@@ -38,6 +53,11 @@ export default {
 
       this.$store.dispatch('userSignIn', this.user);
     },
+    googleLogin(event) {
+      event.preventDefault();
+
+      this.$store.dispatch('userSignInWithGoogle');
+    },
     forgotPassword(){
 
     }
@@ -54,8 +74,9 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.login{
-  max-width: 250px;
+
+#login-form {
+  max-width: 350px;
   margin: auto auto;
 }
 
