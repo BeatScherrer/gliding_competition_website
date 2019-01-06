@@ -40,10 +40,6 @@
       <p class="lead">Account Informationen</p>
 
       <div class="form-group required">
-        <label for="email" class="control-label">Email</label>
-        <input type="email" class="form-control" name="email" placeholder="max@muster.com" required v-model="user.email">
-      </div>
-      <div class="form-group required">
         <label for="passwort" class="control-label">Passwort</label>
         <input type="password" class="form-control" name="password" placeholder="password" required v-model="user.password">
       </div>
@@ -153,14 +149,12 @@ export default {
        // Prevent default form submission.
        event.preventDefault();
 
-      console.log(this.user);
-
-    firebase.firestore().collection("users").doc("g0c11bNpPWN3WxZjpqvQ").set(this.user);
+    firebase.firestore().collection("users").doc(firebase.auth().currentUser.uid).set(this.user);
     }
   },
   created(){
     const vm = this;
-    const docRef = firebase.firestore().collection("users").doc("g0c11bNpPWN3WxZjpqvQ");
+    const docRef = firebase.firestore().collection("users").doc(firebase.auth().currentUser.uid);
     docRef.get().then(
       function(doc){
         if(doc.exists){
@@ -173,7 +167,7 @@ export default {
       }).catch(function(err){
         console.log(`Oops: ${err.message}`);
       });
-  }
+ }
 }
 </script>
 

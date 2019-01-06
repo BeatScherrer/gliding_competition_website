@@ -10,7 +10,7 @@ import Contact from './views/Contact.vue'
 import Login from './components/login/Login.vue'
 import User from './components/user/User.vue'
 
-import firebase from 'firebase'
+import firebase from '@/firebase.js'
 
 Vue.use(Router)
 
@@ -91,7 +91,7 @@ router.beforeEach((to, from, next) => {
 
   // Check if logged in
   const current_user = firebase.auth().currentUser;
-  console.log(current_user);
+  console.log("current User: " + current_user);
 
   // check if route is protected
   if(to.matched.some(record => record.meta.requiresAuth))

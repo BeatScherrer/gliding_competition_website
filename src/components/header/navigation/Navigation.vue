@@ -38,12 +38,12 @@
 
       </ul>
       <ul class="ml-auto">
-        <router-link tag="li" class="nav-item" to="/login" data-toggle="collapse" data-target=".navbar-collapse.show" v-if="!user">
+        <router-link tag="li" class="nav-item" id="loginButton" to="/login" data-toggle="collapse" data-target=".navbar-collapse.show" v-if="!user">
           <button class="btn btn-secondary shadow">
             Login
           </button>
         </router-link>
-        <button class="btn btn-secondary shadow" v-if="user" @click="logout">
+        <button class="btn btn-secondary shadow" id="logoutButton" v-if="user" @click="logout">
           Logout
         </button>
       </ul>
