@@ -27,11 +27,19 @@
       <hr>
 
     </form>
+    <div class="social-logins">
+      <button type="button" class="btn btn-light social-button" name="button" @click="googleLogin">
+        <a id="google-button" class="btn btn-block btn-social btn-google">
+          <i class="fa fa-google"></i> Sign in with Google
+        </a>
+      </button>
+      <button type="button" class="btn btn-primary social-button" id="facebook-button" name="button" @click="facebookLogin">
+        <a class="btn btn-block btn-social btn-facebook">
+          <i class="fa fa-facebook"></i> Sign in with Facebook
+        </a>
+      </button>
+    </div>
 
-      <div class="g-signin2" data-onsuccess="onSignIn"></div>
-
-      <button type="submit" class="btn btn-secondary" name="button" @click="googleLogin">Google</button>
-      <div class="" id="my-signin2"> </div>
   </div>
 </template>
 
@@ -57,6 +65,11 @@ export default {
       event.preventDefault();
 
       this.$store.dispatch('userSignInWithGoogle');
+    },
+    facebookLogin(event) {
+      event.preventDefault();
+
+      this.$store.dispatch('userSignInWithFacebook');
     },
     forgotPassword(){
 
@@ -87,5 +100,29 @@ export default {
 
 .btn{
   margin: 15px;
+}
+
+.social-logins {
+  display: block;
+}
+
+.social-button {
+  margin: 5px;
+}
+
+.btn-social {
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  padding-top: 10px;
+}
+
+#facebook-button {
+  background-color: #3b5998;
+}
+
+i {
+  margin-right: 20px;
+  font-size: 20px;
 }
 </style>

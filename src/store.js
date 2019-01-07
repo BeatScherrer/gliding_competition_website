@@ -67,6 +67,7 @@ export default new Vuex.Store({
     userSignInWithGoogle({commit}) {
       commit('setLoading', true);
       let provider = new firebase.auth.GoogleAuthProvider();
+      provider.addScope('email');
       provider.setCustomParameters({
         prompt: 'select_account'
       });
@@ -85,9 +86,35 @@ export default new Vuex.Store({
 
         commit('setError', errorMessage);
         commit('setLoading', false);
-
-        console.log(errorMessage);
       });
+    },
+
+    userSignInWithFacebook({commit}) {
+      commit('setLoading', true);
+      var provider = new firebase.auth.FacebookAuthProvider();
+            provider.addScope('email');
+      provider.setCustomParameters({
+        'display': 'popup',
+        'auth_type': 'reauthenticate'
+      });
+
+      firebase.auth().signInWithPopup(provider).then(function(result) {
+        if(result.user)
+        {
+          const user = result.user;
+
+          router.push('/user');
+
+          commit('setUser', {email: user.email});
+          commit('setLoading', false);
+          commit('setError', null);
+        }
+        }).catch(function(error) {
+          const errorMessage = error.message;
+
+          commit('setError', errorMessage);
+          commit('setLoading', true);
+        });
     },
 
     autoSignIn ({commit}, payload) {

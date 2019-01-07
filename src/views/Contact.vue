@@ -1,11 +1,14 @@
 <template lang="html">
-  <div class="contact container">
+  <div class="">
+    <p>Kommt bald...</p>
+  </div>
+  <!-- <div class="contact container">
     <div class="row">
       <div class="card-group">
         <contact-card v-for='i in 5' :key="i"> </contact-card>
       </div>
     </div>
-  </div>
+  </div> -->
 </template>
 
 <script>

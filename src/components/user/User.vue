@@ -4,6 +4,10 @@
 
     <hr>
 
+    <div class="alert alert-danger" role="alert" v-if="this.$store.state.error">
+      {{ this.$store.state.error }}
+    </div>
+
     <form class="needs-validation" novalidate>
       <p class="lead">Personen Informationen</p>
       <div class="form-row">
@@ -38,7 +42,7 @@
         </div>
         <div class="form-group col-md-6">
           <label for="strasse" class="control-label">Mobiltelefon</label>
-          <input type="number" class="form-control" id="mobile" placeholder="+41 XX XXX XX XX" v-model="user.mobile">
+          <input type="tel" class="form-control" id="mobile" placeholder="+41 XX XXX XX XX" v-model="user.mobile">
         </div>
       </div>
 

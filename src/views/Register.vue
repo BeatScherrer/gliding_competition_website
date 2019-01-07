@@ -12,7 +12,7 @@
 
     <hr>
 
-    <div class="alert alert-danger" v-if="this.$store.state.error">
+    <div class="alert alert-danger" role="alert" v-if="this.$store.state.error">
       {{ this.$store.state.error }}
     </div>
 
@@ -31,15 +31,29 @@
       </div>
     </form>
 
-    <hr>
-
-    <p>Oder mit deinem Google Account anmelden:</p>
-
-    <hr>
-
-    <div class="g-signin2" data-onsuccess="googleLogin"></div>
 
     <button class="btn btn-primary shadow" @click="signUp">Registrieren</button>
+
+    <hr>
+
+    <div class="social-logins">
+      <button type="button" class="btn btn-light social-button" name="button" @click="googleLogin">
+        <a id="google-button" class="btn btn-block btn-social btn-google">
+          <i class="fa fa-google"></i> Sign in with Google
+        </a>
+      </button>
+
+      <br>
+
+      <button type="button" class="btn btn-outline-primary social-button" name="button" @click="facebookLogin">
+        <a id="facebook-button" class="btn btn-block btn-social btn-facebook">
+          <i class="fa fa-facebook"></i> Sign in with Facebook
+        </a>
+      </button>
+    </div>
+
+    <hr>
+
   </div>
 </template>
 
@@ -65,6 +79,11 @@ export default {
     event.preventDefault();
 
     this.$store.dispatch('userSignInWithGoogle');
+  },
+  facebookLogin(event) {
+    event.preventDefault();
+
+    this.$store.dispatch('userSignInWithFacebook');
   }
 }
 </script>
@@ -88,8 +107,20 @@ hr {
   text-align: left;
 }
 
-.form-group.required .control-label:after {
-  content:" *";
-  color:red;
+.social-logins {
+  display: block;
 }
+
+.social-button {
+  margin: 5px;
+}
+
+.btn-social {
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  padding-top: 10px;
+}
+
+
 </style>
