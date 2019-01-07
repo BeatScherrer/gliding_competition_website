@@ -42,11 +42,8 @@
           <i class="fa fa-google"></i> Sign in with Google
         </a>
       </button>
-
-      <br>
-
-      <button type="button" class="btn btn-outline-primary social-button" name="button" @click="facebookLogin">
-        <a id="facebook-button" class="btn btn-block btn-social btn-facebook">
+      <button type="button" class="btn btn-primary social-button" id="facebook-button" name="button" @click="facebookLogin">
+        <a class="btn btn-block btn-social btn-facebook">
           <i class="fa fa-facebook"></i> Sign in with Facebook
         </a>
       </button>
@@ -73,17 +70,17 @@ export default {
       event.preventDefault();
 
       this.$store.dispatch('userSignUp', this.user);
+    },
+    googleLogin(event) {
+      event.preventDefault();
+
+      this.$store.dispatch('userSignInWithGoogle');
+    },
+    facebookLogin(event) {
+      event.preventDefault();
+
+      this.$store.dispatch('userSignInWithFacebook');
     }
-  },
-  googleLogin(event) {
-    event.preventDefault();
-
-    this.$store.dispatch('userSignInWithGoogle');
-  },
-  facebookLogin(event) {
-    event.preventDefault();
-
-    this.$store.dispatch('userSignInWithFacebook');
   }
 }
 </script>
@@ -99,16 +96,13 @@ hr {
 }
 
 .register-form {
-  max-width: 450px;
+  max-width: 350px;
   margin: auto auto;
 }
 
+
 .form-check-input {
   text-align: left;
-}
-
-.social-logins {
-  display: block;
 }
 
 .social-button {
@@ -118,9 +112,16 @@ hr {
 .btn-social {
   text-align: center;
   width: 200px;
-  height: 50px;
+  height: 40px;
   padding-top: 10px;
 }
 
+#facebook-button {
+  background-color: #3b5998;
+}
 
+i {
+  margin-right: 20px;
+  font-size: 20px;
+}
 </style>

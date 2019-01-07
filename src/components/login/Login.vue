@@ -102,10 +102,6 @@ export default {
   margin: 15px;
 }
 
-.social-logins {
-  display: block;
-}
-
 .social-button {
   margin: 5px;
 }
