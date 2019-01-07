@@ -48,6 +48,7 @@ export default new Vuex.Store({
           commit('setLoading', false);
         })
     },
+
     userSignIn ({commit}, payload) {
       commit('setLoading', true)
       firebase.auth().signInWithEmailAndPassword(payload.email, payload.password)
@@ -62,6 +63,7 @@ export default new Vuex.Store({
         commit('setLoading', false);
       })
     },
+
     userSignInWithGoogle({commit}) {
       commit('setLoading', true);
       let provider = new firebase.auth.GoogleAuthProvider();
@@ -70,7 +72,6 @@ export default new Vuex.Store({
       });
 
       firebase.auth().signInWithPopup(provider).then(function(result) {
-          const token = result.credential.accessToken;
           const user = result.user;
           console.log(user);
 
@@ -80,11 +81,7 @@ export default new Vuex.Store({
           commit('setLoading', false);
           commit('setError', null);
       }).catch(function(error) {
-        const errorCode = error.code;
         const errorMessage = error.message;
-
-        const email = error.email;
-        const credential = error.credential;
 
         commit('setError', errorMessage);
         commit('setLoading', false);
@@ -92,6 +89,7 @@ export default new Vuex.Store({
         console.log(errorMessage);
       });
     },
+
     autoSignIn ({commit}, payload) {
      commit('setUser', {email: payload.email})
     },
@@ -101,7 +99,8 @@ export default new Vuex.Store({
         router.push('/login');
       });
     },
-    userDelete({commit}, payload) {
+
+    userDelete({commit}) {
       const user = firebase.auth().currentUser;
 
       user.delete().then(function() {

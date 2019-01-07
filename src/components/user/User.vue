@@ -167,9 +167,11 @@ export default {
     });
     },
     deleteUser(event) {
+      event.preventDefault();
+
       const confirmation = confirm("Willst du deinen Account wirklich löschen?");
       if(confirmation == true) {
-        this.$store.dispatch('userDelete', this.user);
+        this.$store.dispatch('userDelete', firebase.auth().currentUser);
         this.$router.push('/register');
       }
     }

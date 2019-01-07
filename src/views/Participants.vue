@@ -4,7 +4,7 @@
 
 
 <div class="table-responsive">
-  <table class="table">
+  <table class="table table-stripped">
     <thead class="thead-dark">
       <tr>
         <th scope="col">#</th>
@@ -44,11 +44,6 @@ export default {
     return {
       users: [],
       i: 1
-    }
-  },
-  methods: {
-    test(){
-      console.log(this.users);
     }
   },
   created() {

@@ -16,15 +16,22 @@ Vue.config.productionTip = false;
 // Use http request module to fetch facebook posts
 Vue.use(VueResource);
 
-let app = new Vue({
-  router,
-  store,
-  render: h => h(App),
-  created() {
-    firebase.auth().onAuthStateChanged((firebaseUser) => {
-      if(firebaseUser) {
-        this.$store.dispatch('autoSignIn', firebaseUser);
+let app;
+
+firebase.auth().onAuthStateChanged(() => {
+  console.log(firebase.auth().currentUser);
+  if(!app) {
+    app = new Vue({
+      router,
+      store,
+      render: h => h(App),
+      created() {
+        firebase.auth().onAuthStateChanged((firebaseUser) => {
+          if(firebaseUser) {
+            this.$store.dispatch('autoSignIn', firebaseUser);
+          }
+        })
       }
-    })
+    }).$mount('#app');
   }
-}).$mount('#app');
+})

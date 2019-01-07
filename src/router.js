@@ -72,7 +72,7 @@ let router = new Router({
       name: 'login',
       component: Login,
       meta: {
-        requresGuest: true
+        requiresGuest: true
       }
     },
     {
@@ -89,30 +89,20 @@ let router = new Router({
 // Route guard handling
 router.beforeEach((to, from, next) => {
 
-  // Check if logged in
-  const current_user = firebase.auth().currentUser;
-  console.log(current_user);
+  const user = firebase.auth().currentUser;
 
-  // check if route is protected
-  if(to.matched.some(record => record.meta.requiresAuth))
-  {
-    console.log("route protected.")
-    // if no user is logged in redirect to login
-    if(!current_user) next('login');
-    else next();
-  }
-  else if(to.matched.some(record => record.meta.requiresGuest))
-  {
-    console.log("route needs guest.")
-    // if user is logged in alert that alreaddy logged in
-    if(current_user)
-    {
-      alert(`You are already logged in with ${current_user.email}!`);
+  if(user) {
+    if(to.matched.some(record => record.meta.requiresGuest)) {
       next('user');
     }
-    else next();
+  } else {
+    if(to.matched.some(record => record.meta.requiresAuth)) {
+      if(!user) {
+        next('login');
+      }
+    }
   }
-  else next();
+  next();
 });
 
 export default router;
