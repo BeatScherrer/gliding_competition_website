@@ -42,14 +42,6 @@
           <i class="fa fa-google"></i> Sign in with Google
         </a>
       </button>
-<<<<<<< HEAD
-      <button type="button" class="btn btn-primary social-button" id="facebook-button" name="button" @click="facebookLogin">
-        <a class="btn btn-block btn-social btn-facebook">
-          <i class="fa fa-facebook"></i> Sign in with Facebook
-        </a>
-      </button>
-=======
->>>>>>> develop
     </div>
 
     <hr>

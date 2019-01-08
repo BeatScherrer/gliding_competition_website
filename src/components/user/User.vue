@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="">
-    <h4>{{ user.email }}</h4>
+    <h4>Hallo {{ user.prename }}!</h4>
 
     <hr>
 
