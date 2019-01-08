@@ -18,7 +18,7 @@
       <li><h4><a href="https://www.fromagerieamstutz.ch/en">Fromagerie Amstutz</a></h4></li>
       <li><h4><a href="https://www.mecaplex.ch">Mecaplex</a></h4></li>
       <li><h4><a href="https://www.pilatus-aircraft.com">Pilatus Flugzeugwerke AG</a></h4></li>
-      <li><h4><a href="https://segelflug.ch/?lang=de">Segelflugverband der Schweiz</a></h4></li>
+      <li><h4><a href="https://www.segelflug.ch/">Segelflugverband der Schweiz</a></h4></li>
       <li><h4><a href="https://www.six-group.com">SIX</a></h4></li>
       <li><h4><a href="https://www.parkresort.ch/de/sole-uno/">Sole Uno</a></h4></li>
       <li><h4><a href="https://www.vonroll.com">Von Roll Schweiz AG</a></h4></li>
