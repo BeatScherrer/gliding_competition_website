@@ -56,8 +56,6 @@ export default {
   overflow: hidden;
 }
 
-
-
 .jumbotron-text h1 {
   color: white;
   font-family: Roboto;
