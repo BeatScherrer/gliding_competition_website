@@ -68,18 +68,8 @@ export default {
     },
     googleLogin(event) {
       event.preventDefault();
-
-<<<<<<< HEAD
-      this.$store.dispatch('userSignInWithGoogle');
-    },
-    facebookLogin(event) {
-      event.preventDefault();
-
-      this.$store.dispatch('userSignInWithFacebook');
-    }
-=======
     this.$store.dispatch('userSignInWithGoogle');
->>>>>>> develop
+    }
   }
 }
 </script>
@@ -112,16 +102,12 @@ hr {
   text-align: center;
   width: 200px;
   height: 40px;
-<<<<<<< HEAD
-  padding-top: 10px;
-=======
   padding-top: 7px;
 }
 
 i {
   margin-right: 10px;
   font-size: 20px;
->>>>>>> develop
 }
 
 #facebook-button {
