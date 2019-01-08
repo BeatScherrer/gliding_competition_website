@@ -42,11 +42,14 @@
           <i class="fa fa-google"></i> Sign in with Google
         </a>
       </button>
+<<<<<<< HEAD
       <button type="button" class="btn btn-primary social-button" id="facebook-button" name="button" @click="facebookLogin">
         <a class="btn btn-block btn-social btn-facebook">
           <i class="fa fa-facebook"></i> Sign in with Facebook
         </a>
       </button>
+=======
+>>>>>>> develop
     </div>
 
     <hr>
@@ -74,6 +77,7 @@ export default {
     googleLogin(event) {
       event.preventDefault();
 
+<<<<<<< HEAD
       this.$store.dispatch('userSignInWithGoogle');
     },
     facebookLogin(event) {
@@ -81,6 +85,9 @@ export default {
 
       this.$store.dispatch('userSignInWithFacebook');
     }
+=======
+    this.$store.dispatch('userSignInWithGoogle');
+>>>>>>> develop
   }
 }
 </script>
@@ -113,7 +120,16 @@ hr {
   text-align: center;
   width: 200px;
   height: 40px;
+<<<<<<< HEAD
   padding-top: 10px;
+=======
+  padding-top: 7px;
+}
+
+i {
+  margin-right: 10px;
+  font-size: 20px;
+>>>>>>> develop
 }
 
 #facebook-button {

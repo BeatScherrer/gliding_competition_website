@@ -22,7 +22,7 @@
       <div class="forgot">
         <a href="reset.html">Forgot password?</a>
       </div>
-      <button type="submit" class="btn btn-secondary">Login</button>
+      <button type="submit" class="btn btn-primary">Login</button>
 
       <hr>
 
@@ -33,11 +33,11 @@
           <i class="fa fa-google"></i> Sign in with Google
         </a>
       </button>
-      <button type="button" class="btn btn-primary social-button" id="facebook-button" name="button" @click="facebookLogin">
+      <!-- <button type="button" class="btn btn-primary social-button" id="facebook-button" name="button" @click="facebookLogin">
         <a class="btn btn-block btn-social btn-facebook">
           <i class="fa fa-facebook"></i> Sign in with Facebook
         </a>
-      </button>
+      </button> -->
     </div>
 
   </div>
@@ -65,11 +65,6 @@ export default {
       event.preventDefault();
 
       this.$store.dispatch('userSignInWithGoogle');
-    },
-    facebookLogin(event) {
-      event.preventDefault();
-
-      this.$store.dispatch('userSignInWithFacebook');
     },
     forgotPassword(){
       alert('Ich arbeite momentan daran die Passwort vergessen zu implementieren');
@@ -106,15 +101,11 @@ export default {
   text-align: center;
   width: 200px;
   height: 40px;
-  padding-top: 10px;
-}
-
-#facebook-button {
-  background-color: #3b5998;
+  padding-top: 7px;
 }
 
 i {
-  margin-right: 20px;
+  margin-right: 10px;
   font-size: 20px;
 }
 </style>
