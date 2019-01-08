@@ -72,7 +72,7 @@ export default {
       this.$store.dispatch('userSignInWithFacebook');
     },
     forgotPassword(){
-
+      alert('Ich arbeite momentan daran die Passwort vergessen zu implementieren');
     }
   },
   computed: {
@@ -96,10 +96,6 @@ export default {
 .forgot {
   text-align: left;
   font-size: 12px;
-}
-
-.btn{
-  margin: 15px;
 }
 
 .social-button {

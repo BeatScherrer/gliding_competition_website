@@ -6,6 +6,7 @@ import Participants from './views/Participants.vue'
 import Sponsoring from './views/Sponsoring.vue'
 import Register from './views/Register.vue'
 import Contact from './views/Contact.vue'
+import Dse from './views/Datenschutzerklaerung.vue'
 
 import Login from './components/login/Login.vue'
 import User from './components/user/User.vue'
@@ -82,6 +83,11 @@ let router = new Router({
       meta: {
         requiresAuth: true
       }
+    },
+    {
+      path: '/dse',
+      name: 'dse',
+      component: Dse
     }
   ]
 });
