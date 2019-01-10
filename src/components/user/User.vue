@@ -158,7 +158,29 @@ export default {
   name: 'user',
   data(){
     return {
-      user: { }
+      user: {
+        prename: '',
+        surname: '',
+        street: '',
+        city: '',
+        zip: '',
+        birth: '',
+        mobile: '',
+
+        glider: '',
+        immat: '',
+        sign: '',
+        group: '',
+        logger_id: '',
+        flarm_id: '',
+        training1: false,
+        training2: false,
+        training3: false,
+        camping: false,
+        pickup_service: false,
+        glider_assembled: false,
+        verified: false
+      }
     }
   },
   methods: {
