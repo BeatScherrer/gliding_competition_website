@@ -68,7 +68,7 @@ export default {
     },
     googleLogin(event) {
       event.preventDefault();
-    this.$store.dispatch('userSignInWithGoogle');
+      this.$store.dispatch('userSignInWithGoogle');
     }
   }
 }

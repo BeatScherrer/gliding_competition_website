@@ -26,24 +26,32 @@ export default new Vuex.Store({
   actions: {
     userSignUp ( {commit}, payload) {
         commit('setLoading', true);
-
         // Check if passwords match.
         if(payload.password !== payload.password_ver)
         {
-          const errorMessage = "Passwörter stimmen nicht überein";
-          commit('setError', errorMessage);
-          console.log("test");
+          commit('setError', "Passwörter stimmen nicht überein!");
           return;
         }
+        // create user
         firebase.auth().createUserWithEmailAndPassword(payload.email, payload.password)
         .then(function(firebaseUser) {
-          commit('setUser', { email: firebaseUser.user.email});
-          commit('setError', null);
-          commit('setLoading', false);
-          alert("User created!");
-          router.push('/user');
+          console.log(firebaseUser);
+
+          // https://stackoverflow.com/questions/46620162/firestore-web-code-sample-gives-invalid-argument-type
+          // var empty;
+          // empty = Object.assign({}, {
+          //   verified: false
+          // });
+          firebase.firestore().collection("users").doc(firebaseUser.user.uid).set({verified: false}).then(function() {
+            // Update the vuex store
+            commit('setUser', { email: firebaseUser.user.email});
+            commit('setError', null);
+            commit('setLoading', false);
+
+            router.push('/user');
+            alert("Benutzer erstellt!");
+          });
         }).catch(error => {
-          console.log(error.message);
           commit('setError', error.message);
           commit('setLoading', false);
         })
@@ -120,6 +128,7 @@ export default new Vuex.Store({
     autoSignIn ({commit}, payload) {
      commit('setUser', {email: payload.email})
     },
+
     userSignOut ({commit}) {
       firebase.auth().signOut().then(function() {
         commit('setUser', null);
@@ -130,12 +139,15 @@ export default new Vuex.Store({
     userDelete({commit}) {
       const user = firebase.auth().currentUser;
 
-      user.delete().then(function() {
-        firebase.firestore().collection("users").doc(firebase.auth().currentUser.uid).delete().then(function() {
+      // delete doc before deleting authentication
+      let docRef = firebase.firestore().collection("users").doc(user.uid);
+      docRef.delete().then(function() {
+        user.delete().then(function() {
           commit('setUser', null);
-          this.$router.push('/login');
         })
-      }).catch(function(error) {
+        router.push('/register');
+        alert("Dein Account wurde gelöscht!");
+      }).catch(function (error) {
         commit('setError', error.message);
       });
     }
