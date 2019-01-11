@@ -19,7 +19,6 @@ Vue.use(VueResource);
 let app;
 
 firebase.auth().onAuthStateChanged(() => {
-  console.log(firebase.auth().currentUser);
   if(!app) {
     app = new Vue({
       router,

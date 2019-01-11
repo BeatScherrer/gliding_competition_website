@@ -68,10 +68,9 @@ export default {
     },
     googleLogin(event) {
       event.preventDefault();
-
       this.$store.dispatch('userSignInWithGoogle');
     }
-  },
+  }
 }
 </script>
 
@@ -86,16 +85,13 @@ hr {
 }
 
 .register-form {
-  max-width: 450px;
+  max-width: 350px;
   margin: auto auto;
 }
 
+
 .form-check-input {
   text-align: left;
-}
-
-.social-logins {
-  display: block;
 }
 
 .social-button {
@@ -112,5 +108,12 @@ i {
   font-size: 20px;
 }
 
+#facebook-button {
+  background-color: #3b5998;
+}
 
+i {
+  margin-right: 20px;
+  font-size: 20px;
+}
 </style>

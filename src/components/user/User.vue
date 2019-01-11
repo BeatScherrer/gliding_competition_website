@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="">
-    <h4>Willkommen {{ user.prename }}</h4>
+    <h4>Willkommen {{ user.prename }}!</h4>
 
     <hr>
 
@@ -184,7 +184,7 @@ export default {
     }
   },
   methods: {
-     saveData(event){
+    saveData(event){
        // Prevent default form submission.
        event.preventDefault();
 
@@ -197,8 +197,9 @@ export default {
 
       const confirmation = confirm("Willst du deinen Account wirklich löschen?");
       if(confirmation == true) {
-        this.$store.dispatch('userDelete', firebase.auth().currentUser);
-        this.$router.push('/register');
+        if(this.$store.state.user) {
+          this.$store.dispatch('userDelete');
+        }
       }
     }
   },
@@ -211,7 +212,8 @@ export default {
           vm.user = doc.data();
           vm.user.email = firebase.auth().currentUser.email;
         } else {
-          console.log(`Doc data is undefined`);
+          firebase.firestore().collection("users").doc(firebase.auth().currentUser.uid).set(vm.user);
+          console.log(`empty doc created`);
         }
       }).catch(function(err){
         console.log(`Oops: ${err.message}`);

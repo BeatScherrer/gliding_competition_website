@@ -67,7 +67,7 @@ export default {
       this.$store.dispatch('userSignInWithGoogle');
     },
     forgotPassword(){
-
+      alert('Ich arbeite momentan daran die Passwort vergessen zu implementieren');
     }
   },
   computed: {
@@ -91,10 +91,6 @@ export default {
 .forgot {
   text-align: left;
   font-size: 12px;
-}
-
-.social-logins {
-  display: block;
 }
 
 .social-button {

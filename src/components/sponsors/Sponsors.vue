@@ -3,7 +3,7 @@
     <div class="row">
 
       <div class="col-6 col-md-12 sponsor mx-auto" id="sfvs">
-        <img src="./assets/sfvs.png" alt="sfvs logo" class="mx-auto">
+        <a href="https://www.segelflug.ch/"><img src="./assets/sfvs.png" alt="sfvs logo" class="mx-auto"></a>
       </div>
 
       <div class="col-6 col-md-12 sponsor mx-auto" id="arb">
@@ -15,11 +15,11 @@
       </div>
 
       <div class="col-6 col-md-12 sponsor" id="six">
-        <a href="www.six-group.com"><img src="./assets/six_logo.png" alt="six-group logo" id="six-logo"></a>
+        <a href="https://www.six-group.com"><img src="./assets/six_logo.png" alt="six-group logo" id="six-logo"></a>
       </div>
 
       <div class="col-6 col-md-12 sponsor" id="pilatus">
-        <a href="www.pilatus-aircraft.com"><img src="./assets/pilatus_logo.png" alt="pilatus-group logo" id="pilatus-logo"></a>
+        <a href="https://www.pilatus-aircraft.com"><img src="./assets/pilatus_logo.png" alt="pilatus-group logo" id="pilatus-logo"></a>
       </div>
 
       <div class="col-6 col-md-12 sponsor" id="amstutz">
