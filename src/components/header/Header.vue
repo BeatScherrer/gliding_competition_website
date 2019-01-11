@@ -30,14 +30,8 @@ export default {
   },
   methods: {
     scrollToContent() {
-      console.log("test");
-
       // wait for components to be rendered
       this.$nextTick(() => {
-        const options = {
-          behavior: "instant",
-          block: "start",
-        }
         document.getElementById("main-content").scrollIntoView(true);
       });
     }

@@ -38,7 +38,7 @@
 
       </ul>
       <ul class="ml-auto">
-        <router-link tag="li" class="nav-item" id="loginButton" to="/login" data-toggle="collapse" data-target=".navbar-collapse.show" v-if="!user" @click="scrollToContent">
+        <router-link tag="li" class="nav-item" id="loginButton" to="/login" data-toggle="collapse" data-target=".navbar-collapse.show" v-if="!user" @click.native="scrollToContent">
           <button class="btn btn-secondary shadow">
             Login
           </button>
@@ -54,11 +54,6 @@
 <script>
 export default {
   name: 'navigation',
-  data(){
-    return {
-
-    }
-  },
   methods: {
     logout() {
       this.$store.dispatch('userSignOut');
@@ -66,10 +61,6 @@ export default {
     scrollToContent() {
       // wait for components to be rendered
       this.$nextTick(() => {
-        const options = {
-          behavior: "instant",
-          block: "start",
-        }
         document.getElementById("main-content").scrollIntoView(true);
       });
     }
