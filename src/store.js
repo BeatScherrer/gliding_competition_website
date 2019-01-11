@@ -99,13 +99,46 @@ export default new Vuex.Store({
 
       firebase.auth().signInWithPopup(provider).then(function(result) {
           const user = result.user;
-          console.log(user);
 
-          router.push('/user');
+          // Check if doc exists
+          firebase.firestore().collection('users').doc(user.uid).get().then(docSnapshot => {
+            if(!docSnapshot.exists){
+
+              console.log(result.user.email);
+
+              const empty_user = {
+                prename: '',
+                surname: '',
+                street: '',
+                city: '',
+                zip: '',
+                birth: '',
+                mobile: '',
+                email: result.user.email,
+
+                glider: '',
+                immat: '',
+                sign: '',
+                group: '',
+                logger_id: '',
+                flarm_id: '',
+                training1: false,
+                training2: false,
+                training3: false,
+                camping: false,
+                pickup_service: false,
+                glider_assembled: false,
+                verified: false
+              }
+
+              firebase.firestore().collection('users').doc(user.uid).set(empty_user);
+            }
+          });
 
           commit('setUser', {email: user.email});
           commit('setLoading', false);
           commit('setError', null);
+          router.push('/user');
       }).catch(function(error) {
         const errorMessage = error.message;
 
