@@ -37,11 +37,39 @@ export default new Vuex.Store({
         }
         firebase.auth().createUserWithEmailAndPassword(payload.email, payload.password)
         .then(function(firebaseUser) {
-          commit('setUser', { email: firebaseUser.user.email});
-          commit('setError', null);
-          commit('setLoading', false);
-          alert("User created!");
-          router.push('/user');
+
+          const empty_user = {
+            prename: '',
+            surname: '',
+            street: '',
+            city: '',
+            zip: '',
+            birth: '',
+            mobile: '',
+            email: firebaseUser.user.email,
+
+            glider: '',
+            immat: '',
+            sign: '',
+            group: '',
+            logger_id: '',
+            flarm_id: '',
+            training1: false,
+            training2: false,
+            training3: false,
+            camping: false,
+            pickup_service: false,
+            glider_assembled: false,
+            verified: false
+          }
+
+          firebase.firestore().collection('users').doc(firebaseUser.user.uid).set(empty_user).then(function() {
+            commit('setUser', { email: firebaseUser.user.email});
+            commit('setError', null);
+            commit('setLoading', false);
+            alert("User created!");
+            router.push('/user');
+          });
         }).catch(error => {
           console.log(error.message);
           commit('setError', error.message);

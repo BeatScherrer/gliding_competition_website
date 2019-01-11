@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="">
-    <h4>{{ user.email }}</h4>
+    <h4>Willkommen {{ user.prename }}</h4>
 
     <hr>
 
@@ -188,9 +188,9 @@ export default {
        // Prevent default form submission.
        event.preventDefault();
 
-    firebase.firestore().collection("users").doc(firebase.auth().currentUser.uid).set(this.user).then(function() {
-      alert("Daten wurden übernommen.");
-    });
+      firebase.firestore().collection("users").doc(firebase.auth().currentUser.uid).set(this.user).then(function() {
+        alert("Daten wurden übernommen.");
+      });
     },
     deleteUser(event) {
       event.preventDefault();
@@ -208,7 +208,6 @@ export default {
     docRef.get().then(
       function(doc){
         if(doc.exists){
-          console.log(`Document data: ${doc.data()}`);
           vm.user = doc.data();
           vm.user.email = firebase.auth().currentUser.email;
         } else {

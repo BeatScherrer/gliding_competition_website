@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="login">
+  <div class="login" id="login">
 
 
     <form id="login-form" v-on:submit.prevent="login">
@@ -93,10 +93,6 @@ export default {
   font-size: 12px;
 }
 
-.btn{
-  margin: 15px;
-}
-
 .social-logins {
   display: block;
 }
@@ -106,10 +102,8 @@ export default {
 }
 
 .btn-social {
-  text-align: center;
   width: 200px;
   height: 40px;
-  padding-top: 7px;
 }
 
 i {

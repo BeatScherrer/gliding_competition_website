@@ -7,7 +7,7 @@
         <h1 class="display-5">01.05.2019 - 05.05.2019</h1>
         <h1 class="display-5">Dittingen</h1>
       </div>
-      <router-link class="nav-item" to="/register">
+      <router-link class="nav-item" to="/register"  @click.native="scrollToContent">
         <button class="btn btn-primary btn-lg shadow" id="register-button" v-if="!user">
           Teilnehmen
         </button>
@@ -27,6 +27,20 @@ export default {
   },
   components: {
     appNavigation: Navigation
+  },
+  methods: {
+    scrollToContent() {
+      console.log("test");
+
+      // wait for components to be rendered
+      this.$nextTick(() => {
+        const options = {
+          behavior: "instant",
+          block: "start",
+        }
+        document.getElementById("main-content").scrollIntoView(true);
+      });
+    }
   },
   computed: {
     user() {
