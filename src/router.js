@@ -7,6 +7,7 @@ import Sponsoring from './views/Sponsoring.vue'
 import Register from './views/Register.vue'
 import Contact from './views/Contact.vue'
 import Dse from './views/Datenschutzerklaerung.vue'
+import Admin from './views/Admin.vue'
 
 import Login from './components/login/Login.vue'
 import User from './components/user/User.vue'
@@ -88,26 +89,54 @@ let router = new Router({
       path: '/dse',
       name: 'dse',
       component: Dse
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: Admin,
+      meta: {
+        requiresAdmin: true
+      }
     }
   ]
 });
 
-// Route guard handling
+// Route guards
 router.beforeEach((to, from, next) => {
 
   const user = firebase.auth().currentUser;
 
-  if(user) {
-    if(to.matched.some(record => record.meta.requiresGuest)) {
-      next('user');
-    }
-  } else {
-    if(to.matched.some(record => record.meta.requiresAuth)) {
-      if(!user) {
-        next('login');
-      }
+  if(to.matched.some(record => record.meta.requiresAdmin)) {
+    console.log("requiresAdmin");
+
+    if(user && (user.email == "beat.scherrer@gmail.com" || "florian.anklin@gmail.com")) {
+      next();
+    } else {
+      alert('No permission!');
+      next('login');
     }
   }
+
+  if(to.matched.some(record => record.meta.requiresAuth)) {
+    console.log("requiresAuth");
+
+    if(user) {
+      next();
+    } else {
+      next('login');
+    }
+  }
+
+  if(to.matched.some(record => record.meta.requiresGuest)) {
+    console.log("requiresGuest");
+
+    if(user) {
+      next('user');
+    } else {
+      next();
+    }
+  }
+
   next();
 });
 
