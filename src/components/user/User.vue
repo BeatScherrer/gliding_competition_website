@@ -166,6 +166,7 @@ export default {
         zip: '',
         birth: '',
         mobile: '',
+        email: '',
 
         glider: '',
         immat: '',
@@ -188,7 +189,7 @@ export default {
        // Prevent default form submission.
        event.preventDefault();
 
-      firebase.firestore().collection("users").doc(firebase.auth().currentUser.uid).set(this.user).then(function() {
+      firebase.firestore().collection("users").doc(firebase.auth().currentUser.uid).update(this.user).then(function() {
         alert("Daten wurden übernommen.");
       });
     },
@@ -212,8 +213,7 @@ export default {
           vm.user = doc.data();
           vm.user.email = firebase.auth().currentUser.email;
         } else {
-          firebase.firestore().collection("users").doc(firebase.auth().currentUser.uid).set(vm.user);
-          console.log(`empty doc created`);
+          console.log(`Document for user ${firebase.auth().currentUser.uid} does not exist...`);
         }
       }).catch(function(err){
         console.log(`Oops: ${err.message}`);
