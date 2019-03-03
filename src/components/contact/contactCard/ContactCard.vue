@@ -5,7 +5,8 @@
       <div class="card-body">
         <h5 class="card-title">{{ person.name }}</h5>
         <p class="card-text">{{ person.role }}</p>
-        <a v-bind:href="mailTo">contact</a>
+        <hr>
+        <p class="card-text"><small class="text-muted"><a v-bind:href="mailTo">contact</a></small></p>
       </div>
     </div>
   </div>

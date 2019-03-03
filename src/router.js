@@ -8,6 +8,8 @@ import Register from './views/Register.vue'
 import Contact from './views/Contact.vue'
 import Dse from './views/Datenschutzerklaerung.vue'
 import Admin from './views/Admin.vue'
+import LiveTracking from './views/LiveTracking.vue'
+import TasksResults from './views/TasksResults.vue'
 
 import Login from './components/login/Login.vue'
 import User from './components/user/User.vue'
@@ -97,6 +99,16 @@ let router = new Router({
       meta: {
         requiresAdmin: true
       }
+    },
+    {
+      path: '/livetracking',
+      name: 'live-tracking',
+      component: LiveTracking,
+    },
+    {
+      path: '/tasksresults',
+      name: 'tasks-results',
+      component: TasksResults,
     }
   ]
 });
