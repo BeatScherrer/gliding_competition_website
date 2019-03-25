@@ -23,6 +23,15 @@ export default {
 
 <style lang="css" scoped>
 .card {
-  margin: 20px 0;
+  margin: 10px 0;
+  width: 100%;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+a {
+  font-size: 14px;
 }
 </style>

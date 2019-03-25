@@ -1,5 +1,11 @@
 <template lang="mp">
   <div class="table-responsive">
+    <p>
+      Aufgrund der Platzverhältnisse ist die Teilnehmerzahl auf 25 Plätze beschränkt.
+    </p>
+
+    <hr>
+
     <table class="table table-stripped">
       <thead class="thead-dark">
         <tr>
@@ -35,32 +41,27 @@ export default {
   name: 'participants',
   data(){
     return {
-      users: [],
-      i: 1
+      users: []
     }
   },
   methods: {
-    compareSign(a, b) {
-      const signA = a.sign.toUpperCase();
-      const signB = b.sign.toUpperCase();
-
-      if(signA > signB) return 1;
-      else if(signB > signA) return -1;
-
-      return 0;
-    }
   },
   created() {
-    let vm = this;
-
-    // Get all documents with verified property is true.
+    // Get all documents with verified property == true and sort after sign.
     firebase.firestore().collection("users").where("verified", "==", true).get()
-    .then(function(querySnapshot) {
-      querySnapshot.forEach(function(doc) {
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
         // set all verified participants to the users array.
-        vm.users.push(doc.data());
+        this.users.push(doc.data());
       });
-      vm.users.sort(vm.compareSign);
+      this.users.sort(function(a, b) {
+        const signA = a.sign;
+        const signB = b.sign;
+        //compare the signs
+        if(signA < signB) return -1;
+        if(signA > signB) return 1;
+        return 0;
+      });
     }).catch(function(error) {
       console.log(`Error getting documents: ${error}`);
     });
