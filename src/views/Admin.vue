@@ -51,6 +51,8 @@
       </tbody>
 
     </table>
+
+    <p>emails: {{email_list}}</p>
   </div>
 </template>
 
@@ -104,6 +106,19 @@ export default {
           counter += 1;
       });
       return counter;
+    },
+    email_list(){
+      let email_list = "";
+      this.participants.forEach((element) => {
+        if(email_list == ""){
+          email_list = element.email;
+        } else {
+          email_list += `, ${element.email}`;
+        }
+        console.log(element.email);
+      });
+      console.log("test")
+      return email_list;
     }
   },
   created() {
