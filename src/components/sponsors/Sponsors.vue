@@ -26,6 +26,10 @@
         <a href="https://www.cobratrailer.com/?lang=en"><img src="./assets/A.Spindelberger_Logo.jpg" alt="A. Spindelberger logo"></a>
       </div>
 
+      <div class="col-6 col-md-12 sponsor" id="pure_planes">
+        <a href="www.pureplanes.de"><img src="./assets/pure_planes_logo.jpg" alt="Pure Planes logo" id="pure-planes-logo"></a>
+      </div>
+
     </div>
   </div>
 </template>
@@ -43,12 +47,16 @@ export default {
 
 .sponsor {
   padding: 10px 10px;
-  max-height: 400px;
+  max-height: 100px;
   margin: auto 0;
   }
 
   #six-logo {
     height: 50px;
+  }
+
+  #pure-planes-logo {
+    height: 100px;
   }
 
   a {
