@@ -27,6 +27,10 @@
       </div>
 
       <div class="col-6 col-md-12 sponsor" id="pure_planes">
+        <a href="https://www.metallveredlung.ch/index.php"><img src="./assets/schild_logo.jpeg" alt="Schild Metallveredelung logo" id="schild-logo"></a>
+      </div>
+
+      <div class="col-6 col-md-12 sponsor" id="pure_planes">
         <a href="www.pureplanes.de"><img src="./assets/pure_planes_logo.jpg" alt="Pure Planes logo" id="pure-planes-logo"></a>
       </div>
 
@@ -53,6 +57,10 @@ export default {
 
   #six-logo {
     height: 50px;
+  }
+
+  #schild-logo {
+    height: 100px;
   }
 
   #pure-planes-logo {
