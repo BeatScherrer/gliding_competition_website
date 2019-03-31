@@ -2,6 +2,10 @@
   <div class="container">
     <div class="row">
 
+      <div class="col-6 col-md-12 sponsor mx-auto" id="air-connect">
+        <a href="http://www.air-connect-intl.com/"><img src="./assets/airconnect-logo.png" alt="airconnect logo" class="mx-auto"></a>
+      </div>
+
       <div class="col-6 col-md-12 sponsor mx-auto" id="sfvs">
         <a href="https://www.segelflug.ch/"><img src="./assets/sfvs.png" alt="sfvs logo" class="mx-auto"></a>
       </div>
@@ -31,7 +35,23 @@
       </div>
 
       <div class="col-6 col-md-12 sponsor" id="pure_planes">
-        <a href="www.pureplanes.de"><img src="./assets/pure_planes_logo.jpg" alt="Pure Planes logo" id="pure-planes-logo"></a>
+        <a href="https://www.pureplanes.de"><img src="./assets/pure_planes_logo.jpg" alt="Pure Planes logo" id="pure-planes-logo"></a>
+      </div>
+
+      <div class="col-6 col-md-12 sponsor" id="anklin">
+        <a href="http://www.anklin.ch/"><img src="./assets/anklin_logo.jpg" alt="anklin logo" id="anklin-logo"></a>
+      </div>
+
+      <div class="col-6 col-md-12 sponsor" id="raiffeisen">
+        <a href="https://www.raiffeisen.ch/rch/de.html"><img src="./assets/raiffeisen_logo.png" alt="raiffeisen logo" id="raiffeisen-logo"></a>
+      </div>
+
+      <div class="col-6 col-md-12 sponsor" id="skysight">
+        <a href="https://skysight.io"><img src="./assets/skysight_logo.png" alt="skysight logo" id="skysight-logo"></a>
+      </div>
+
+      <div class="col-6 col-md-12 sponsor" id="ctc">
+        <a href="https://www.ctc.ch/"><img src="./assets/ctc_logo.jpg" alt="ctc analytics logo" id="ctc-logo"></a>
       </div>
 
     </div>
