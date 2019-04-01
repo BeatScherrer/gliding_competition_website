@@ -22,24 +22,24 @@
         <a href="https://www.six-group.com"><img src="./assets/six_logo.png" alt="six-group logo" id="six-logo"></a>
       </div>
 
-      <div class="col-6 col-md-12 sponsor" id="pilatus">
-        <a href="https://www.pilatus-aircraft.com"><img src="./assets/pilatus_logo.png" alt="pilatus-group logo" id="pilatus-logo"></a>
+      <div class="col-6 col-md-12 sponsor" id="anklin">
+        <a href="https://www.anklin.ch/"><img src="./assets/anklin_logo.jpg" alt="anklin logo" id="anklin-logo"></a>
       </div>
 
-      <div class="col-6 col-md-12 sponsor" id="amstutz">
-        <a href="https://www.cobratrailer.com/?lang=en"><img src="./assets/A.Spindelberger_Logo.jpg" alt="A. Spindelberger logo"></a>
+      <div class="col-6 col-md-12 sponsor" id="pilatus">
+        <a href="https://www.pilatus-aircraft.com"><img src="./assets/pilatus_logo.png" alt="pilatus-group logo" id="pilatus-logo"></a>
       </div>
 
       <div class="col-6 col-md-12 sponsor" id="pure_planes">
         <a href="https://www.metallveredlung.ch/index.php"><img src="./assets/schild_logo.jpeg" alt="Schild Metallveredelung logo" id="schild-logo"></a>
       </div>
 
-      <div class="col-6 col-md-12 sponsor" id="pure_planes">
-        <a href="https://www.pureplanes.de"><img src="./assets/pure_planes_logo.jpg" alt="Pure Planes logo" id="pure-planes-logo"></a>
+      <div class="col-6 col-md-12 sponsor" id="ctc">
+        <a href="https://www.ctc.ch/"><img src="./assets/ctc_logo.jpg" alt="ctc analytics logo" id="ctc-logo"></a>
       </div>
 
-      <div class="col-6 col-md-12 sponsor" id="anklin">
-        <a href="http://www.anklin.ch/"><img src="./assets/anklin_logo.jpg" alt="anklin logo" id="anklin-logo"></a>
+      <div class="col-6 col-md-12 sponsor" id="amstutz">
+        <a href="https://www.cobratrailer.com/?lang=en"><img src="./assets/A.Spindelberger_Logo.jpg" alt="A. Spindelberger logo"></a>
       </div>
 
       <div class="col-6 col-md-12 sponsor" id="raiffeisen">
@@ -50,8 +50,8 @@
         <a href="https://skysight.io"><img src="./assets/skysight_logo.png" alt="skysight logo" id="skysight-logo"></a>
       </div>
 
-      <div class="col-6 col-md-12 sponsor" id="ctc">
-        <a href="https://www.ctc.ch/"><img src="./assets/ctc_logo.jpg" alt="ctc analytics logo" id="ctc-logo"></a>
+      <div class="col-6 col-md-12 sponsor" id="pure_planes">
+        <a href="https://www.pureplanes.de"><img src="./assets/pure_planes_logo.jpg" alt="Pure Planes logo" id="pure-planes-logo"></a>
       </div>
 
     </div>
@@ -69,32 +69,18 @@ export default {
 
 <style lang="css" scoped>
 
-.sponsor {
-  padding: 10px 10px;
-  max-height: 100px;
-  margin: auto 0;
-  }
-
-  #six-logo {
-    height: 50px;
-  }
-
-  #schild-logo {
-    height: 100px;
-  }
-
-  #pure-planes-logo {
-    height: 100px;
-  }
-
-  a {
-    margin:auto;
+  .sponsor {
+    padding: 10px 15px;
+    margin: auto;
   }
 
   img {
+    width:  100%;
+    max-height: 100px;
     object-fit: contain;
-    max-width: 100%;
   }
+
+
 
   p {
     text-align: center;

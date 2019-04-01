@@ -14,14 +14,18 @@
       <li><h4><a href="https://www.accu-24.de">ACCU-24 Batterien & Systeme GmbH</a></h4></li>
       <li><h4><a href="http://www.aeroclub-regiobasel.ch/NEU/index.php">Aeroclub Regio Basel</a></h4></li>
       <li><h4><a href="https://www.air-connect-intl.com">Air-Connect International AG</a></h4></li>
+      <li><h4><a href="https://www.anklin.ch/">Anklin</a></h4></li>
       <li><h4><a href="https://www.cobratrailer.com">COBRA trailer</a></h4></li>
+      <li><h4><a href="https://www.ctc.ch/">CTC Analytics</a></h4></li>
       <li><h4><a href="https://www.fromagerieamstutz.ch/en">Fromagerie Amstutz</a></h4></li>
       <li><h4><a href="https://www.mecaplex.ch">Mecaplex</a></h4></li>
       <li><h4><a href="https://www.pilatus-aircraft.com">Pilatus Flugzeugwerke AG</a></h4></li>
       <li><h4><a href="https://www.pureplanes.de">Pure Planes</a></h4></li>
       <li><h4><a href="https://www.metallveredlung.ch/">Schild Metallveredelung AG</a></h4></li>
+      <li><h4><a href="https://www.raiffeisen.ch/rch/de.html">Raiffeisen</a></h4></li>
       <li><h4><a href="https://www.segelflug.ch/">Segelflugverband der Schweiz</a></h4></li>
       <li><h4><a href="https://www.six-group.com">SIX</a></h4></li>
+      <li><h4><a href="https://skysight.io">Skysight</a></h4></li>
       <li><h4><a href="https://www.parkresort.ch/de/sole-uno/">Sole Uno</a></h4></li>
       <li><h4><a href="https://www.vonroll.com">Von Roll Schweiz AG</a></h4></li>
     </ul>
