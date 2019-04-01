@@ -2,6 +2,8 @@
   <div class="container">
     <div class="row">
 
+      <!-- Gold Sponsors -->
+
       <div class="col-6 col-md-12 sponsor mx-auto" id="air-connect">
         <a href="http://www.air-connect-intl.com/"><img src="./assets/airconnect-logo.png" alt="airconnect logo" class="mx-auto"></a>
       </div>
@@ -18,12 +20,26 @@
         <a href="https://www.fromagerieamstutz.ch/en"><img src="./assets/amstutz_logo.png" alt="Fromagerie Amstutz logo"></a>
       </div>
 
+      <div class="col-6 col-md-12 sponsor" id="swisslos">
+        <a href="https://www.baselland.ch/politik-und-behorden/direktionen/bildungs-kultur-und-sportdirektion/sport/swisslos-sportfonds"><img src="./assets/swisslos_logo.jpg" alt="Swisslos Sportfonds"></a>
+      </div>
+
       <div class="col-6 col-md-12 sponsor" id="six">
         <a href="https://www.six-group.com"><img src="./assets/six_logo.png" alt="six-group logo" id="six-logo"></a>
       </div>
 
+      <!-- Silver Sponsors -->
+
       <div class="col-6 col-md-12 sponsor" id="anklin">
         <a href="https://www.anklin.ch/"><img src="./assets/anklin_logo.jpg" alt="anklin logo" id="anklin-logo"></a>
+      </div>
+
+      <div class="col-6 col-md-12 sponsor" id="ctc">
+        <a href="https://www.ctc.ch/"><img src="./assets/ctc_logo.jpg" alt="ctc analytics logo" id="ctc-logo"></a>
+      </div>
+
+      <div class="col-6 col-md-12 sponsor" id="neukom">
+        <a href="https://www.ltb-peterneukom.ch/"><img src="./assets/neukom_logo.jpg" alt="LTB Peter Neukom GmbH logo" id="neukom-logo"></a>
       </div>
 
       <div class="col-6 col-md-12 sponsor" id="pilatus">
@@ -34,12 +50,14 @@
         <a href="https://www.metallveredlung.ch/index.php"><img src="./assets/schild_logo.jpeg" alt="Schild Metallveredelung logo" id="schild-logo"></a>
       </div>
 
-      <div class="col-6 col-md-12 sponsor" id="ctc">
-        <a href="https://www.ctc.ch/"><img src="./assets/ctc_logo.jpg" alt="ctc analytics logo" id="ctc-logo"></a>
+      <!-- Bronze Sponsors -->
+
+      <div class="col-6 col-md-12 sponsor" id="cobra">
+        <a href="https://www.cobratrailer.com/?lang=en"><img src="./assets/A.Spindelberger_Logo.jpg" alt="A. Spindelberger logo"></a>
       </div>
 
-      <div class="col-6 col-md-12 sponsor" id="amstutz">
-        <a href="https://www.cobratrailer.com/?lang=en"><img src="./assets/A.Spindelberger_Logo.jpg" alt="A. Spindelberger logo"></a>
+      <div class="col-6 col-md-12 sponsor" id="pure_planes">
+        <a href="https://www.pureplanes.de"><img src="./assets/pure_planes_logo.jpg" alt="Pure Planes logo" id="pure-planes-logo"></a>
       </div>
 
       <div class="col-6 col-md-12 sponsor" id="raiffeisen">
@@ -48,10 +66,6 @@
 
       <div class="col-6 col-md-12 sponsor" id="skysight">
         <a href="https://skysight.io"><img src="./assets/skysight_logo.png" alt="skysight logo" id="skysight-logo"></a>
-      </div>
-
-      <div class="col-6 col-md-12 sponsor" id="pure_planes">
-        <a href="https://www.pureplanes.de"><img src="./assets/pure_planes_logo.jpg" alt="Pure Planes logo" id="pure-planes-logo"></a>
       </div>
 
     </div>

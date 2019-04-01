@@ -4,7 +4,7 @@ import News from './views/News.vue'
 import Information from './views/Information.vue'
 import Participants from './views/Participants.vue'
 import Sponsoring from './views/Sponsoring.vue'
-import Register from './views/Register.vue'
+//import Register from './views/Register.vue'
 import Contact from './views/Contact.vue'
 import Dse from './views/Datenschutzerklaerung.vue'
 import Admin from './views/Admin.vue'
@@ -58,14 +58,14 @@ let router = new Router({
       name: 'sponsoring',
       component: Sponsoring
     },
-    {
-      path: '/register',
-      name: 'register',
-      component: Register,
-      meta: {
-        requiresGuest: true
-      }
-    },
+    // {
+    //   path: '/register',
+    //   name: 'register',
+    //   component: Register,
+    //   meta: {
+    //     requiresGuest: true
+    //   }
+    // },
     {
       path: '/contact',
       name: 'contact',

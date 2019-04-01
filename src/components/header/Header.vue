@@ -7,12 +7,11 @@
         <h1 class="display-5">01.05.2019 - 05.05.2019</h1>
         <h1 class="display-5">Dittingen</h1>
       </div>
-      <router-link class="nav-item" to="/register"  @click.native="scrollToContent">
+      <!-- <router-link class="nav-item" to="/register"  @click.native="scrollToContent">
         <button class="btn btn-primary btn-lg shadow" id="register-button" v-if="!user">
           Teilnehmen
         </button>
-
-      </router-link>
+      </router-link> -->
     </div>
   </header>
 </template>
