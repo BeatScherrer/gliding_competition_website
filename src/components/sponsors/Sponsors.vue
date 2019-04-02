@@ -56,12 +56,12 @@
         <a href="https://www.cobratrailer.com/?lang=en"><img src="./assets/A.Spindelberger_Logo.jpg" alt="A. Spindelberger logo"></a>
       </div>
 
-      <div class="col-6 col-md-12 sponsor" id="pure_planes">
-        <a href="https://www.pureplanes.de"><img src="./assets/pure_planes_logo.jpg" alt="Pure Planes logo" id="pure-planes-logo"></a>
-      </div>
-
       <div class="col-6 col-md-12 sponsor" id="raiffeisen">
         <a href="https://www.raiffeisen.ch/rch/de.html"><img src="./assets/raiffeisen_logo.png" alt="raiffeisen logo" id="raiffeisen-logo"></a>
+      </div>
+
+      <div class="col-6 col-md-12 sponsor" id="pure_planes">
+        <a href="https://www.pureplanes.de"><img src="./assets/pure_planes_logo.jpg" alt="Pure Planes logo" id="pure-planes-logo"></a>
       </div>
 
       <div class="col-6 col-md-12 sponsor" id="skysight">
