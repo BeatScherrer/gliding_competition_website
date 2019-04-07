@@ -10,6 +10,8 @@
         <th>Gruppe</th>
         <th>Logger ID</th>
         <th>Flarm ID</th>
+        <th>WK</th>
+        <th>Immatrikulation</th>
         <th>Training 1</th>
         <th>Training 2</th>
         <th>Training 3</th>
@@ -27,6 +29,8 @@
           <td>{{ i.group }}</td>
           <td>{{ i.logger_id }}</td>
           <td>{{ i.flarm_id }}</td>
+          <td>{{ i.sign }}</td>
+          <td>{{ i.immat }}</td>
           <td v-bind:class="{'table-success': i.training1, 'table-danger': !i.training1}">{{ i.training1 }}</td>
           <td v-bind:class="{'table-success' : i.training2, 'table-danger': !i.training2}">{{ i.training2 }}</td>
           <td v-bind:class="{'table-success' : i.training3, 'table-danger': !i.training3}">{{ i.training3 }}</td>
@@ -37,6 +41,7 @@
         </tr>
 
         <tr>
+          <td></td>
           <td></td>
           <td></td>
           <td></td>

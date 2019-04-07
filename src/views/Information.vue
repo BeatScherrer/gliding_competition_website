@@ -176,7 +176,7 @@
       </div>
       <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
         <div class="card-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          <iframe src="https://map.geo.admin.ch/embed.html?topic=ech&lang=de&bgLayer=ch.swisstopo.swissimage&E=2603768.19&N=1254188.62&zoom=11.051928094887334&catalogNodes=687,702&layers=KML%7C%7Chttps:%2F%2Fpublic.geo.admin.ch%2Fko1LzYp1R1eFi4-ztOsfwA" id="anfahrt_iframe"></iframe>
         </div>
       </div>
     </div>
@@ -214,6 +214,15 @@ p {
 
 .card-body {
   padding: 20px 20px;
+}
+
+.card-body iframe
+{
+  width: 100%;
+  height: 500px;
+  margin: 0;
+  padding: 0;
+  display:
 }
 
 @media only screen and (min-width: 768px) {
