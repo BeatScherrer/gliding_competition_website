@@ -47,6 +47,7 @@
           <td></td>
           <td></td>
           <td></td>
+          <td></td>
           <td>{{ training1_count }}</td>
           <td>{{ training2_count }}</td>
           <td>{{ training3_count }}</td>
@@ -130,7 +131,7 @@ export default {
     const vm = this;
 
     // Get all documents with verified property is true.
-    firebase.firestore().collection("users").where("verified", "==", true).get()
+    firebase.firestore().collection("users").get()
     .then(function(querySnapshot) {
       querySnapshot.forEach(function(doc) {
         // set all verified participants to the users array.
