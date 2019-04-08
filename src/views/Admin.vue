@@ -18,6 +18,7 @@
         <th>Camping</th>
         <th>Abhol Service</th>
         <th>Handy</th>
+        <th>email</th>
 
       </thead>
 
@@ -38,6 +39,7 @@
           <td v-bind:class="{'table-success' : i.camping, 'table-danger': !i.camping}">{{ i.camping }}</td>
           <td v-bind:class="{'table-success' : i.pickup_service, 'table-danger': !i.pickup_service}">{{ i.pickup_service }}</td>
           <td>{{ i.mobile }}</td>
+          <td>{{ i.email }}</td>
 
         </tr>
 
@@ -54,6 +56,7 @@
           <td>{{ training3_count }}</td>
           <td>{{ camping_count }}</td>
           <td>{{ pickup_service_count }}</td>
+          <td></td>
           <td></td>
         </tr>
       </tbody>
