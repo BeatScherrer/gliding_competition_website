@@ -77,7 +77,7 @@
       </div>
 
       <div class="col-6 col-md-12 sponsor" id="accu24">
-        <a href="https://www.accu-24.de/"><img src="./assets/accu24_logo.png" alt="Accu24 Logo"></a>
+        <a href="http://www.airbatt.de/"><img src="./assets/accu24_logo.png" alt="Accu24 Logo"></a>
       </div>
 
     </div>

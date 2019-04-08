@@ -11,7 +11,7 @@
       Vielen Dank an unsere Sponsoren und Unterstützer:
     </p>
     <ul>
-      <li><h4><a href="https://www.accu-24.de">ACCU-24 Batterien & Systeme GmbH</a></h4></li>
+      <li><h4><a href="http://www.airbatt.de/">ACCU-24 Batterien & Systeme GmbH</a></h4></li>
       <li><h4><a href="http://www.aeroclub-regiobasel.ch/NEU/index.php">Aeroclub Regio Basel</a></h4></li>
       <li><h4><a href="https://www.air-connect-intl.com">Air-Connect International AG</a></h4></li>
       <li><h4><a href="https://www.anklin.ch/">Anklin AG</a></h4></li>
