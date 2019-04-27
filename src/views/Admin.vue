@@ -17,6 +17,7 @@
         <th>Training 3</th>
         <th>Camping</th>
         <th>Abhol Service</th>
+        <th>assembled</th>
         <th>Handy</th>
         <th>email</th>
 
@@ -38,9 +39,9 @@
           <td v-bind:class="{'table-success' : i.training3, 'table-danger': !i.training3}">{{ i.training3 }}</td>
           <td v-bind:class="{'table-success' : i.camping, 'table-danger': !i.camping}">{{ i.camping }}</td>
           <td v-bind:class="{'table-success' : i.pickup_service, 'table-danger': !i.pickup_service}">{{ i.pickup_service }}</td>
+          <td v-bind:class="{'table-success' : i.glider_assembled, 'table-danger': !i.glider_assembled}">{{ i.glider_assembled }}</td>
           <td>{{ i.mobile }}</td>
           <td>{{ i.email }}</td>
-
         </tr>
 
         <tr>
@@ -56,6 +57,7 @@
           <td>{{ training3_count }}</td>
           <td>{{ camping_count }}</td>
           <td>{{ pickup_service_count }}</td>
+          <td>{{ assembled_count }}</td>
           <td></td>
           <td></td>
         </tr>
@@ -118,6 +120,15 @@ export default {
       });
       return counter;
     },
+    assembled_count(){
+      let counter = 0;
+      this.participants.forEach((element) => {
+        if(element.glider_assembled){
+          counter += 1;
+        }
+      });
+      return counter;
+    },
     email_list(){
       let email_list = "";
       this.participants.forEach((element) => {
@@ -126,9 +137,7 @@ export default {
         } else {
           email_list += `, ${element.email}`;
         }
-        console.log(element.email);
       });
-      console.log("test")
       return email_list;
     }
   },
