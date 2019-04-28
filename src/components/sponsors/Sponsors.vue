@@ -80,6 +80,10 @@
         <a href="http://www.airbatt.de/"><img src="./assets/accu24_logo.png" alt="Accu24 Logo"></a>
       </div>
 
+      <div class="col-6 col-md-12 sponsor" id="vtec">
+        <a href="http://www.vtec.ch/"><img src="./assets/vtec_logo.png" alt="Vtec Logo"></a>
+      </div>
+
     </div>
   </div>
 </template>

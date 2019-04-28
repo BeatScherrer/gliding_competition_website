@@ -31,6 +31,7 @@
       <li><h4><a href="https://www.baselland.ch/politik-und-behorden/direktionen/bildungs-kultur-und-sportdirektion/sport/swisslos-sportfonds">Swisslos Sportfonds Baselland</a></h4></li>
       <li><h4><a href="https://www.parkresort.ch/de/sole-uno/">Sole Uno</a></h4></li>
       <li><h4><a href="https://www.vonroll.com">Von Roll Schweiz AG</a></h4></li>
+      <li><h4><a href="http://www.vtec.ch/">Vtec Electronics GmbH</a></h4></li>
       <li><h4><a href="http://www.wuerzburger.ch/">Würzburger AG</a></h4></li>
     </ul>
   </div>
