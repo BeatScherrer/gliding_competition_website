@@ -34,6 +34,10 @@
           <a class="nav-link">Kontakt</a>
         </router-link>
 
+        <router-link tag="li" class="nav-item" to="/livetracking" data-toggle="collapse" data-target=".navbar-collapse.show" >
+          <a class="nav-link">Live Tracking</a>
+        </router-link>
+
         <hr v-if="user">
 
         <router-link tag="li" class="nav-item" to="/user" data-toggle="collapse" data-target=".navbar-collapse.show" v-if="user" >

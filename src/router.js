@@ -109,6 +109,11 @@ let router = new Router({
       path: '/tasksresults',
       name: 'tasks-results',
       component: TasksResults,
+    },
+    {
+      path: '/livetracking',
+      name: 'live-tracking',
+      component: LiveTracking
     }
   ]
 });

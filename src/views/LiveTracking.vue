@@ -1,7 +1,8 @@
 <template lang="html">
-  <div class="">
-    <iframe src="http://glidertracker.de/"></iframe>
-
+  <div class="main">
+    <a href="http://www.glidertracker.org/#tsk=https://raw.githubusercontent.com/BeatScherrer/Segelfluggruppe-Dittingen/master/OGN/Tasks/task&lst=http://www.glidertracker.org/#tsk=https://pastebin.com/raw/Znv0zBGL&lst=https://raw.githubusercontent.com/BeatScherrer/Segelfluggruppe-Dittingen/master/OGN/Groups/jsm2019.csv&nowelcome">Tracking Link</a>
+    <hr>
+    <iframe src="http://www.glidertracker.org/#tsk=https://raw.githubusercontent.com/BeatScherrer/Segelfluggruppe-Dittingen/master/OGN/Tasks/task&lst=http://www.glidertracker.org/#tsk=https://pastebin.com/raw/Znv0zBGL&lst=https://raw.githubusercontent.com/BeatScherrer/Segelfluggruppe-Dittingen/master/OGN/Groups/jsm2019.csv&nowelcome"></iframe>
   </div>
 </template>
 
@@ -14,8 +15,12 @@ export default {
 <style lang="css">
 iframe {
   width: 100%;
-  height: 500px;
+  height: 100%;
   border: none;
-  margin: -50px -20px;
+  padding-bottom: 50px;
+}
+
+.main {
+  height: 600px;
 }
 </style>

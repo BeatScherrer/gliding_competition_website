@@ -1,6 +1,20 @@
 <template lang="html">
   <div class="accordion " id="accordionExample">
     <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h5 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Anfahrt
+          </button>
+        </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body">
+          <iframe src='https://map.geo.admin.ch/embed.html?topic=ech&lang=de&bgLayer=ch.swisstopo.swissimage&E=2604010.77&N=1254046.45&zoom=10&catalogNodes=687,702&layers=KML%7C%7Chttps:%2F%2Fpublic.geo.admin.ch%2FJAEPI9V-TE6iDYz_1vsfbA' width='400' height='300' frameborder='0' style='border:0'></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="card">
       <div class="card-header" id="headingOne">
         <h5 class="mb-0">
           <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -9,7 +23,7 @@
         </h5>
       </div>
 
-      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
         <div class="card-body">
           <h2>Ausschreibung JSM 2019</h2>
           <hr>
@@ -166,20 +180,6 @@
         </div>
       </div>
     </div>
-    <!-- <div class="card">
-      <div class="card-header" id="headingTwo">
-        <h5 class="mb-0">
-          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Anfahrt
-          </button>
-        </h5>
-      </div>
-      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-        <div class="card-body">
-          <iframe src="https://map.geo.admin.ch/embed.html?topic=ech&lang=de&bgLayer=ch.swisstopo.swissimage&E=2603768.19&N=1254188.62&zoom=11.051928094887334&catalogNodes=687,702&layers=KML%7C%7Chttps:%2F%2Fpublic.geo.admin.ch%2Fko1LzYp1R1eFi4-ztOsfwA" id="anfahrt_iframe"></iframe>
-        </div>
-      </div>
-    </div>
     <div class="card">
       <div class="card-header" id="headingThree">
         <h5 class="mb-0">
@@ -190,10 +190,30 @@
       </div>
       <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
         <div class="card-body">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          <h1>Live Tracking</h1>
+          Für die Besucher des Wettbewerbs wird ein Live Tracking der Piloten zu sehen sein und man kann so die ganze
+          Aufgabe mitverfolgen.
+
+          <h1>Wettbewerb</h1>
+          Der Tagesablauf an einem Wettbewerbstag sieht in der Regel wie folgt aus:
+          Der Wettbewerbstag beginnt mit einem täglichen Briefing an dem das Wetter analysiert wird und entsprechend
+          eine Tagesaufgabe für die Piloten verteilt. Die Aufgabe kann von 50km bis 500km oder noch weiter reichen.
+          Diese Aufgabe gilt es als "Parcours" zu umfliegen und der Schnellste Pilot sichert sich den Tagessieg. <br>
+          Nach dem Briefing bereiten sich die Piloten und ihre Flugzeuge auf die Aufgabe vor. Oft wird dabei Wasser in die
+          Flügel geladen (bis zu 150 Liter) um das Gewicht des Flugzeuges zu erhöhen und so eine bessere Performance
+          bei höherer Geschwindigkeit zu erreichen. Nachdem die Flugzeuge bereit sind werden sie in Reihen an den Startplatz
+          gestellt. <br>
+          Beim Start gilt es das ganze Feld so schnell wie möglich in die Luft zu bringen um auch begrenzte Wetterfenster
+          nutzen zu können. Sind alle Piloten in der Luft wird die Startlinie geöffnet und die Piloten können ab diesem
+          Zeitpunkt die Startlinie überfliegen um die Aufgabe zu beginnen.<br>
+          Während der Aufgabe ist auf dem Flugplatz weniger betrieb und man kann die Piloten beim Live Tracking mitverfolgen.
+          Bei den Zahlreichen Landungen in relativ kurzer Zeit am Abend nach absolvieren der Aufgabe ist dann wieder mehr
+          Aktivität auf dem Flugplatz zu verspüren und anschliessend wird dann der Wettbewerbstag bei den Piloten und
+          Anwesenden besprochen und gefachsimpelt.
+          
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -229,6 +249,10 @@ p {
     .card-body {
       padding: 20px 70px;
     }
+}
+
+h1 {
+  margin-top: 25px;
 }
 
 </style>
