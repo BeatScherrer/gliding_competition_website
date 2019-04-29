@@ -31,7 +31,7 @@
       <!-- Silver Sponsors -->
 
       <div class="col-6 col-md-12 sponsor" id="anklin">
-        <a href="https://www.anklin.ch/"><img src="./assets/anklin_logo.jpg" alt="anklin logo" id="anklin-logo"></a>
+        <a href="http://www.anklin.ch/"><img src="./assets/anklin_logo.jpg" alt="anklin logo" id="anklin-logo"></a>
       </div>
 
       <div class="col-6 col-md-12 sponsor" id="ctc">
