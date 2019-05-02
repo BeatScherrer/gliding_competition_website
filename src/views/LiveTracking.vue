@@ -2,7 +2,7 @@
   <div class="main">
     <a href="https://www.glidertracker.org/#tsk=https://raw.githubusercontent.com/BeatScherrer/Segelfluggruppe-Dittingen/master/OGN/Tasks/task&lst=http://www.glidertracker.org/#tsk=https://pastebin.com/raw/Znv0zBGL&lst=https://raw.githubusercontent.com/BeatScherrer/Segelfluggruppe-Dittingen/master/OGN/Groups/jsm2019.csv&nowelcome">Tracking Link</a>
     <hr>
-    <iframe src="https://www.glidertracker.org/#tsk=https://raw.githubusercontent.com/BeatScherrer/Segelfluggruppe-Dittingen/master/OGN/Tasks/task&lst=http://www.glidertracker.org/#tsk=https://pastebin.com/raw/Znv0zBGL&lst=https://raw.githubusercontent.com/BeatScherrer/Segelfluggruppe-Dittingen/master/OGN/Groups/jsm2019.csv&nowelcome"></iframe>
+    <iframe src="http://www.glidertracker.org/#tsk=https://raw.githubusercontent.com/BeatScherrer/Segelfluggruppe-Dittingen/master/OGN/Tasks/task&lst=http://www.glidertracker.org/#tsk=https://pastebin.com/raw/Znv0zBGL&lst=https://raw.githubusercontent.com/BeatScherrer/Segelfluggruppe-Dittingen/master/OGN/Groups/jsm2019.csv&nowelcome"></iframe>
   </div>
 </template>
 

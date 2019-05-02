@@ -17,15 +17,18 @@ export default {
   },
   data(){
     return {
-      facebookPosts: {}
+      facebookPosts: []
     }
   },
   methods: {
   },
   created(){
 
-    this.$http.get(`https://graph.facebook.com/391674157977731/posts?pretty=1&access_token=${process.env.VUE_APP_FACEBOOK_ACCESS_TOKEN}`).then(function(data) {
+    this.$http.get(`https://graph.facebook.com/jsmdittingen2019/posts?fields=full_picture,picture,message,permalink_url,created_time&access_token=${process.env.VUE_APP_FACEBOOK_ACCESS_TOKEN}`).then(function(data) {
+      console.log(data);
+
       let posts = data.body.data;
+      console.log(posts);
       this.facebookPosts = posts;
     }).catch((error) => {
       console.log(error);

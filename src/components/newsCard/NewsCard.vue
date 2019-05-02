@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="card mb-3">
-    <img class="card-img-top" src="" alt="Card image cap" v-if="hasImage">
+    <img class="card-img-top" v-bind:src="post.full_picture" alt="Card image cap" v-if="hasImage">
     <div class="card-body">
       <h5 class="card-title" v-if="hasTitle"></h5>
       <p class="card-text">{{post.message}}</p>
@@ -16,7 +16,7 @@ export default {
   },
   computed: {
     hasImage(){
-      return('image' in this.post);
+      return('full_picture' in this.post);
     },
     hasTitle(){
       return('title' in this.post);
@@ -33,8 +33,9 @@ export default {
 <style lang="css" scoped>
 
 img {
-  height: 400px;
   width: 100%;
+  height: auto;
+
 }
 
 .text-muted{
