@@ -3,15 +3,17 @@
 import firebase from 'firebase'
 
 // Configure firebase
-const config = {
+const firebaseConfig = {
   apiKey: process.env.VUE_APP_FIREABSE_API_KEY,
-  authDomain: "jsm2019-ffe72.firebaseapp.com",
-  databaseURL: "https://jsm2019-ffe72.firebaseio.com",
-  projectId: "jsm2019-ffe72",
-  storageBucket: "",
-  messagingSenderId: "1085322579037"
+  authDomain: "rm-dittingen.firebaseapp.com",
+  projectId: "rm-dittingen",
+  storageBucket: "rm-dittingen.appspot.com",
+  messagingSenderId: "366638679031",
+  appId: "1:366638679031:web:fe13303c5bd5ba13aea4f2",
+  measurementId: "G-22Y1YXJ0CG"
 };
-firebase.initializeApp(config);
+
+firebase.initializeApp(firebaseConfig);
 
 const db = firebase.firestore();
 const settings = {
