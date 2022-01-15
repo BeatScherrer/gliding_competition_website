@@ -2,20 +2,78 @@
   <mat-stepper linear #stepper>
     <!-- First step -->
     <mat-step [stepControl]="firstFormGroup">
-      <form [formGroup]="firstFormGroup">
-        <ng-template matStepLabel>Persoenlich</ng-template>
-        <!-- Vorname -->
-        <mat-form-field appearance="fill">
-          <mat-label>Vorname</mat-label>
-          <input
-            matInput
-            placeholder="Last name, First name"
-            formControlName="firstCtrl"
-            required
-          />
-        </mat-form-field>
+      <form [formGroup]="firstFormGroup" fxLayout="column" fxLayoutGap="1rem" fxLayoutAlign="center">
+        <div fxLayout fxLayoutGap="1rem">
+          <ng-template matStepLabel>Persoenlich</ng-template>
+          <!-- Vorname -->
+          <mat-form-field appearance="fill">
+            <mat-label>Vorname</mat-label>
+            <input
+              matInput
+              placeholder="Last name, First name"
+              formControlName="firstCtrl"
+              required
+            />
+          </mat-form-field>
 
-        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Nachname</mat-label>
+            <input
+              matInput
+              placeholder="Last name, First name"
+              formControlName="firstCtrl"
+              required
+            />
+          </mat-form-field>
+        </div>
+        <div fxLayout fxLayoutGap="1rem">
+          <ng-template matStepLabel>Persoenlich</ng-template>
+          <!-- Vorname -->
+          <mat-form-field appearance="fill">
+            <mat-label>Strasse</mat-label>
+            <input
+              matInput
+              placeholder="Last name, First name"
+              formControlName="firstCtrl"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Ortschaft</mat-label>
+            <input
+              matInput
+              placeholder="Last name, First name"
+              formControlName="firstCtrl"
+              required
+            />
+          </mat-form-field>
+        </div>
+        <div fxLayout fxLayoutGap="1rem">
+          <ng-template matStepLabel>Postleitzahl</ng-template>
+          <!-- Vorname -->
+          <mat-form-field appearance="fill">
+            <mat-label>Strasse</mat-label>
+            <input
+              matInput
+              placeholder="Last name, First name"
+              formControlName="firstCtrl"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field appearance="fill">
+            <mat-label>Ortschaft</mat-label>
+            <input
+              matInput
+              placeholder="Last name, First name"
+              formControlName="firstCtrl"
+              required
+            />
+          </mat-form-field>
+        </div>
+
+        <div fxLayout fxLayoutAlign="center">
           <button mat-button matStepperNext>Next</button>
         </div>
       </form>

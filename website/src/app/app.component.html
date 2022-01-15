@@ -5,6 +5,7 @@
   fxLayoutAlign="space-between"
 >
   <!-- Menu -->
+  <!-- TODO how can we use fxFlex in the toolbar?? -->
   <mat-toolbar>
     <div fxLayout fxLayoutAlign="space-between">
       <span>RM Dittingen</span>
@@ -21,8 +22,9 @@
   </mat-toolbar>
 
   <!-- Main content -->
-  <div id="main-content" class="container" fxLayout fxLayoutAlign="center">
+  <div id="main-content" class="container" fxFlex fxLayout fxLayoutAlign="center">
     <router-outlet></router-outlet>
+    <!-- <div id="test"></div> -->
   </div>
 
   <!-- Footer -->
