@@ -1,0 +1,143 @@
+<mat-card>
+  <mat-stepper linear #stepper>
+    <!-- First step -->
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Persoenlich</ng-template>
+        <!-- Vorname -->
+        <mat-form-field appearance="fill">
+          <mat-label>Vorname</mat-label>
+          <input
+            matInput
+            placeholder="Last name, First name"
+            formControlName="firstCtrl"
+            required
+          />
+        </mat-form-field>
+
+        <!-- Nachname -->
+        <mat-form-field appearance="fill">
+          <mat-label>Nachname</mat-label>
+          <input
+            matInput
+            placeholder="Last name, First name"
+            formControlName="firstCtrl"
+            required
+          />
+        </mat-form-field>
+
+        <!-- Geburstdatum -->
+        <mat-form-field appearance="fill">
+          <mat-label>Geburstdatum</mat-label>
+          <input
+            matInput
+            placeholder="Last name, First name"
+            formControlName="firstCtrl"
+            required
+          />
+        </mat-form-field>
+
+        <!-- Strassse -->
+        <mat-form-field appearance="fill">
+          <mat-label>Geburstdatum</mat-label>
+          <input
+            matInput
+            placeholder="Last name, First name"
+            formControlName="firstCtrl"
+            required
+          />
+        </mat-form-field>
+
+        <!-- Ortschaft -->
+        <mat-form-field appearance="fill">
+          <mat-label>Geburstdatum</mat-label>
+          <input
+            matInput
+            placeholder="Last name, First name"
+            formControlName="firstCtrl"
+            required
+          />
+        </mat-form-field>
+
+        <!-- Postleitzahl -->
+        <mat-form-field appearance="fill">
+          <mat-label>Geburstdatum</mat-label>
+          <input
+            matInput
+            placeholder="Last name, First name"
+            formControlName="firstCtrl"
+            required
+          />
+        </mat-form-field>
+
+        <!-- Segelfluggruppe -->
+        <mat-form-field appearance="fill">
+          <mat-label>Segelfluggruppe</mat-label>
+          <input
+            matInput
+            placeholder="Last name, First name"
+            formControlName="firstCtrl"
+            required
+          />
+        </mat-form-field>
+
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+
+      <!-- Second step -->
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" label="Wettbewerb">
+      <!-- Flugzeugtyp -->
+      <form [formGroup]="secondFormGroup">
+        <mat-form-field appearance="fill">
+          <mat-label>Flugzeugtyp</mat-label>
+          <input
+            matInput
+            formControlName="secondCtrl"
+            placeholder="Ex. 1 Main St, New York, NY"
+            required
+          />
+        </mat-form-field>
+
+        <!-- Geburstdatum -->
+        <mat-form-field appearance="fill">
+          <mat-label>Wettbewerbkennzeichen</mat-label>
+          <input
+            matInput
+            placeholder="Last name, First name"
+            formControlName="firstCtrl"
+            required
+          />
+        </mat-form-field>
+
+        <!-- Geburstdatum -->
+        <mat-form-field appearance="fill">
+          <mat-label>Geburstdatum</mat-label>
+          <input
+            matInput
+            placeholder="Last name, First name"
+            formControlName="firstCtrl"
+            required
+          />
+        </mat-form-field>
+
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+    <!-- Third step -->
+    <mat-step>
+      <ng-template matStepLabel>Sicherheit</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</mat-card>

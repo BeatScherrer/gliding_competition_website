@@ -1,0 +1,41 @@
+<div
+  id="root"
+  class="container"
+  fxLayout="column"
+  fxLayoutAlign="space-between"
+>
+  <!-- Menu -->
+  <mat-toolbar>
+    <div fxLayout fxLayoutAlign="space-between">
+      <span>RM Dittingen</span>
+      <mat-menu>
+        <mat-icon>dialpad</mat-icon>
+        <button mat-menu-item routerLink="registration">
+          <span>Registration</span>
+        </button>
+        <button mat-menu-item>
+          <span>Registration</span>
+        </button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
+
+  <!-- Main content -->
+  <div id="main-content" class="container" fxLayout fxLayoutAlign="center">
+    <router-outlet></router-outlet>
+  </div>
+
+  <!-- Footer -->
+
+  <div fxLayout fxLayoutAlign="space-evenly" id="footer">
+    <div fxLayout="column" fxLayoutAlign="space-evenly">
+      <div>sg-dittingen</div>
+      <div>info@sg-dittingen.ch</div>
+    </div>
+    <div fxLayout fxLayoutAlign="center">
+      <mat-icon>facebook</mat-icon>
+      <mat-icon>facebook</mat-icon>
+    </div>
+    <div fxLayout="column" fxLayoutAlign="space-evenly">something else</div>
+  </div>
+</div>
