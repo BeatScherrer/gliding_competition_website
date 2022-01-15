@@ -12,7 +12,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # firebase cache
-*.cache.firebase
+.firebase
 
 # Editor directories and files
 .idea
