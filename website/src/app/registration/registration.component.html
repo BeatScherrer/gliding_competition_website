@@ -1,126 +1,150 @@
-<mat-card>
-  <mat-stepper linear #stepper>
+<mat-card fxFill id="registration-card">
+  <mat-stepper orientation="vertical" #stepper>
     <!-- First step -->
-    <mat-step [stepControl]="firstFormGroup">
-      <form [formGroup]="firstFormGroup" fxLayout="column" fxLayoutGap="1rem" fxLayoutAlign="center">
-        <div fxLayout fxLayoutGap="1rem">
+    <mat-step [stepControl]="firstFormGroup" errorMessage="Fehlende Informationen">
+      <form [formGroup]="firstFormGroup" fxLayout="row wrap" fxLayoutGap="1rem">
           <ng-template matStepLabel>Persoenlich</ng-template>
           <!-- Vorname -->
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="fill" fxFlex=calc(50%-1rem)>
             <mat-label>Vorname</mat-label>
             <input
               matInput
-              placeholder="Last name, First name"
+              placeholder="Hans"
               formControlName="firstCtrl"
               required
             />
           </mat-form-field>
 
-          <mat-form-field appearance="fill">
+          <mat-form-field appearance="fill" fxFlex="calc(50%-1rem)">
             <mat-label>Nachname</mat-label>
             <input
               matInput
-              placeholder="Last name, First name"
-              formControlName="firstCtrl"
-              required
-            />
-          </mat-form-field>
-        </div>
-        <div>
-          <mat-form-field appearance="fill">
-            <mat-label>email</mat-label>
-            <input
-              matInput
-              placeholder="email"
-              formControlName="firstCtrl"
-              required
-            />
-          </mat-form-field>
-        </div>
-        <div fxLayout fxLayoutGap="1rem">
-          <ng-template matStepLabel>Persoenlich</ng-template>
-          <!-- Vorname -->
-          <mat-form-field appearance="fill">
-            <mat-label>Strasse</mat-label>
-            <input
-              matInput
-              placeholder="Last name, First name"
+              placeholder="Mustermann"
               formControlName="firstCtrl"
               required
             />
           </mat-form-field>
 
-          <mat-form-field appearance="fill">
-            <mat-label>Ortschaft</mat-label>
+
+          <!-- Vorname -->
+          <mat-form-field appearance="fill" fxFlex="calc(80%-1rem)">
+            <mat-label>Strasse</mat-label>
             <input
               matInput
-              placeholder="Last name, First name"
+              placeholder="Musterstrasse"
               formControlName="firstCtrl"
               required
             />
           </mat-form-field>
-        </div>
-        <div fxLayout fxLayoutGap="1rem">
+
+          <mat-form-field appearance="fill" fxFlex="calc(20%-1rem)">
+            <mat-label>Nr.</mat-label>
+            <input
+              matInput
+              placeholder="42"
+              formControlName="firstCtrl"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" fxFlex="calc(70%-1rem)">
+            <mat-label>Ortschaft</mat-label>
+            <input
+              matInput
+              placeholder="Entenhausen"
+              formControlName="firstCtrl"
+              required
+            />
+          </mat-form-field>
           <ng-template matStepLabel>Postleitzahl</ng-template>
           <!-- Vorname -->
-          <mat-form-field appearance="fill">
-            <mat-label>Strasse</mat-label>
+          <mat-form-field appearance="fill" fxFlex="calc(30%-1rem)">
+            <mat-label>Postleitzahl</mat-label>
             <input
               matInput
-              placeholder="Last name, First name"
+              placeholder="1000"
               formControlName="firstCtrl"
               required
             />
           </mat-form-field>
 
-          <mat-form-field appearance="fill">
-            <mat-label>Ortschaft</mat-label>
+          <mat-divider inset="true"></mat-divider>
+
+          <mat-form-field appearance="fill" fxFlex="100">
+            <mat-label>Email</mat-label>
             <input
               matInput
-              placeholder="Last name, First name"
+              placeholder="hans@mustermann.com"
               formControlName="firstCtrl"
               required
             />
           </mat-form-field>
-        </div>
-
-        <div fxLayout fxLayoutAlign="center">
-          <button mat-button matStepperNext>Next</button>
-        </div>
+          <mat-form-field appearance="fill" fxFlex="100">
+            <mat-label>Natelnummer</mat-label>
+            <input
+              matInput
+              placeholder="079 123 45 67"
+              formControlName="firstCtrl"
+              required
+            />
+          </mat-form-field>
       </form>
 
       <!-- Second step -->
     </mat-step>
-    <mat-step [stepControl]="secondFormGroup" label="Wettbewerb">
+    <mat-step [stepControl]="secondFormGroup" label="Wettbewerb" errorMessage="Fehlende Informationen">
       <!-- Flugzeugtyp -->
-      <form [formGroup]="secondFormGroup">
-        <mat-form-field appearance="fill">
+      <form [formGroup]="secondFormGroup" fxLayout="row wrap" fxLayoutGap="1rem">
+        <mat-form-field appearance="fill" fxFlex="calc(50%-1rem)">
           <mat-label>Flugzeugtyp</mat-label>
           <input
             matInput
             formControlName="secondCtrl"
-            placeholder="Ex. 1 Main St, New York, NY"
-            required
+            placeholder="ASH-26E"
           />
         </mat-form-field>
-
-        <!-- Geburstdatum -->
-
-        <div>
-          <button mat-button matStepperPrevious>Back</button>
-          <button mat-button matStepperNext>Next</button>
-        </div>
+        <mat-form-field appearance="fill" fxFlex="calc(50%-1rem)">
+          <mat-label>Wettbewerbskennzeichen</mat-label>
+          <input
+            matInput
+            formControlName="secondCtrl"
+            placeholder="XY"
+          />
+        </mat-form-field>
       </form>
     </mat-step>
 
     <!-- Third step -->
-    <mat-step>
+    <mat-step errorMessage="Fehlende Informationen">
       <ng-template matStepLabel>Sicherheit</ng-template>
-      <p>You are now done.</p>
-      <div>
-        <button mat-button matStepperPrevious>Back</button>
-        <button mat-button (click)="stepper.reset()">Reset</button>
-      </div>
+      <form [formGroup]="secondFormGroup">
+        <div  fxLayout="row wrap" fxLayoutGap="1rem">
+
+        <mat-form-field appearance="fill" fxFlex="calc(50%-1rem)">
+          <mat-label>FLARM ID</mat-label>
+          <input
+            matInput
+            formControlName="secondCtrl"
+            placeholder="ASH-26E"
+          />
+        </mat-form-field>
+        <mat-form-field appearance="fill" fxFlex="calc(50%-1rem)">
+          <mat-label>Notfall Telefonnummer</mat-label>
+          <input
+            matInput
+            formControlName="secondCtrl"
+            placeholder="079 123 45 67"
+            required
+          />
+        </mat-form-field>
+        </div>
+
+        <div fxLayout fxLayoutAlign="center">
+          <button mat-raised-button color="primary" (click)="register">Anmelden</button>
+        </div>
+      </form>
     </mat-step>
   </mat-stepper>
 </mat-card>
+
+<div id="test"></div>

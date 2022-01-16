@@ -1,44 +1,20 @@
-<div
-  id="root"
-  class="container"
-  fxLayout="column"
-  fxLayoutAlign="space-between"
->
-  <!-- Menu -->
-  <!-- TODO how can we use fxFlex in the toolbar?? -->
-  <mat-toolbar>
-    <div fxLayout fxLayoutAlign="space-between">
-      <span>RM Dittingen</span>
-      <mat-menu>
-        <mat-icon>dialpad</mat-icon>
-        <button mat-menu-item routerLink="registration">
-          <span>Registration</span>
-        </button>
-        <button mat-menu-item>
-          <span>Registration</span>
-        </button>
-      </mat-menu>
-    </div>
+<!-- Menu -->
+<!-- TODO how can we use fxFlex in the toolbar?? -->
+<div fxLayout="column" fxLayoutAlign="space-between">
+  <mat-toolbar id="navbar" fxLayout="row" fxFlex>
+    <button mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span routerLink="/">RM Dittingen 2022</span>
+    <div fxFlex></div>
+
+      <button mat-button routerLink="registration">Anmelden</button>
   </mat-toolbar>
 
   <!-- Main content -->
-  <div id="main-content" class="container" fxFlex fxLayout fxLayoutAlign="center">
+  <div id="main-content" class="container" fxLayout="column">
     <router-outlet></router-outlet>
-    <!-- <div id="test"></div> -->
-  </div>
 
-  <!-- Footer -->
-
-  <div fxLayout fxLayoutAlign="space-evenly" id="footer">
-    &copy; Segelflugruppe Dittingen
-    <!-- <div fxLayout="column" fxLayoutAlign="space-evenly">
-      <div>sg-dittingen</div>
-      <div>info@sg-dittingen.ch</div>
-    </div>
-    <div fxLayout fxLayoutAlign="center">
-      <mat-icon>facebook</mat-icon>
-      <mat-icon>facebook</mat-icon>
-    </div>
-    <div fxLayout="column" fxLayoutAlign="space-evenly">something else</div> -->
+    <div fxLayout fxLayoutAlign="center">&copy; Segelflugruppe Dittingen</div>
   </div>
 </div>

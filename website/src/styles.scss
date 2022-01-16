@@ -4,15 +4,10 @@ html,
 body {
   min-height: 100vh;
   height: auto;
-  min-width: 100vw;
+  width: 100%;
+  scrollbar-width: none
 }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
-#test {
-  background-color: aquamarine;
-  height:100%;
-  width: 100%;
 }
