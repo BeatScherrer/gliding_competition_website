@@ -1,11 +1,19 @@
-<mat-card fxFill id="registration-card">
-  <mat-stepper orientation="vertical" #stepper>
-    <!-- First step -->
-    <mat-step [stepControl]="firstFormGroup" errorMessage="Fehlende Informationen">
-      <form [formGroup]="firstFormGroup" fxLayout="row wrap" fxLayoutGap="1rem">
+<div id="registration-container">
+  <mat-card fxFill id="registration-card">
+    <mat-stepper orientation="vertical" #stepper>
+      <!-- First step -->
+      <mat-step
+        [stepControl]="firstFormGroup"
+        errorMessage="Fehlende Informationen"
+      >
+        <form
+          [formGroup]="firstFormGroup"
+          fxLayout="row wrap"
+          fxLayoutGap="1rem"
+        >
           <ng-template matStepLabel>Persoenlich</ng-template>
           <!-- Vorname -->
-          <mat-form-field appearance="fill" fxFlex=calc(50%-1rem)>
+          <mat-form-field appearance="fill" fxFlex="calc(50%-1rem)">
             <mat-label>Vorname</mat-label>
             <input
               matInput
@@ -24,7 +32,6 @@
               required
             />
           </mat-form-field>
-
 
           <!-- Vorname -->
           <mat-form-field appearance="fill" fxFlex="calc(80%-1rem)">
@@ -88,61 +95,67 @@
               required
             />
           </mat-form-field>
-      </form>
+        </form>
 
-      <!-- Second step -->
-    </mat-step>
-    <mat-step [stepControl]="secondFormGroup" label="Wettbewerb" errorMessage="Fehlende Informationen">
-      <!-- Flugzeugtyp -->
-      <form [formGroup]="secondFormGroup" fxLayout="row wrap" fxLayoutGap="1rem">
-        <mat-form-field appearance="fill" fxFlex="calc(50%-1rem)">
-          <mat-label>Flugzeugtyp</mat-label>
-          <input
-            matInput
-            formControlName="secondCtrl"
-            placeholder="ASH-26E"
-          />
-        </mat-form-field>
-        <mat-form-field appearance="fill" fxFlex="calc(50%-1rem)">
-          <mat-label>Wettbewerbskennzeichen</mat-label>
-          <input
-            matInput
-            formControlName="secondCtrl"
-            placeholder="XY"
-          />
-        </mat-form-field>
-      </form>
-    </mat-step>
+        <!-- Second step -->
+      </mat-step>
+      <mat-step
+        [stepControl]="secondFormGroup"
+        label="Wettbewerb"
+        errorMessage="Fehlende Informationen"
+      >
+        <!-- Flugzeugtyp -->
+        <form
+          [formGroup]="secondFormGroup"
+          fxLayout="row wrap"
+          fxLayoutGap="1rem"
+        >
+          <mat-form-field appearance="fill" fxFlex="calc(50%-1rem)">
+            <mat-label>Flugzeugtyp</mat-label>
+            <input
+              matInput
+              formControlName="secondCtrl"
+              placeholder="ASH-26E"
+            />
+          </mat-form-field>
+          <mat-form-field appearance="fill" fxFlex="calc(50%-1rem)">
+            <mat-label>Wettbewerbskennzeichen</mat-label>
+            <input matInput formControlName="secondCtrl" placeholder="XY" />
+          </mat-form-field>
+        </form>
+      </mat-step>
 
-    <!-- Third step -->
-    <mat-step errorMessage="Fehlende Informationen">
-      <ng-template matStepLabel>Sicherheit</ng-template>
-      <form [formGroup]="secondFormGroup">
-        <div  fxLayout="row wrap" fxLayoutGap="1rem">
+      <!-- Third step -->
+      <mat-step errorMessage="Fehlende Informationen">
+        <ng-template matStepLabel>Sicherheit</ng-template>
+        <form [formGroup]="secondFormGroup">
+          <div fxLayout="row wrap" fxLayoutGap="1rem">
+            <mat-form-field appearance="fill" fxFlex="calc(50%-1rem)">
+              <mat-label>FLARM ID</mat-label>
+              <input
+                matInput
+                formControlName="secondCtrl"
+                placeholder="ASH-26E"
+              />
+            </mat-form-field>
+            <mat-form-field appearance="fill" fxFlex="calc(50%-1rem)">
+              <mat-label>Notfall Telefonnummer</mat-label>
+              <input
+                matInput
+                formControlName="secondCtrl"
+                placeholder="079 123 45 67"
+                required
+              />
+            </mat-form-field>
+          </div>
 
-        <mat-form-field appearance="fill" fxFlex="calc(50%-1rem)">
-          <mat-label>FLARM ID</mat-label>
-          <input
-            matInput
-            formControlName="secondCtrl"
-            placeholder="ASH-26E"
-          />
-        </mat-form-field>
-        <mat-form-field appearance="fill" fxFlex="calc(50%-1rem)">
-          <mat-label>Notfall Telefonnummer</mat-label>
-          <input
-            matInput
-            formControlName="secondCtrl"
-            placeholder="079 123 45 67"
-            required
-          />
-        </mat-form-field>
-        </div>
-
-        <div fxLayout fxLayoutAlign="center">
-          <button mat-raised-button color="primary" (click)="register">Anmelden</button>
-        </div>
-      </form>
-    </mat-step>
-  </mat-stepper>
-</mat-card>
+          <div fxLayout fxLayoutAlign="center">
+            <button mat-raised-button color="primary" (click)="(register)">
+              Anmelden
+            </button>
+          </div>
+        </form>
+      </mat-step>
+    </mat-stepper>
+  </mat-card>
+</div>

@@ -1,37 +1,39 @@
-<mat-card>
-  <!-- email login fields -->
+<div id="login-container">
+  <mat-card>
+    <!-- email login fields -->
 
-  <div fxLayout="column" fxLayoutGap="1rem">
-  <form [formGroup]="loginFormGroup">
     <div fxLayout="column" fxLayoutGap="1rem">
-      <mat-form-field appearance="fill" fxFlex="calc(50%-1rem)">
-        <mat-label>Email</mat-label>
-        <input
-          matInput
-          formControlName="emailCtrl"
-          placeholder="max@muster.com"
-        />
-      </mat-form-field>
-      <mat-form-field appearance="fill" fxFlex="calc(50%-1rem)">
-        <mat-label>Passwort</mat-label>
-        <input
-          matInput
-          formControlName="passwordCtrl"
-          placeholder="password"
-          type="password"
-        />
-      </mat-form-field>
+      <form [formGroup]="loginFormGroup">
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <mat-form-field appearance="fill" fxFlex="calc(50%-1rem)">
+            <mat-label>Email</mat-label>
+            <input
+              matInput
+              formControlName="emailCtrl"
+              placeholder="max@muster.com"
+            />
+          </mat-form-field>
+          <mat-form-field appearance="fill" fxFlex="calc(50%-1rem)">
+            <mat-label>Passwort</mat-label>
+            <input
+              matInput
+              formControlName="passwordCtrl"
+              placeholder="password"
+              type="password"
+            />
+          </mat-form-field>
 
-      <div fxLayout fxLayoutAlign="center">
-        <button mat-raised-button color="primary" (click)="(login)">
-          Login
-        </button>
+          <div fxLayout fxLayoutAlign="center">
+            <button mat-raised-button color="primary" (click)="(login)">
+              Login
+            </button>
+          </div>
+        </div>
+      </form>
+      <mat-divider inset="true"></mat-divider>
+      <div fxLayout="column" fxLayoutGap="1rem" fxLayoutAlign="center center">
+        <div>google</div>
       </div>
     </div>
-  </form>
-  <mat-divider inset="true"></mat-divider>
-  <div fxLayout="column" fxLayoutGap="1rem" fxLayoutAlign="center">
-    social login
-  </div>
+  </mat-card>
 </div>
-</mat-card>

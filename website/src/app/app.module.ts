@@ -9,17 +9,35 @@ import { MaterialModule } from './material/material.module';
 import { RegistrationComponent } from './registration/registration.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
-import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService } from '@angular/fire/analytics';
-import { provideAuth,getAuth } from '@angular/fire/auth';
-import { provideFirestore,getFirestore } from '@angular/fire/firestore';
-import { provideStorage,getStorage } from '@angular/fire/storage';
+import {
+  provideAnalytics,
+  getAnalytics,
+  ScreenTrackingService,
+  UserTrackingService,
+} from '@angular/fire/analytics';
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
+import { provideStorage, getStorage } from '@angular/fire/storage';
 import { LoginComponent } from './login/login.component';
 import { ParticipantsComponent } from './participants/participants.component';
+import { HomeComponent } from './home/home.component';
+import { ContactComponent } from './contact/contact.component';
+import { SponsoringComponent } from './sponsoring/sponsoring.component';
+import { SponsorsComponent } from './sponsors/sponsors.component';
 
 @NgModule({
-  declarations: [AppComponent, RegistrationComponent, LoginComponent, ParticipantsComponent],
+  declarations: [
+    AppComponent,
+    RegistrationComponent,
+    LoginComponent,
+    ParticipantsComponent,
+    HomeComponent,
+    ContactComponent,
+    SponsoringComponent,
+    SponsorsComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -34,9 +52,7 @@ import { ParticipantsComponent } from './participants/participants.component';
     provideFirestore(() => getFirestore()),
     provideStorage(() => getStorage()),
   ],
-  providers: [
-    ScreenTrackingService,UserTrackingService
-  ],
+  providers: [ScreenTrackingService, UserTrackingService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
