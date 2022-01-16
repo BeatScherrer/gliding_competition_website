@@ -1,20 +1,21 @@
 <!-- Menu -->
 <!-- TODO how can we use fxFlex in the toolbar?? -->
-<div fxLayout="column" fxLayoutAlign="space-between">
+<div fxLayout="column" fxLayoutAlign="space-between" id="root">
   <mat-toolbar id="navbar" fxLayout="row" fxFlex>
-    <button mat-icon-button>
-      <mat-icon>menu</mat-icon>
-    </button>
     <span routerLink="/">RM Dittingen 2022</span>
     <div fxFlex></div>
 
       <button mat-button routerLink="registration">Anmelden</button>
+      <button mat-button routerLink="participants">Teilnehmer</button>
+      <mat-divider inset="true" vertical="true"></mat-divider>
+      <button mat-raised-button color="primary" >Login</button>
+
   </mat-toolbar>
 
   <!-- Main content -->
-  <div id="main-content" class="container" fxLayout="column">
+  <div id="main-content" class="container" fxLayout="column" fxFlex>
     <router-outlet></router-outlet>
-
-    <div fxLayout fxLayoutAlign="center">&copy; Segelflugruppe Dittingen</div>
   </div>
+
+  <div fxLayout fxLayoutAlign="center">&copy; Segelflugruppe Dittingen</div>
 </div>

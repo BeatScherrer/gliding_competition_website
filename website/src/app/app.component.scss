@@ -4,7 +4,15 @@
   width: 100%;
 }
 
+#navbar {
+  min-height: 70px;
+}
+
 #footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: 2rem;
 }
 

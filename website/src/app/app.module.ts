@@ -15,9 +15,11 @@ import { provideAnalytics,getAnalytics,ScreenTrackingService,UserTrackingService
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { provideStorage,getStorage } from '@angular/fire/storage';
+import { LoginComponent } from './login/login.component';
+import { ParticipantsComponent } from './participants/participants.component';
 
 @NgModule({
-  declarations: [AppComponent, RegistrationComponent],
+  declarations: [AppComponent, RegistrationComponent, LoginComponent, ParticipantsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
