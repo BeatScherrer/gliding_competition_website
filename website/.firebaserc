@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "rm-dittingen": {
+      "hosting": {
+        "website": [
+          "rm-dittingen"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "rm-dittingen"
+  }
+}

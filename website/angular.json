@@ -108,6 +108,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "website:build:production",
+            "firebaseProject": "rm-dittingen",
+            "firebaseHostingSite": "rm-dittingen"
+          }
         }
       }
     }
