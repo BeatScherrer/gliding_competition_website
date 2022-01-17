@@ -13,6 +13,7 @@ const routes: Routes = [
   { path: 'participants', component: ParticipantsComponent},
   { path: 'sponsoring', component: SponsoringComponent},
   { path: 'Contact', component: ContactComponent},
+  { path: 'profile', component: ContactComponent},
   { path: '**', component: HomeComponent},
 ];
 

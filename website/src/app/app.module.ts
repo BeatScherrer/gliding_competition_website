@@ -33,6 +33,7 @@ import { RegistrationComponent } from './registration/registration.component';
 
 // environments
 import { environment } from '../environments/environment';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { environment } from '../environments/environment';
     ContactComponent,
     SponsoringComponent,
     SponsorsComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

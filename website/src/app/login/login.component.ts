@@ -1,35 +1,41 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
-import firebase from 'firebase/compat';
+import { AuthService } from '../auth.service';
+import { StateService } from '../state.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  loginFormGroup: FormGroup;
+  loginForm: FormGroup;
 
-  constructor(private _formBuilder: FormBuilder, public auth: AngularFireAuth) {
-    this.loginFormGroup = this._formBuilder.group({
-      emailCtrl: ['', Validators.required],
-      passwordCtrl: ['', Validators.required]
+  constructor(private _formBuilder: FormBuilder, public auth: AuthService) {
+    this.loginForm = this._formBuilder.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required],
     });
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  onSubmit() {
+    if (this.loginForm.valid) {
+      const value = this.loginForm.value;
+      this.auth.loginWithEmailAndPassword(value.email, value.password)
+    }
   }
 
-  login(): void {
+  get email() {
+    return this.loginForm.get('email');
+  }
+
+  get password() {
+    return this.loginForm.get('password');
   }
 
   loginWithGoogle(): void {
-    this.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider());
+    this.auth.loginWithGoogle();
   }
-
-  logout(): void {
-    this.auth.signOut();
-  }
-
 }
