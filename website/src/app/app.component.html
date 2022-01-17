@@ -5,22 +5,23 @@
     <span routerLink="/">RM Dittingen 2022</span>
     <div fxFlex></div>
 
-      <button mat-button routerLink="registration">Anmelden</button>
-      <button mat-button routerLink="participants">Teilnehmer</button>
-      <button mat-button routerLink="sponsoring">Sponsoring</button>
-      <button mat-button routerLink="Contact">Kontakt</button>
-      <mat-divider inset="true" vertical="true"></mat-divider>
-      <div fxLayout fxLayoutGap="0.5rem">
-      <button mat-raised-button color="seconday" routerLink="registration" >Anmelden</button>
-      <button mat-raised-button color="primary" routerLink="login" >Login</button>
-</div>
-
+    <button mat-button routerLink="registration">Anmelden</button>
+    <button mat-button routerLink="participants">Teilnehmer</button>
+    <button mat-button routerLink="sponsoring">Sponsoring</button>
+    <button mat-button routerLink="Contact">Kontakt</button>
+    <mat-divider inset="true" vertical="true"></mat-divider>
+    <div fxLayout fxLayoutGap="0.5rem">
+      <button mat-raised-button color="seconday" routerLink="registration">
+        Anmelden
+      </button>
+      <button mat-raised-button color="primary" routerLink="login">
+        Login
+      </button>
+    </div>
   </mat-toolbar>
 
-  <!-- Main content -->
-  <div id="main-content" class="container" fxLayout="column" fxFlex>
+  <div id="main-content" class="container" fxLayout="column">
     <router-outlet></router-outlet>
   </div>
-
-  <div fxLayout fxLayoutAlign="center">&copy; Segelflugruppe Dittingen</div>
+<div fxLayout fxLayoutAlign="center">&copy; Segelflugruppe Dittingen</div>
 </div>
