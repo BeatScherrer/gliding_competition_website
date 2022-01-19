@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "start",
+      "problemMatcher": ["$tsc"],
+      "label": "npm: serve",
+      "detail": "ng serve",
+      "options": {
+        "cwd": "website"
+      }
+    }
+  ]
+}
