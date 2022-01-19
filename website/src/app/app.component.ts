@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { StateService } from './state.service';
 
 @Component({
@@ -7,10 +8,10 @@ import { StateService } from './state.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  loading: boolean;
+  loading$: BehaviorSubject<boolean>;
 
   constructor(private state: StateService) {
-    this.loading = this.state.loading;
+    this.loading$ = state.loading$
   }
 
   title = 'website';
