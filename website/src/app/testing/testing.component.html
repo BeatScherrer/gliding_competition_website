@@ -1,3 +1,27 @@
-<div>
-  <button mat-raised-button (click)="setLoading(true)">set loading</button>
+<div
+  id="testing-container"
+  fxLayout="column"
+  fxLayoutAlign="center center"
+  fxLayoutGap="1rem"
+>
+  <mat-card>
+    <div fxLayout="column" fxLayoutGap="1rem">
+      <div fxLayout fxLayoutAlign="center center" fxLayoutGap="1rem">
+        <p>trigger the loading spinner (close it by clicking on it)</p>
+        <button mat-raised-button (click)="setLoading()">set loading</button>
+      </div>
+
+      <mat-divider inset="true"></mat-divider>
+
+      <div fxLayout fxLayoutAlign="center center" fxLayoutGap="1rem">
+        <p>login with test user</p>
+        <button mat-raised-button (click)="loginWithEmail()">login</button>
+      </div>
+    </div>
+  </mat-card>
+
+  <mat-card>
+    <div fxLayout="column" fxLayoutGap="1rem"></div>
+    <h1>Application state</h1>
+  </mat-card>
 </div>

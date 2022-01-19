@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { User } from 'firebase/auth';
+import { BehaviorSubject, Subject } from 'rxjs';
+import { AuthService } from './auth.service';
 import { StateService } from './state.service';
 
 @Component({
@@ -8,11 +10,21 @@ import { StateService } from './state.service';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  loading$: BehaviorSubject<boolean>;
+  title = 'RM Dittingen';
 
-  constructor(private state: StateService) {
-    this.loading$ = state.loading$
+  loading$: BehaviorSubject<boolean>;
+  user$ = new Subject<User | undefined>();
+
+  constructor(private state: StateService, private auth: AuthService) {
+    this.loading$ = state.loading$;
+    this.user$ = auth.user$;
   }
 
-  title = 'website';
+  finishLoading() {
+    this.loading$.next(false);
+  }
+
+  logout() {
+    this.auth.logout();
+  }
 }

@@ -4,6 +4,9 @@
   <mat-toolbar id="navbar" fxLayout="row" fxFlex>
     <span routerLink="/">RM Dittingen 2022</span>
     <button mat-raised-button routerLink="testing">testing</button>
+    <button mat-raised-button routerLink="profile" *ngIf="user$ | async">
+      profile
+    </button>
     <div fxFlex></div>
 
     <button mat-button routerLink="registration">Anmelden</button>
@@ -15,8 +18,22 @@
       <button mat-raised-button color="seconday" routerLink="registration">
         Anmelden
       </button>
-      <button mat-raised-button color="primary" routerLink="login">
+      <button
+        mat-raised-button
+        color="primary"
+        routerLink="login"
+        *ngIf="!(user$ | async)"
+      >
         Login
+      </button>
+
+      <button
+        mat-raised-button
+        color="primary"
+        *ngIf="user$ | async"
+        (click)="logout()"
+      >
+        Logout
       </button>
     </div>
   </mat-toolbar>
@@ -24,9 +41,15 @@
   <div id="main-content" class="container" fxLayout="column">
     <router-outlet></router-outlet>
   </div>
-<div fxLayout fxLayoutAlign="center">&copy; Segelflugruppe Dittingen</div>
+  <div fxLayout fxLayoutAlign="center">&copy; Segelflugruppe Dittingen</div>
 </div>
 
-<div id="loading-overlay" *ngIf="loading$ | async" fxLayout fxLayoutAlign="center center">
+<div
+  id="loading-overlay"
+  *ngIf="loading$ | async"
+  fxLayout
+  fxLayoutAlign="center center"
+  (click)="finishLoading()"
+>
   <mat-spinner></mat-spinner>
 </div>
