@@ -9,22 +9,40 @@
     </button>
     <div fxFlex></div>
 
-    <button mat-button routerLink="registration">Anmelden</button>
     <button mat-button routerLink="participants">Teilnehmer</button>
     <button mat-button routerLink="sponsoring">Sponsoring</button>
     <button mat-button routerLink="Contact">Kontakt</button>
+
+    <ng-container *ngIf="(state$ | async)?.loggedIn">
+      <button mat-raised-button routerLink="#">Downloads</button>
+      <button mat-raised-button routerLink="#">Profil</button>
+    </ng-container>
+
     <mat-divider inset="true" vertical="true"></mat-divider>
     <div fxLayout fxLayoutGap="0.5rem">
-      <button mat-raised-button color="seconday" routerLink="registration">
+      <button
+        mat-raised-button
+        color="seconday"
+        routerLink="registration"
+        *ngIf="!(state$ | async)?.loggedIn"
+      >
         Anmelden
       </button>
       <button
         mat-raised-button
         color="primary"
         routerLink="login"
-        *ngIf="!(user$ | async)"
+        *ngIf="!(state$ | async)?.loggedIn"
       >
         Login
+      </button>
+      <button
+        mat-raised-button
+        color="secondary"
+        *ngIf="(state$ | async)?.loggedIn"
+        (click)="logout()"
+      >
+        Logout
       </button>
 
       <button
@@ -46,7 +64,7 @@
 
 <div
   id="loading-overlay"
-  *ngIf="loading$ | async"
+  *ngIf="(state$ | async)?.loading"
   fxLayout
   fxLayoutAlign="center center"
   (click)="finishLoading()"

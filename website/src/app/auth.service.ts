@@ -7,55 +7,65 @@ import {
   User,
   UserCredential,
 } from '@angular/fire/auth';
-import { Observable, of, Subject } from 'rxjs';
-import { StateService } from './state.service';
+import { BehaviorSubject } from 'rxjs';
+import { ApplicationState, StateService } from './state.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthService {
-  user$ = new Subject<User | undefined>();
+  user$ = new BehaviorSubject<User | undefined>(undefined);
+  state$ = new BehaviorSubject<ApplicationState>(new ApplicationState());
 
-  constructor(private auth: Auth, private state: StateService) {
+  constructor(private auth: Auth, private stateService: StateService) {
     auth.onAuthStateChanged(this.onAuthStateChange);
+    this.state$ = stateService.state$;
   }
 
   loginWithEmailAndPassword(email: string, password: string): void {
-    this.state.setLoading(true);
+    this.stateService.setLoading(true);
     console.log('logging in with email...');
     signInWithEmailAndPassword(this.auth, email, password)
       .catch((e) => console.log(e))
       .then((user_credential: UserCredential | void) => {
         if (user_credential) {
           this.user$.next(user_credential.user);
+          this.stateService.setLoggedIn(true);
         }
+        this.stateService.setLoading(false);
       });
-
-    this.state.setLoading(false);
   }
 
   loginWithGoogle(): void {
-    this.state.setLoading(true);
+    this.stateService.setLoading(true);
     signInWithPopup(this.auth, new GoogleAuthProvider()).then(
       (user_credential: UserCredential | void) => {
         if (user_credential) {
-          const user = user_credential.user;
-          console.log('asjdf;laskjdf');
           this.user$.next(user_credential.user);
+          this.stateService.setLoggedIn(true);
         }
+
+        this.stateService.setLoading(false);
       }
     );
-    this.state.setLoading(false);
   }
 
   logout() {
     console.log('loggin out');
-    this.state.setLoading(true);
+    this.stateService.setLoading(true);
     this.auth.signOut();
-    this.state.setLoading(false);
+    this.stateService.setLoading(false);
+    this.stateService.setLoggedIn(false);
   }
 
-  onAuthStateChange(value: any) {
-    console.log(value);
+  onAuthStateChange(user: User | null) {
+    if (user != null) {
+      console.log(`user: ${JSON.stringify(user)}`);
+      this.user$.next(user);
+      this.stateService.setLoggedIn(true);
+    } else {
+      this.user$.next(undefined);
+      this.stateService.setLoggedIn(false);
+    }
   }
 }

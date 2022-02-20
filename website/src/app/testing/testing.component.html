@@ -13,9 +13,16 @@
 
       <mat-divider inset="true"></mat-divider>
 
-      <div fxLayout fxLayoutAlign="center center" fxLayoutGap="1rem">
-        <p>login with test user</p>
-        <button mat-raised-button (click)="loginWithEmail()">login</button>
+      <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="1rem">
+        <div>
+          <p>login with test user</p>
+          <button mat-raised-button (click)="loginWithEmail()">login</button>
+        </div>
+
+        <div>
+          <p>logout</p>
+          <button mat-raised-button (click)="logout()">logout</button>
+        </div>
       </div>
     </div>
   </mat-card>
@@ -23,5 +30,6 @@
   <mat-card>
     <div fxLayout="column" fxLayoutGap="1rem"></div>
     <h1>Application state</h1>
+    {{ state$ | async | json }}
   </mat-card>
 </div>

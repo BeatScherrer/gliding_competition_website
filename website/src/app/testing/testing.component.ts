@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { delay } from 'rxjs';
+import { BehaviorSubject, delay } from 'rxjs';
 import { AuthService } from '../auth.service';
-import { StateService } from '../state.service';
+import { StateService, ApplicationState } from '../state.service';
 
 @Component({
   selector: 'app-testing',
@@ -9,17 +9,25 @@ import { StateService } from '../state.service';
   styleUrls: ['./testing.component.scss'],
 })
 export class TestingComponent implements OnInit {
-  constructor(private state: StateService, private auth: AuthService) {}
+
+  state$: BehaviorSubject<ApplicationState> = new BehaviorSubject<ApplicationState>(new ApplicationState());
+
+  constructor(private stateService: StateService, private authService: AuthService) {
+    this.state$ = stateService.state$;
+  }
 
   ngOnInit(): void {}
 
   setLoading() {
-    console.log('set loading true');
-    this.state.setLoading(true);
+    this.stateService.setLoading(true);
   }
 
   loginWithEmail() {
     // login with a simple test user to test firebase
-    this.auth.loginWithEmailAndPassword('test@test.test', '123456');
+    this.authService.loginWithEmailAndPassword('test@test.test', '123456');
+  }
+
+  logout() {
+    this.authService.logout();
   }
 }

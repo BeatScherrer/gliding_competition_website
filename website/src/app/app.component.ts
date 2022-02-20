@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { User } from 'firebase/auth';
 import { BehaviorSubject, Subject } from 'rxjs';
 import { AuthService } from './auth.service';
-import { StateService } from './state.service';
+import { ApplicationState, StateService } from './state.service';
 
 @Component({
   selector: 'app-root',
@@ -12,16 +12,15 @@ import { StateService } from './state.service';
 export class AppComponent {
   title = 'RM Dittingen';
 
-  loading$: BehaviorSubject<boolean>;
+  state$ = new BehaviorSubject<ApplicationState>(new ApplicationState());
   user$ = new Subject<User | undefined>();
 
   constructor(private state: StateService, private auth: AuthService) {
-    this.loading$ = state.loading$;
-    this.user$ = auth.user$;
+    this.state$ = state.state$;
   }
 
   finishLoading() {
-    this.loading$.next(false);
+    this.state.setLoading(false);
   }
 
   logout() {
