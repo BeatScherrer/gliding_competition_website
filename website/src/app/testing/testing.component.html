@@ -28,8 +28,14 @@
   </mat-card>
 
   <mat-card>
-    <div fxLayout="column" fxLayoutGap="1rem"></div>
-    <h1>Application state</h1>
-    {{ state$ | async | json }}
+    <div fxLayout="column" fxLayoutGap="1rem">
+      <div>
+        <h1>Application state</h1>
+        {{ state$ | async | json }}
+      </div>
+      <div>
+        {{ user$ | async | json }}
+      </div>
+    </div>
   </mat-card>
 </div>

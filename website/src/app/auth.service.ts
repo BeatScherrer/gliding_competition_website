@@ -14,12 +14,21 @@ import { ApplicationState, StateService } from './state.service';
   providedIn: 'root',
 })
 export class AuthService {
-  user$ = new BehaviorSubject<User | undefined>(undefined);
+  user$ = new BehaviorSubject<User | null>(null);
   state$ = new BehaviorSubject<ApplicationState>(new ApplicationState());
 
   constructor(private auth: Auth, private stateService: StateService) {
-    auth.onAuthStateChanged(this.onAuthStateChange);
     this.state$ = stateService.state$;
+    this.user$.next(auth.currentUser);
+
+    auth.onAuthStateChanged((user: User | null) => {
+      if (user) {
+        this.stateService.setLoggedIn(true);
+      } else {
+        this.stateService.setLoggedIn(false);
+      }
+      this.user$.next(user);
+    });
   }
 
   loginWithEmailAndPassword(email: string, password: string): void {
@@ -51,21 +60,6 @@ export class AuthService {
   }
 
   logout() {
-    console.log('loggin out');
-    this.stateService.setLoading(true);
     this.auth.signOut();
-    this.stateService.setLoading(false);
-    this.stateService.setLoggedIn(false);
-  }
-
-  onAuthStateChange(user: User | null) {
-    if (user != null) {
-      console.log(`user: ${JSON.stringify(user)}`);
-      this.user$.next(user);
-      this.stateService.setLoggedIn(true);
-    } else {
-      this.user$.next(undefined);
-      this.stateService.setLoggedIn(false);
-    }
   }
 }

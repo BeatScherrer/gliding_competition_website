@@ -9,6 +9,10 @@
       "detail": "ng serve",
       "options": {
         "cwd": "website"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
       }
     }
   ]

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '@angular/fire/auth';
 import { BehaviorSubject, delay } from 'rxjs';
 import { AuthService } from '../auth.service';
 import { StateService, ApplicationState } from '../state.service';
@@ -9,11 +10,16 @@ import { StateService, ApplicationState } from '../state.service';
   styleUrls: ['./testing.component.scss'],
 })
 export class TestingComponent implements OnInit {
+  state$: BehaviorSubject<ApplicationState> =
+    new BehaviorSubject<ApplicationState>(new ApplicationState());
+  user$ = new BehaviorSubject<User | null>(null);
 
-  state$: BehaviorSubject<ApplicationState> = new BehaviorSubject<ApplicationState>(new ApplicationState());
-
-  constructor(private stateService: StateService, private authService: AuthService) {
+  constructor(
+    private stateService: StateService,
+    private authService: AuthService
+  ) {
     this.state$ = stateService.state$;
+    this.user$ = authService.user$;
   }
 
   ngOnInit(): void {}
