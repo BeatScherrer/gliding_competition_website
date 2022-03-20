@@ -10,14 +10,11 @@ import { StateService, ApplicationState } from '../state.service';
   styleUrls: ['./testing.component.scss'],
 })
 export class TestingComponent implements OnInit {
-  state$: BehaviorSubject<ApplicationState> =
-    new BehaviorSubject<ApplicationState>(new ApplicationState());
-  user$ = new BehaviorSubject<User | null>(null);
 
-  constructor(
-    private stateService: StateService,
-    private authService: AuthService
-  ) {
+  state$: BehaviorSubject<ApplicationState> = new BehaviorSubject<ApplicationState>(new ApplicationState());
+  user$: BehaviorSubject<User | undefined> = new BehaviorSubject<User | undefined>(undefined);
+
+  constructor(private stateService: StateService, private authService: AuthService) {
     this.state$ = stateService.state$;
     this.user$ = authService.user$;
   }
