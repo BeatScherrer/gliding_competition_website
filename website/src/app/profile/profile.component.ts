@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Profile } from '@models/profile';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-profile',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  vm$!: Subject<Profile>;
+
+  constructor(private firestoreService: FirestoreService) {
+    this.vm$ = this.firestoreService.getProfile()
+  }
 
   ngOnInit(): void {
   }
