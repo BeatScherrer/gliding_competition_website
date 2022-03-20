@@ -12,7 +12,7 @@ import { StateService, ApplicationState } from '../state.service';
 export class TestingComponent implements OnInit {
 
   state$: BehaviorSubject<ApplicationState> = new BehaviorSubject<ApplicationState>(new ApplicationState());
-  user$: BehaviorSubject<User | undefined> = new BehaviorSubject<User | undefined>(undefined);
+  user$: BehaviorSubject<User | null> = new BehaviorSubject<User | null>(null);
 
   constructor(private stateService: StateService, private authService: AuthService) {
     this.state$ = stateService.state$;
