@@ -4,18 +4,15 @@
   <mat-toolbar id="navbar" fxLayout="row" fxFlex>
     <span routerLink="/">RM Dittingen 2022</span>
     <button mat-raised-button routerLink="testing">testing</button>
-    <button mat-raised-button routerLink="profile" *ngIf="user$ | async">
-      profile
-    </button>
     <div fxFlex></div>
 
     <button mat-button routerLink="participants">Teilnehmer</button>
     <button mat-button routerLink="sponsoring">Sponsoring</button>
-    <button mat-button routerLink="Contact">Kontakt</button>
+    <button mat-button routerLink="contact">Kontakt</button>
 
     <ng-container *ngIf="(state$ | async)?.loggedIn">
-      <button mat-raised-button routerLink="#">Downloads</button>
-      <button mat-raised-button routerLink="/profile">Profil</button>
+      <button mat-raised-button routerLink="downloads">Downloads</button>
+      <button mat-raised-button routerLink="profile">Profil</button>
     </ng-container>
 
     <mat-divider inset="true" vertical="true"></mat-divider>

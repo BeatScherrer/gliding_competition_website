@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { User } from 'firebase/auth';
 import { BehaviorSubject, Subject } from 'rxjs';
-import { AuthService } from './auth.service';
-import { ApplicationState, StateService } from './state.service';
+import { AuthService } from '@services/auth.service';
+import { ApplicationState, StateService } from '@services/state.service';
 
 @Component({
   selector: 'app-root',

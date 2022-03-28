@@ -1,5 +1,14 @@
-import {Component} from '@angular/core';
-import {animate, state, style, transition, trigger} from '@angular/animations';
+import { Component } from '@angular/core';
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
+import { Observable } from 'rxjs';
+import { UserService } from '../user.service';
+import { Users } from '../../models/User';
 
 /**
  * @title Table with expandable rows
@@ -10,16 +19,25 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
   templateUrl: './participants.component.html',
   animations: [
     trigger('detailExpand', [
-      state('collapsed', style({height: '0px', minHeight: '0'})),
-      state('expanded', style({height: '*'})),
-      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')),
+      state('collapsed', style({ height: '0px', minHeight: '0' })),
+      state('expanded', style({ height: '*' })),
+      transition(
+        'expanded <=> collapsed',
+        animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)')
+      ),
     ]),
   ],
 })
 export class ParticipantsComponent {
   dataSource = ELEMENT_DATA;
-  columnsToDisplay = ['name', 'weight', 'symbol', 'position'];
+  columnsToDisplay = ['name'];
   expandedElement: PeriodicElement | null = null;
+
+  users$ = new Observable<Users>();
+
+  constructor(userService: UserService) {
+    this.users$ = userService.users$;
+  }
 }
 
 export interface PeriodicElement {
@@ -120,7 +138,6 @@ const ELEMENT_DATA: PeriodicElement[] = [
         two-thirds the density of air.`,
   },
 ];
-
 
 /**  Copyright 2022 Google LLC. All Rights Reserved.
     Use of this source code is governed by an MIT-style license that

@@ -1,23 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ContactComponent } from './contact/contact.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { ParticipantsComponent } from './participants/participants.component';
-import { ProfileComponent } from './profile/profile.component';
+import { ParticipantsComponent } from './components/participants/participants.component';
+import { ProfileComponent } from './components/profile/profile.component';
 import { RegistrationComponent } from './registration/registration.component';
-import { SponsoringComponent } from './sponsoring/sponsoring.component';
+import { SponsoringComponent } from './components/sponsoring/sponsoring.component';
 import { TestingComponent } from './testing/testing.component';
 
 const routes: Routes = [
   { path: 'testing', component: TestingComponent },
   { path: 'registration', component: RegistrationComponent },
-  { path: 'login', component: LoginComponent},
-  { path: 'participants', component: ParticipantsComponent},
-  { path: 'sponsoring', component: SponsoringComponent},
-  { path: 'Contact', component: ContactComponent},
-  { path: 'profile', component: ProfileComponent},
-  { path: '**', component: HomeComponent},
+  { path: 'login', component: LoginComponent },
+  { path: 'participants', component: ParticipantsComponent },
+  { path: 'sponsoring', component: SponsoringComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'profile', component: ProfileComponent },
+  { path: '**', component: HomeComponent },
 ];
 
 @NgModule({

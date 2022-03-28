@@ -18,22 +18,22 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideStorage, getStorage } from '@angular/fire/storage';
 
 // custom modules
-import { MaterialModule } from './material/material.module';
+import { MaterialModule } from './modules/material/material.module';
 import { AppRoutingModule } from './app-routing.module';
 
 // app components
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { ParticipantsComponent } from './participants/participants.component';
-import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
-import { SponsoringComponent } from './sponsoring/sponsoring.component';
-import { SponsorsComponent } from './sponsors/sponsors.component';
-import { RegistrationComponent } from './registration/registration.component';
+import { LoginComponent } from '@components/login/login.component';
+import { ParticipantsComponent } from '@components/participants/participants.component';
+import { HomeComponent } from '@components/home/home.component';
+import { ContactComponent } from '@components/contact/contact.component';
+import { SponsoringComponent } from '@components/sponsoring/sponsoring.component';
+import { SponsorsComponent } from '@components/sponsors/sponsors.component';
+import { RegistrationComponent } from '@components/registration/registration.component';
 
 // environments
 import { environment } from '../environments/environment';
-import { ProfileComponent } from './profile/profile.component';
+import { ProfileComponent } from './components/profile/profile.component';
 import { TestingComponent } from './testing/testing.component';
 
 @NgModule({
