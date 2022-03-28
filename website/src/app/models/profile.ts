@@ -1,4 +1,4 @@
-export interface Profile {
+export interface IProfile {
   // personal data
   firstName: string;
   lastName: string;
