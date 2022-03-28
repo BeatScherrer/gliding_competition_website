@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../auth.service';
-import { StateService } from '../state.service';
+
+import { AuthService } from '@services/auth.service';
+import { StateService } from '@services/state.service';
 
 @Component({
   selector: 'app-login',
@@ -23,7 +24,7 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     if (this.loginForm.valid) {
       const value = this.loginForm.value;
-      this.auth.loginWithEmailAndPassword(value.email, value.password)
+      this.auth.loginWithEmailAndPassword(value.email, value.password);
     }
   }
 

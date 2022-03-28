@@ -7,8 +7,9 @@ import {
   trigger,
 } from '@angular/animations';
 import { Observable } from 'rxjs';
-import { UserService } from '../user.service';
-import { Users } from '../../models/User';
+
+import { UserService } from '@services/user.service';
+import { Users } from '@models/User';
 
 /**
  * @title Table with expandable rows

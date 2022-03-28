@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Profile } from '@models/profile';
 
-import { FirestoreService } from '@services/FirestoreService';
+// import { FirestoreService } from '@services/FirestoreService';
 
 import { User } from '@angular/fire/auth';
 import { BehaviorSubject, Subject } from 'rxjs';
@@ -17,9 +17,9 @@ export class ProfileComponent implements OnInit {
 
   vm$!: Subject<Profile>;
 
-  constructor(private firestoreService: FirestoreService) {
-    this.vm$ = this.firestoreService.getProfile();
-  }
+  // constructor(private firestoreService: FirestoreService) {
+  //   this.vm$ = this.firestoreService.getProfile();
+  // }
 
   ngOnInit(): void {}
 }
