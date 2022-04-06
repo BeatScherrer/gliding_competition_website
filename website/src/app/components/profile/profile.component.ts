@@ -21,7 +21,6 @@ export class ProfileComponent implements OnInit {
 
   constructor(private logger: LoggerService, private auth: AuthService) {
     this.user$ = auth.user$;
-    this.logger.warn('test');
   }
 
   ngOnInit(): void {

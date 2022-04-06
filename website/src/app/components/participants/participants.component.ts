@@ -10,6 +10,8 @@ import { Observable } from 'rxjs';
 
 import { UserService } from '@services/user.service';
 import { Users } from '@models/User';
+import { FirestoreService } from '@services/firestore.service';
+import { IProfile } from '@models/profile';
 
 /**
  * @title Table with expandable rows
@@ -34,10 +36,12 @@ export class ParticipantsComponent {
   columnsToDisplay = ['name'];
   expandedElement: PeriodicElement | null = null;
 
-  users$ = new Observable<Users>();
+  profilesvm$ = new Observable<IProfile[]>();
 
-  constructor(userService: UserService) {
-    this.users$ = userService.users$;
+  constructor(firestore: FirestoreService) {
+    this.profilesvm$ = firestore.profiles$;
+
+    this.profilesvm$.subscribe(value => console.log(value));
   }
 }
 

@@ -30,10 +30,10 @@ import { ContactComponent } from '@components/contact/contact.component';
 import { SponsoringComponent } from '@components/sponsoring/sponsoring.component';
 import { SponsorsComponent } from '@components/sponsors/sponsors.component';
 import { RegistrationComponent } from '@components/registration/registration.component';
+import { ProfileComponent } from '@components/profile/profile.component';
 
 // environments
 import { environment } from '../environments/environment';
-import { ProfileComponent } from './components/profile/profile.component';
 import { TestingComponent } from './testing/testing.component';
 
 @NgModule({
