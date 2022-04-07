@@ -1,7 +1,7 @@
-<div id="participants-container" fxLayout="column">
+<div id="participants-container" fxLayout="column" *ngIf="profilesvm$ | async as profilesvm">
   <table
     mat-table
-    [dataSource]="dataSource"
+    [dataSource]="profilesvm"
     multiTemplateDataRows
     class="mat-elevation-z8"
   >

@@ -1,20 +1,6 @@
-<div id="sponsors-container" fxLayout="row wrap" fxLayoutAlign="center center">
-  <div class="sponsor-image">
+<div id="sponsors-container" fxLayout="row wrap" fxLayoutAlign="center center" *ngIf="sponsorsvm$ | async as sponsorsvm">
+  <div class="sponsor-image" *ngFor="let sponsor of sponsorsvm">
+    {{ sponsor.name }}
+    <img [src]="sponsor.imageUrl" alt="">
   </div>
-  <div class="sponsor-image">
-  </div>
-  <div class="sponsor-image">
-  </div>
-  <div class="sponsor-image">
-  </div>
-  <div class="sponsor-image">
-  </div>
-  <div class="sponsor-image">
-  </div>
-  <div class="sponsor-image">
-  </div>
-  <div class="sponsor-image">
-  </div>
-
-
 </div>

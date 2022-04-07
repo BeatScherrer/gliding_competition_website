@@ -4,6 +4,7 @@ import { Firestore, collectionData, collection, DocumentData } from '@angular/fi
 import { Observable, tap, map } from 'rxjs';
 
 import { IProfile } from '@models/profile';
+import { ISponsor } from '@models/sponsor';
 
 @Injectable({
   providedIn: 'root'
@@ -11,13 +12,17 @@ import { IProfile } from '@models/profile';
 export class FirestoreService {
 
   private profilesPath = "/profiles";
+  private sponsorsPath = "/sponsors";
 
   profiles$: Observable<IProfile[]>;
+  sponsors$: Observable<ISponsor[]>;
 
   constructor(firestore: Firestore) {
     const profile_collection = collection(firestore, this.profilesPath);
+    const sponsors_collection = collection(firestore, this.sponsorsPath);
 
     this.profiles$ = collectionData(profile_collection) as Observable<IProfile[]>;
+    this.sponsors$ = collectionData(sponsors_collection) as Observable<ISponsor[]>;
 
     // this.profilesCollection$.pipe(tap(value => console.log(value)));
 

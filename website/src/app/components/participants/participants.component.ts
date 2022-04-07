@@ -33,7 +33,7 @@ import { IProfile } from '@models/profile';
 })
 export class ParticipantsComponent {
   dataSource = ELEMENT_DATA;
-  columnsToDisplay = ['name'];
+  columnsToDisplay = ['firstName', 'lastName', 'glidingGroup', 'glider'];
   expandedElement: PeriodicElement | null = null;
 
   profilesvm$ = new Observable<IProfile[]>();
