@@ -1,23 +1,45 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import {
+  ActivatedRouteSnapshot,
+  RouterStateSnapshot,
+  Resolve,
+} from '@angular/router';
+import { IProfile } from '@models/profile';
 import { FirestoreService } from '@services/firestore.service';
-import { Resolver } from 'dns';
-import { catchError } from 'rxjs';
+import { NotificationService } from '@services/notification.service';
+import { map, Observable } from 'rxjs';
+
+interface IReturn {
+  profiles: IProfile[];
+}
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-export class ProfilesService implements Resolver {
+export class ProfilesService implements Resolve<IProfile[]> {
+  constructor(
+    private firestore: FirestoreService,
+    private notificationService: NotificationService
+  ) {}
 
-  constructor(private firestore: FirestoreService) { }
-
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot)
-  {
+  resolve(
+    route: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot
+  ): Observable<IReturn> {
     return this.firestore.profiles$.pipe(
-      catchError(error => this._ngAlert.push({
-        message: error.message,
-        type: MessageType.error
-      }))
+      map((profiles) => {
+        return profiles;
+      })
     );
+    // .catchError((error) => {
+    //   const notification: INotification = {
+    //     title: 'Error',
+    //     message: error.message,
+    //     level: NotificationLevel.ERROR,
+    //   };
+    //   this.notificationService.push(notification);
+    //   return throwError(() => new Error(error.message));
+    // }),
+    // );
   }
 }

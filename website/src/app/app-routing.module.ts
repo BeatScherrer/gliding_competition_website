@@ -9,12 +9,19 @@ import { ProfileComponent } from '@components/profile/profile.component';
 import { RegistrationComponent } from '@components/registration/registration.component';
 import { SponsoringComponent } from '@components/sponsoring/sponsoring.component';
 import { TestingComponent } from '@testing/testing.component';
+import { ProfilesService } from './resolvers/profiles.service';
 
 const routes: Routes = [
   { path: 'testing', component: TestingComponent },
   { path: 'registration', component: RegistrationComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'participants', component: ParticipantsComponent },
+  {
+    path: 'participants/:',
+    component: ParticipantsComponent,
+    resolve: {
+      pageData: ProfilesService,
+    },
+  },
   { path: 'sponsoring', component: SponsoringComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'profile', component: ProfileComponent },

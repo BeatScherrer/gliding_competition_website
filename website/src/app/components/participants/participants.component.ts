@@ -8,10 +8,9 @@ import {
 } from '@angular/animations';
 import { Observable } from 'rxjs';
 
-import { UserService } from '@services/user.service';
-import { Users } from '@models/User';
 import { FirestoreService } from '@services/firestore.service';
 import { IProfile } from '@models/profile';
+import { ActivatedRoute } from '@angular/router';
 
 /**
  * @title Table with expandable rows
@@ -38,10 +37,14 @@ export class ParticipantsComponent {
 
   profilesvm$ = new Observable<IProfile[]>();
 
-  constructor(firestore: FirestoreService) {
+  constructor(firestore: FirestoreService, private _route: ActivatedRoute) {
     this.profilesvm$ = firestore.profiles$;
 
-    this.profilesvm$.subscribe(value => console.log(value));
+    this.profilesvm$.subscribe((value) => console.log(value));
+  }
+
+  ngOnInit() {
+    this.profilesvm$ = this._route.snapshot.data.pageData;
   }
 }
 

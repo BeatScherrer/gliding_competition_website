@@ -8,6 +8,7 @@ import { User } from '@angular/fire/auth';
 import { BehaviorSubject, map, Subject, tap } from 'rxjs';
 import { AuthService } from '@services/auth.service';
 import { LoggerService } from '@services/logger.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -16,7 +17,6 @@ import { LoggerService } from '@services/logger.service';
 })
 export class ProfileComponent implements OnInit {
   user$ = new Subject<User | null>();
-
   vm$ = new BehaviorSubject<IProfile | null>(null);
 
   constructor(private logger: LoggerService, private auth: AuthService) {
