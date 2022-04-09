@@ -1,0 +1,9 @@
+<mat-card id="notification">
+  <div fxLayout fxLayoutAlign="space-between center">
+    <h1>{{ notification.title }}</h1>
+    <div>
+      {{ notification.message }}
+    </div>
+    <mat-icon (click)="closeNotification(notification)">close</mat-icon>
+  </div>
+</mat-card>

@@ -1,5 +1,10 @@
-<div *ngIf="notifications$ | async as notifications">
-  <div *ngFor="let notification of notifications">
-    {{ notification.message }}
-  </div>
+<div
+  *ngIf="notifications$ | async as notifications"
+  fxLayout="column"
+  fxLayoutGap="1rem"
+>
+  <app-notification
+    *ngFor="let notification of notifications"
+    [notification]="notification"
+  ></app-notification>
 </div>

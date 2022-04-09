@@ -37,6 +37,8 @@ export class NotificationService {
     });
 
     this.notifications$.next(this.notifications);
+
+    this.notifications$.subscribe((value) => console.log(value));
   }
 
   push(notification: INotification) {

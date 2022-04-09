@@ -31,18 +31,23 @@
     <div fxLayout="column" fxLayoutGap="1rem">
       <div>
         <h1>Application state</h1>
-        {{ state$ | async | json }}
+        {{ state$ | async | prettyJson }}
       </div>
       <div>
-        {{ user$ | async | json }}
+        {{ user$ | async | prettyJson }}
       </div>
     </div>
   </mat-card>
 
-  <mat-card *ngIf="notifications$ | async as notifications">
-    <div *ngFor="let notification of notifications">
-      {{ notification | json}}
-    </div>
-
+  <mat-card>
+    <h1>notifications:</h1>
+    <button mat-raised-button (click)="testNotification()">
+      test Notification
+    </button>
+    <ng-container *ngIf="notifications$ | async as notifications">
+      <div *ngFor="let notification of notifications">
+        {{ notification | prettyJson }}
+      </div>
+    </ng-container>
   </mat-card>
 </div>

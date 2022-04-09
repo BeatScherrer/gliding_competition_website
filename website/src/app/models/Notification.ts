@@ -1,16 +1,16 @@
 export interface NotificationData {
-  onActionClick: Function,
-};
+  onActionClick: Function;
+}
 
 export enum NotificationLevel {
-  INFO = "INFO",
-  WARN = "WARN",
-  ERROR = "ERROR"
-};
+  INFO = 'INFO',
+  WARN = 'WARN',
+  ERROR = 'ERROR',
+}
 
 export interface INotification {
-  title: string,
-  message: string,
-  data: NotificationData
-  level: NotificationLevel
-};
+  title: string;
+  message: string;
+  data?: NotificationData;
+  level: NotificationLevel;
+}

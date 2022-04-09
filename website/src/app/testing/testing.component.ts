@@ -4,7 +4,7 @@ import { BehaviorSubject, delay, Subject } from 'rxjs';
 import { AuthService } from '@services/auth.service';
 import { StateService, ApplicationState } from '@services/state.service';
 import { NotificationService } from '@services/notification.service';
-import { INotification } from '@models/Notification';
+import { INotification, NotificationLevel } from '@models/Notification';
 
 @Component({
   selector: 'app-testing',
@@ -15,7 +15,7 @@ export class TestingComponent implements OnInit {
   state$: BehaviorSubject<ApplicationState> =
     new BehaviorSubject<ApplicationState>(new ApplicationState());
   user$: BehaviorSubject<User | null> = new BehaviorSubject<User | null>(null);
-  notifications$: Subject<INotification[]>;
+  notifications$!: Subject<INotification[]>;
 
   constructor(
     private stateService: StateService,
@@ -40,5 +40,14 @@ export class TestingComponent implements OnInit {
 
   logout() {
     this.authService.logout();
+  }
+
+  testNotification() {
+    this.notificationService.push({
+      title: 'title',
+      message: 'test message',
+      data: { onActionClick: () => console.log('a') },
+      level: NotificationLevel.INFO,
+    });
   }
 }

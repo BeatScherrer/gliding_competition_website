@@ -7,7 +7,9 @@ import {
   User,
   UserCredential,
 } from '@angular/fire/auth';
+import { NotificationLevel } from '@models/Notification';
 import { BehaviorSubject } from 'rxjs';
+import { NotificationService } from './notification.service';
 import { ApplicationState, StateService } from './state.service';
 
 @Injectable({
@@ -17,13 +19,26 @@ export class AuthService {
   user$ = new BehaviorSubject<User | null>(null);
   state$ = new BehaviorSubject<ApplicationState>(new ApplicationState());
 
-  constructor(private auth: Auth, private stateService: StateService) {
+  constructor(
+    private auth: Auth,
+    private stateService: StateService,
+    private notificationService: NotificationService
+  ) {
     this.state$ = stateService.state$;
     this.user$.next(auth.currentUser);
 
     auth.onAuthStateChanged((user: User | null) => {
       if (user) {
         this.stateService.setLoggedIn(true);
+
+        if (user.displayName) {
+          const notification = {
+            title: 'Welcome',
+            message: user.displayName,
+            level: NotificationLevel.INFO,
+          };
+          this.notificationService.push(notification);
+        }
       } else {
         this.stateService.setLoggedIn(false);
       }

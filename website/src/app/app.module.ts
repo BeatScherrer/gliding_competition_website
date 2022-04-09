@@ -36,6 +36,8 @@ import { ProfileComponent } from '@components/profile/profile.component';
 import { environment } from '../environments/environment';
 import { TestingComponent } from './testing/testing.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
+import { PrettyJsonPipe } from './pipes/pretty-json.pipe';
+import { NotificationComponent } from './components/notifications/notification/notification.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,8 @@ import { NotificationsComponent } from './components/notifications/notifications
     ProfileComponent,
     TestingComponent,
     NotificationsComponent,
+    PrettyJsonPipe,
+    NotificationComponent,
   ],
   imports: [
     BrowserModule,
