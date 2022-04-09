@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '@angular/fire/auth';
-import { BehaviorSubject, delay } from 'rxjs';
+import { BehaviorSubject, delay, Subject } from 'rxjs';
 import { AuthService } from '@services/auth.service';
 import { StateService, ApplicationState } from '@services/state.service';
+import { NotificationService } from '@services/notification.service';
+import { INotification } from '@models/Notification';
 
 @Component({
   selector: 'app-testing',
@@ -13,13 +15,16 @@ export class TestingComponent implements OnInit {
   state$: BehaviorSubject<ApplicationState> =
     new BehaviorSubject<ApplicationState>(new ApplicationState());
   user$: BehaviorSubject<User | null> = new BehaviorSubject<User | null>(null);
+  notifications$: Subject<INotification[]>;
 
   constructor(
     private stateService: StateService,
-    private authService: AuthService
+    private authService: AuthService,
+    private notificationService: NotificationService
   ) {
     this.state$ = stateService.state$;
     this.user$ = authService.user$;
+    this.notifications$ == notificationService.notifications$;
   }
 
   ngOnInit(): void {}

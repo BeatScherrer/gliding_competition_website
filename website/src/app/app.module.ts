@@ -35,6 +35,7 @@ import { ProfileComponent } from '@components/profile/profile.component';
 // environments
 import { environment } from '../environments/environment';
 import { TestingComponent } from './testing/testing.component';
+import { NotificationsComponent } from './components/notifications/notifications.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { TestingComponent } from './testing/testing.component';
     SponsorsComponent,
     ProfileComponent,
     TestingComponent,
+    NotificationsComponent,
   ],
   imports: [
     BrowserModule,

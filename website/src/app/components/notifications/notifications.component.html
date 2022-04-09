@@ -1,0 +1,5 @@
+<div *ngIf="notifications$ | async as notifications">
+  <div *ngFor="let notification of notifications">
+    {{ notification.message }}
+  </div>
+</div>

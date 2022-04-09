@@ -38,4 +38,11 @@
       </div>
     </div>
   </mat-card>
+
+  <mat-card *ngIf="notifications$ | async as notifications">
+    <div *ngFor="let notification of notifications">
+      {{ notification | json}}
+    </div>
+
+  </mat-card>
 </div>
