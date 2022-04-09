@@ -7,7 +7,7 @@ import {
   User,
   UserCredential,
 } from '@angular/fire/auth';
-import { NotificationLevel } from '@models/Notification';
+import { INotification, NotificationLevel } from '@models/Notification';
 import { BehaviorSubject } from 'rxjs';
 import { NotificationService } from './notification.service';
 import { ApplicationState, StateService } from './state.service';
@@ -40,6 +40,12 @@ export class AuthService {
           this.notificationService.push(notification);
         }
       } else {
+        const notification: INotification = {
+          title: 'Goodbye',
+          level: NotificationLevel.INFO,
+        };
+        this.notificationService.push(notification);
+
         this.stateService.setLoggedIn(false);
       }
       this.user$.next(user);

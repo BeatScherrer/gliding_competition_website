@@ -10,7 +10,7 @@ export enum NotificationLevel {
 
 export interface INotification {
   title: string;
-  message: string;
+  message?: string;
   data?: NotificationData;
   level: NotificationLevel;
 }

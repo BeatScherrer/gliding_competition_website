@@ -57,11 +57,4 @@ export class NotificationService {
 
     this.notifications$.next(this.notifications);
   }
-
-  openSnackBar(notification: INotification) {
-    this.snackBar.open(notification.message, '', {
-      duration: this.config.duration,
-      panelClass: [''],
-    });
-  }
 }

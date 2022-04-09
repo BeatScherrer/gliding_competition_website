@@ -1,8 +1,13 @@
-<mat-card id="notification">
-  <div fxLayout fxLayoutAlign="space-between center">
-    <h1>{{ notification.title }}</h1>
-    <div>
-      {{ notification.message }}
+<mat-card class="notification">
+  <div fxLayout fxLayoutAlign="space-between begin" fxLayoutGap="1rem">
+    <div fxLayout="column" fxLayoutGap="1rem">
+      <div class="notification-title">{{ notification.title }}</div>
+      <ng-container *ngIf="notification.message">
+        <mat-divider [inset]="true"></mat-divider>
+        <div class="notification-body">
+          {{ notification.message }}
+        </div>
+      </ng-container>
     </div>
     <mat-icon (click)="closeNotification(notification)">close</mat-icon>
   </div>
