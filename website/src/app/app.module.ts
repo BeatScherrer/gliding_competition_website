@@ -38,6 +38,7 @@ import { TestingComponent } from './testing/testing.component';
 import { NotificationsComponent } from './components/notifications/notifications.component';
 import { PrettyJsonPipe } from './pipes/pretty-json.pipe';
 import { NotificationComponent } from './components/notifications/notification/notification.component';
+import { DownloadsComponent } from './components/downloads/downloads.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { NotificationComponent } from './components/notifications/notification/n
     NotificationsComponent,
     PrettyJsonPipe,
     NotificationComponent,
+    DownloadsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ContactComponent } from '@components/contact/contact.component';
+import { DownloadsComponent } from '@components/downloads/downloads.component';
 import { HomeComponent } from '@components/home/home.component';
 import { LoginComponent } from '@components/login/login.component';
 import { ParticipantsComponent } from '@components/participants/participants.component';
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'sponsoring', component: SponsoringComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'downloads', component: DownloadsComponent },
   { path: '**', component: HomeComponent },
 ];
 
