@@ -19,7 +19,7 @@ const routes: Routes = [
     path: 'participants/:',
     component: ParticipantsComponent,
     resolve: {
-      pageData: ProfilesService,
+      profiles: ProfilesService,
     },
   },
   { path: 'sponsoring', component: SponsoringComponent },

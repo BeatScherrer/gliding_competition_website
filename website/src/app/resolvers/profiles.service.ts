@@ -25,12 +25,13 @@ export class ProfilesService implements Resolve<IProfile[]> {
   resolve(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
-  ): Observable<IReturn> {
-    return this.firestore.profiles$.pipe(
-      map((profiles) => {
-        return profiles;
-      })
-    );
+  ): Observable<IProfile[]> {
+    return this.firestore.profiles$;
+    // return this.firestore.profiles$.pipe(
+    //   map((profiles) => {
+    //     return profiles;
+    //   })
+    // );
     // .catchError((error) => {
     //   const notification: INotification = {
     //     title: 'Error',

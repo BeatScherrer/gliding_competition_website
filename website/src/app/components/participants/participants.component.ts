@@ -39,12 +39,6 @@ export class ParticipantsComponent {
 
   constructor(firestore: FirestoreService, private _route: ActivatedRoute) {
     this.profilesvm$ = firestore.profiles$;
-
-    this.profilesvm$.subscribe((value) => console.log(value));
-  }
-
-  ngOnInit() {
-    this.profilesvm$ = this._route.snapshot.data.pageData;
   }
 }
 
